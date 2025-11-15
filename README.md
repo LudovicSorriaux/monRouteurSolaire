@@ -98,12 +98,15 @@ Routeur solaire intelligent ESP32 pour optimisation autoconsommation photovolta�
 ```
 routeur solaire/
 ├── src/
-│   ├── main.cpp                     # Point d'entrée (2003 lignes)
+│   ├── main.cpp                     # Point d'entrée (2101 lignes) ✅ DOCUMENTÉ
 │   │                                # Setup: WiFi, NTP, OLED, TRIAC, API
 │   │                                # Loop: core1 (web), core0 (dimmer)
-│   ├── routeurWeb.cpp               # Serveur web AsyncWebServer (1349 lignes)
+│   │                                # 26+ fonctions avec headers @brief
+│   ├── routeurWeb.cpp               # Serveur web AsyncWebServer (1564 lignes) ✅ DOCUMENTÉ
 │   │                                # Routes API, SSE, authentification
-│   └── espnow.cpp                   # Communication ESP-NOW (284 lignes)
+│   │                                # 34 fonctions avec headers @brief
+│   └── espnow.cpp                   # Communication ESP-NOW (377 lignes) ✅ DOCUMENTÉ
+│                                    # 14 fonctions avec headers @brief
 │
 ├── include/
 │   ├── globalRouteur.h              # Constantes, structures config
@@ -123,13 +126,40 @@ routeur solaire/
 │   └── ...
 │
 ├── scripts/
-│   └── add_comments_src.py          # Script auto commentaires fonctions
+│   ├── add_comments_src.py          # Script auto commentaires fonctions
+│   └── improve_comments_routeur.py  # Script amélioration commentaires (74 fonctions)
 │
 ├── platformio.ini                   # Configuration PlatformIO
 ├── gulpfile.js                      # Build frontend (minify, gzip)
 ├── package.json                     # Dépendances Node.js
 ├── copilote-instructions.md         # Guide développeur complet
 └── README.md                        # Ce fichier
+
+## 📚 Documentation Code
+
+Le code source est **intégralement documenté** avec headers Doxygen :
+
+- **main.cpp** : 26 fonctions documentées (WiFi, SolarEdge, Config, Time, Control, Display)
+- **routeurWeb.cpp** : 34 fonctions documentées (Routes API, SSE, Auth, Sessions)
+- **espnow.cpp** : 14 fonctions documentées (Init, Send, Receive, Callbacks)
+
+**Format headers :**
+```cpp
+/**
+ * @brief Description concise de la fonction
+ * @param paramName Description du paramètre
+ * @return Description de la valeur retournée
+ * @note Informations complémentaires
+ */
+```
+
+**Groupes fonctionnels main.cpp :**
+- **WiFi** (6) : wl_status_to_string, WiFiConnect, startWiFi, ConnectWithStoredCredentials...
+- **SolarEdge/HTTP** (3) : getSolarEdgeValues, getSolarEdgeInfos, http_status_to_string
+- **Config/SPIFFS** (8) : loadConfiguration, saveConfiguration, listAllFilesInDir...
+- **Time** (3) : getNTPTime, dstOffset, calculDureeJour
+- **Routeur Control** (5) : marcheForceeSwitch, setRelayPac, handleButtonEvent...
+- **Display/Web** (3) : gestEcran, stopEcran, gestWeb
 ```
 
 ---
@@ -602,14 +632,17 @@ AceButton @ ^1.10.1               # Gestion boutons
 
 ## 📝 Historique Versions
 
-| Version | Date    | Modifications                                |
-|---------|---------|----------------------------------------------|
-| 1.0.0   | 11/2024 | Documentation complète, headers, commentaires|
-| 0.9     | 10/2024 | Ajout ESP-NOW, refonte multi-threading       |
-| 0.8     | 09/2024 | API SolarEdge HTTPS, certificat SSL          |
-| 0.7     | 08/2024 | Dimmer TRIAC, zero-crossing, interruptions   |
-| 0.6     | 07/2024 | AsyncWebServer, SSE, interface web           |
-| 0.5     | 06/2024 | DS18B20 x4, OLED SSD1306                     |
+| Version | Date    | Modifications                                                                     |
+|---------|---------|-----------------------------------------------------------------------------------|
+| 1.0.0   | 11/2024 | ✅ Documentation complète 74 fonctions (main.cpp, routeurWeb.cpp, espnow.cpp)   |
+|         |         | ✅ Headers @brief Doxygen pour toutes les fonctions                             |
+|         |         | ✅ Commentaires inline logique PV surplus/TRIAC/PAC                             |
+|         |         | ✅ Script improve_comments_routeur.py avec dictionnaire descriptions            |
+| 0.9     | 10/2024 | Ajout ESP-NOW, refonte multi-threading                                           |
+| 0.8     | 09/2024 | API SolarEdge HTTPS, certificat SSL                                              |
+| 0.7     | 08/2024 | Dimmer TRIAC, zero-crossing, interruptions                                       |
+| 0.6     | 07/2024 | AsyncWebServer, SSE, interface web                                               |
+| 0.5     | 06/2024 | DS18B20 x4, OLED SSD1306                                                         |
 
 ---
 
