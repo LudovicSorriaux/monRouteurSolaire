@@ -1,0 +1,765 @@
+Check Time
+maxTimeRequest is : 49
+    Now sending hello message to Keyboard !
+    Now sending hello message to web !
+    Now sending hello message to Keyboard !
+    Now sending hello message to web !
+    Now sending hello message to Keyboard !
+    Now sending hello message to web !
+    Got (synch) message from web : source is : W, cmd is : S, size is : 1, sizeof datastruc is 4 message is : F
+    Now sending synch message to Web with type sync is F !
+Now sending on available Channels - EPOCH index=48 value=1
+    Got message (time) from web : source is : W, cmd is : T, size is : 8, sizeof datastruc is 4 message is : 223, 157, 53, 104, 0, 0, 0, 0, 
+    Got new time message from Web : 27/05/55 11:11:27, timeValue is 1748344287
+    Sending Time message to Clavier, Time message is : 7509081536561782239 and time is 35433160912
+Now sending on available Channels - EPOCH index=48 value=0
+    Got message (hello) from Web : source is : W, cmd is : H, size is : 1, sizeof datastruc is 4 message is : 0, 
+    Now sending hello message to web !
+    Got (synch) message from web : source is : W, cmd is : S, size is : 1, sizeof datastruc is 4 message is : F
+    Now sending synch message to Web with type sync is F !
+    Got (synch) message from web : source is : W, cmd is : S, size is : 1, sizeof datastruc is 4 message is : F
+    Now sending synch message to Web with type sync is F !
+   ==> donnees pour ce jour : startTime:11:0 , ceJour:11:49:0
+1er lancement de cycle : calcul des cycles
+in calculPompe : temp Eau = -256.00
+Temp eau = 0 => mesures pas encore pretes: just wait (cycles = 0)
+calculs pompe principale duree: 0, interval: 0, nbcycles: 0
+ ==> Stopping pompe principale
+    Got (synch) message from web : source is : W, cmd is : S, size is : 1, sizeof datastruc is 4 message is : F
+    Now sending synch message to Web with type sync is F !
+Now sending on available Channels - PP index=16 value=0
+    Got (synch) message from web : source is : W, cmd is : S, size is : 1, sizeof datastruc is 4 message is : F
+    Now sending synch message to Web with type sync is F !
+    Got (synch) message from web : source is : W, cmd is : S, size is : 1, sizeof datastruc is 4 message is : F
+    Now sending synch message to Web with type sync is F !
+    Got (synch) message from web : source is : W, cmd is : S, size is : 1, sizeof datastruc is 4 message is : F
+    Now sending synch message to Web with type sync is F !
+    Now sending hello message to Keyboard !
+ message (tim : W, cmd is : T, size is : 8, sizeof datastruc is 4 message is : 223, 157, 53, 104, 0, 0, 0, 0, 
+    Got new time message from Web : 27/05/55 11:11:27, timeValue is -5530420344957592097
+    Sending Time message to Clavier, Time message is : 7509081536561782239 and time is 35433160912
+Now sending on available Channels - EPOCH index=48 value=0
+   Got  : source ise) from web    Got (synch) message from web : source is : W, cmd is : S, size is : 1, sizeof datastruc is 4 message is : F
+    Now sending synch message to Web with type sync is F !
+    Now sending hello message to Keyboard !
+1er lancement de cycle : calcul des cycles
+in calculPompe : temp Eau = -256.00
+Temp eau = 0 => mesures pas encore pretes: just wait (cycles = 0)
+calculs pompe principale du=> Stopping pompe principale
+ree: 0, intecycles: 0
+ =rval: 0, nbNow sending on available Channels - PP index=16 value=0
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+1er lancement de cycle : calcul des cycles
+in calculPompe : temp Eau = -256.00
+Temp eau = 0 => mesures pas encore pretes: just wait (cycles = 0)
+calculs pompe principale duree: 0, interval: 0, nbcycles: 0
+ ==> Stopping pompe principale
+Now sending on available Channels - PP index=16 value=0
+    Now sending hello message to Keyboard !
+1er lancement de cycle : calcul des cycles
+in calculPompe : temp Eau = -256.00
+Temp eau = 0 => mesures pas encore pretes: just wait (cycles = 0)
+calculs pompe principale duree: 0, interval: 0, nbcycles: 0
+ ==> Stopping pompe principale
+Now sending on available Channels - PP index=16 value=0
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+1er lancement de cycle : calcul des cycles
+in calculPompe : temp Eau = -256.00
+Temp eau = 0 => mesures pas encore pretes: just wait (cycles = 0)
+pb avec la lecture de la sonde de temp => fixe une temp arbitraire de 20° pour filtrage on
+ interval: 0, nbcycles: 0
+ ==> Stopcalculs pomprincipale
+pe principalping pompe e duree: 0,Now sending on available Channels - PP index=16 value=0
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+1er lancement de cycle : calcul des cycles
+in calculPompe : temp Eau = 20.00
+   ==> donnees pour ce jour : startTime:11:0 , ceJour:11:49:0
+   ==> nouvelles donnees pour ce jour : duree pompe:12000, Interval:3270 et nbCycles=3
+calculs pompe principale duree: 12000, interval: 3270, nbcycles: 3
+demarrag==> Startingcipale for 200 mn
+   cycle en cours pompe en marche 
+  ==> temps restant pompe pe pompe, 1er pompe prinrincipale:2counter_Filtration:5)
+ cycle:1
+ 00 (durreePompe:12000, Now sending on available Channels - PP index=16 value=200
+Now sending on available Channels - PP index=16 value=200
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+Check Alerts
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+   cycle en cours pompe en marche 
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+  ==> temps restant pompe principale:199 (durreePompe:12000, counter_Filtration:65)
+Now sending on available Channels - PP index=16 value=199
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+<< Check PH >>
+       PH_sensor val is : 555 and phValue is -0.046888
+           CalculPH val is : 655.000000
+    ==> PH VALUE FLOAT avec moyenne sur les dernieres valeurs avant Calibration IS : 655.00
+             calcul avec PH7 (0.0260) et PH4 (-1.2460)
+    ==>>>   PH VALUE FLOAT APRES Calibration IS : 1593.11
+ AL is :28238
+  !!!   P      indPHVH adjustment will only start 30 minutes after start in 29 minutes from now
+<< Check CL >>
+       Redox_sensor val is : 740 and RedoxValue is 1697.203491
+           CalculRedox val is :EDOX VALUE avec moyenne sur les dernieres valeurs avant Calibration IS : 1697.00
+               calcul avec juste RedoxHIGH, delta: -1140.5000    ==>>>   REDOX VALUE APRES calibration
+       in IS : 556.50 :556
+  PHvalue (1593.10
+
+    ==> Rut of bounds, can't set CL at this time CL is -1       indCLVAL is :-100
+  !!!   Exceptional CL adjustment will only start 30 minutes after08276) is o 1697.00000dRedoxVAL is start in 29 minutes from now
+Check Alerts
+Now sending on available Channels - clVal index=8 value=-100
+Now sending on available Channels - redoxVal index=7 value=556
+Now sending on available Channels - phVal index=6 value=28238
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+   cycle en cours pompe en marche 
+    Now sending hello message to Keyboard !
+ Now sending hello messa   ge to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+  ==> temps restant pompe principale:198 (durreePompe:12000, counter_Filtration:125)
+Now sending on available Channels - PP index=16 value=198
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+Check Alerts
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+   cycle en cours pompe en marche 
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+  ==> temps restant pompe principale:197 (durreePompe:12000, counter_Filtration:185)
+Now sending on available Channels - PP index=16 value=197
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+Check Alerts
+    Now sending hello message to Keyboard !
+<< Check PH >>
+       PH_sensor val is : 307 and phValue is -0.945412
+           CalculPH val is : 654.500000
+    ==> PH VALUE FLOAT avec moyenne sur lant Calibrat valeurs avion IS : 654es dernieres.50
+             calcul avec PH7 (0.0260) et  FLOAT APRESPH4 (-1.246n IS : 1591.94
+       indPHVAL is :28122
+  !!!   PH adjus   PH VALUEtment will only start 30 minutes af Calibratio0)
+    ==>>>ter start in 27 minutes from now
+<< Check CL >>
+       Redox_sensor val is : 1111 and RedoxValue is 1339.440674
+           Ca.000000
+
+   VALUE avec moyenne sur les dernieres valeurs avant Calibration IS : 1518.00
+    l is : 1518 ==> REDOX lculRedox va           calcul avec juste RedoxHIGH, delta: -1140.5000    ==>>>   REDOX VALUE APRES calibration IS : 377.50
+       indRedoxVAL is :377
+  PHvalue (1591.944580) is out of bounds, can't set CL at this time CL is -1       indCLVAL is :-100
+  !!!   Exceptional CL adjustment will only start 30 minutes after start in 27 minutes from now
+Now Val index=8 value=-100available Channels - clsending on 
+Now sending on available Channels - redoxVal index=7 value=377
+Now sending on available Channels - phVal index=6 value=28122
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+   cycle en cours pompe en marche 
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+  ==> temps restant pompe principale:196 (durreePompe:12000, counter_Filtration:245)
+Now sending on available Channels - PP index=16 value=196
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+Check Alerts
+Check Temp Int
+Failed to read from DHT sensor!
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+   cycle en cours pompe en marche 
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+  ==> temps restant pompe principale:195 (durreePompe:12000, counter_Filtration:305)
+Now sending on available Channels - PP index=16 value=195
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+ to Keyboard !
+Check Alerts
+   Now sending hello message     Got (tempAdd) message from Web : source is : W, cmd is : A, size is re scan addn Temp OneWi: 0, message is : 
+  i : 
+  Capteur trouve ; Adresse : 28 FF 29 02 A0 16 03 16 
+ Storing Capteur Adressse in ind:3
+  Capteur trouve ; Adresse : 28 FF 5D 33 A0 16 05 7E 
+ Storing Capteur Adressse in ind:4
+    Now sending tempAdd message to Web with type 'A' size is 48!
+   getTempAdd size is 48 and All message is : 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 28, FF, 29, 02, A0, 16, 03, 16, 28, FF, 5D, 33, A0, 16, 05, 7E, 00, 00, 00, 00, 00, 00, 00, 00, 
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+<< Check PH >>
+       PH_sensor val is : 566 and phValue is -0.007034
+           CalculPH val is : 654.500000
+    ==> PH VALUE FLOAT avec moyenne sur les dernieres valeurs avant Calibration IS : 654.50
+             calcul avec PH7 (0.0260) et PH4 (-1.2460)
+    ==>>>   PH VALUE FLOAT APRES Calibrat  indPHVAL is :28122
+  !!!   PH adjustment will only start 30 minutes after start in 25 minutes from noion IS : 15L >>
+       Redox_sensor val is : 558 and RedoxValue is 1872.709717
+           CalculRedox val is : 1636.000000
+
+    ==> REDOX VALUE avec moyenne sur les dernie91.94
+     w
+<< Check Cres valeurs avant Calibration IS : 1636.00
+               calcul avec juste RedoxHIGH, delta  REDOX VALU: -1140.500E APRES calibration IS : 495.50
+       indRedoxVAL is :495
+  PHvalue80) is out of bounds, can't set CL at this time CL is -1       indCLVAL is :-100
+  !!!   Exceptional CL adjustment will only start 30 minutes after start in 25 minutes from now
+0    ==>>>  (1591.9445    Got (tempAdd) message from Web : source is : W, cmd is : A, size is : 0, message is : 
+  in Temp OneWire scan add : 
+  Capteur trouve ; Adresse : 28 FF 29 02 A0 16 03 16 
+ Storing Capteur Adressse in ind:3
+  Capteur trouve ; Adresse : 28 FF 5D 33 A0 16 05 7E 
+ Storing Capteur Adressse in ind:4
+    Now sending tempAdd message to Web with type 'A' size is 48!
+   getTempAdd size is 48 and All message is : 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 28, FF, 29, 02, A0, 16, 03, 16, 28, FF, 5D, 33, A0, 16, 05, 7E, 00, 00, 00, 00, 00, 00, 00, 00, 
+Now sending on available Channels - clVal index=8 value=-100
+Now sending on available Channels - redoxVal index=7 valuennels - phVal index=6 vending on a=495
+Now salue=28122vailable Cha
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+   cycle en cours pompe en marche 
+ e to Keyboard !
+ow sending h   Nello messag    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+  ==> temps restant pompe principale:194 (durreePompe:12000, counter_Filtration:365)
+Now sending on available Channels - PP index=16 value=194
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+Check Alerts
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+   cycle en cours pompe en marche 
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Got (tempAdd) message from Web : source is : W, cmd is : B, size is : 24, message is : 00, 00, 00, 00, 00, 00, 00, 00, 28, FF, 29, 02, A0, 16, 03, 16, 28, FF, 5D, 33, A0, 16, 05, 7E, 
+ Received New Sondes Temp ADD values !
+received data transformed addr is :
+         addr[0]:00 00 00 00 00 00 00 00 
+         addr[1]:28 F[2]:28 FF 56 03 16 
+         addr     addr[3]:00 00 00 00 00 00 00 00 
+       D 33 A0 16 05 7E 
+      addr[4]:00F 29 02 A0 1 00 00 00 00 00 00 00 
+         addr[5]:00 00 00 00 00 00 00 00 
+Check Temp Eau
+Check Temp PAC
+Check Temp Eau
+Check Temp PAC
+Now sending on available Channels - tempPAC index=4 value=2218
+Now sending on available Channels - tempEau index=2 value=2193
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Got (etalonWeb) message from Web : source is : W, cmd is : E, size is : 100, message is : 7B, 22, 63, 6F, 6D, 6D, 61, 6E, 64, 65, 22, 3A, 22, 63, 61, 6E, 63, 65, 6C, 53, 63, 61, 6E, 22, 2C, 22, 74, 79, 70, 65, 22, 3A, 22, 50, 48, 22, 7D, 00, FF, 3F, 14, 640, 00, 00, 0, 00, 00, 00, 02, 00, 0, FF, 3F, 000, 00, 00, D0, 12, FF, 3F, 98, 32, 00, 00, 53, 06, 00, 00, DC, 88, FE, 3F, DA, 0C, 10, 40, BC, 66, FF, 3F, 00, 00, 00, 00, 00, 00, 00, 00, 53, 06, 00, 00, 74, 95, FF, 3F, 05, 00, 00, 00, 00, 
+{"commande":"cancelScan","type":"PH"}
+    Got (etalonWeb) message from Web : source is : W, cmd is : E, size is : 100, message is : 7B, 22, 63, 6F, 6D, 6D, 61, 6E, 64, 65, 22, 3A, 22, 63, 61, 6E, 63, 65, 6C, 53, 63, 61, 6E, 22, 2C, 22, 74, 79, 70, 65, 22, 3A, 22, 52, 65, 64, 6F, 78, 22, 7D, 00, C2, FF, 3F, 70, 34, 10, 40, 00, C2, FF, 3F, 22, 00, 00, 00, 20, 13, FF, 3FDC, 88, FE, 0, 00, F2, 07, 00, 00, , 90, 3F, 03F, DA, 0C,, 00, 00, 00 71, 21, 40 10, 40, F8,, 00, 00, 02, 07, 00, 00, 6C, A2, FF, 3F, 05,  00, 
+{"compe":"Redox"0, 00, 00, F00, 00, 00,}
+mande":"cancelScan","ty    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+  ==> temps restant pompe principale:193 (durreePompe:12000, counter_Filtration:425)
+Nnnels - PP ow sending on aindex=16 valvailable Chaue=193
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+Check Alerts
+    Now sending hello message to Keyboard !
+   cycle en cours pompe en marche 
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+<< Check PH >>
+       PH_sensor val is : 468 and phValue is -0.313760
+           CalculPH val is : -0.313760
+    ==> PH VALUE FLOAT avec moyenne sur les dernieration IS : res valeurs avant Calib         cal-0.31
+    cul avec PH7 (0.0260) et PH4 (-1.2460)
+    ==>>>   PH VALUE FLOAT APRES Calibration IS : 6.29
+       indPHVAL is :628
+  !!!  inutes after start in 23 minutes from now
+<< Cnt will only
+       Redo PH adjustmex_sensor valnd RedoxValue is 1491.803223
+           Calcul start 30 m : 1491.803Redox val is is : 953 aheck CL >>> REDOX VALU223
+
+    ==E avec moyenne sur les dernieres valeurs avant Calibration IS : 1491.80
+               calcul avec juste RedoxHIGH, delta: -1140.5000    ==>>>   REDOX VALUE APRES calibration IS : 351.30
+       indRedoxVAL is :351
+  PHvalue (6.285373) is out of bounds, can't set CL at this time CL is -1       indCLVAL is :-100
+  !!!   Exceptional CL adjustment will only start 30 minutes after start in 23 minutes from now
+Now sending on available Channels - clVal index=8 value=-100
+Now sending on available Channels - redoxVal index=7 value=351
+Now sending on available Channels - phVal index=6 value=628
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+  ==> temps restant pompe principale:192 (durreePompe:12000, counter_Filtration:485)
+Now sending on available Channels - PP index=16 value=192
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+   cycle en cours pompe en marche 
+Check Alerts
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+  ==> temps restant pompe principale:191 (durreePompe:12000, counter_Filtration:545)
+Now sending on available Channels - PP index=16 value=191
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+   cycle en cours pompe en marche 
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+Check temp Eau PAC  
+ In doPAC temp Eau :  21.94  temp PAC :  22.19  temp Ext :  0.00  temp fixe :  26.00  temp rel :  -5.00  flag temp fixe :  Fixe
+Check Alerts
+Check Temp Int
+Failed to read from DHT sensor!
+Now sending on available Channels - PAC index=17 value=1
+    Now sending hello message to Keyboard !
+    Now s message to Keyboard !ending hello
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+<< Check PH >>
+       PH_sensor val is : 349 and phValue is -0.742076
+           CalculPH val is : -0.742076
+    ==> PH VALUE FLOAT avec moyenne sur les dernieres valeurs avant Calibration IS : -0.74
+             calcul avec PH7 (0.0260) et PH4 (-1.2460)
+    ==>>>   PH VALUE FLOAT APRES Calibration IS : 5.19
+       indPHVAL is :519
+  !!!   PH adjustment will only start 30 minutes after start in 21 minutes from now
+<< Check CL >>
+       Redox_sensor val is : 900 and RedoxValue is 1542.912231
+           CalculRedox val is : 1542.912231
+
+    ==> REDOX VALUE avec moyenne sur les dernieres valeurs avant Calibration IS : 1542.91
+               calcul avec juste RedoxHIGH, delta: -1140.5000    ==>>>   REDOX VALUE APRES calibration IS : 402.41
+       indRedoxVAL is :402
+  PHvalue (5.190163) is out of bounds, can't set CL at this time CL is -1       indCLVAL is :-100
+  !!!   Exceptional CL adjustment will only start 30 minutes after start in 21 minutes from now
+Now sending on available Channels - clVal index=8 value=-100
+Now sending on availabl=402
+Now sending on available Chane Channels -nels - phVal index=6 value=519
+dex=7 value redoxVal in    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now so message toending hell Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+  ==> temps restant pompe principale:190 (durreePompe:12000, counter_Filtration:605)
+Now sending on available Channels - PP index=16 value=190
+    Now sending hello message to Keyboard !
+   cycle en cours pompe en marche 
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+Check Alerts
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+   cycle en cours pompe en marche 
+  ==> temps restant pompe principale:189 (durreePompe:12000, counter_Filtration:665)
+Now sending on available Channels - PP index=16 value=189
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+Check Alerts
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Nod !
+ello message to Keyboarw sending h    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+<< Check PH >>
+       PH_sensor val is : 329 and phValue is -0.814062
+           CalculPH val is : -0.814062
+    ==> PH VALUE FLOAT avec moyenne sur les dernieres valeurs avant Calibration IS : -0.81
+             calcul avec PH7 (0.0260) et PH4 (-1.2460)
+    ==>>>   PH VALUE FLOAT APRES Calibration IS : 5.05
+       indPHVAL is :505
+  !!!   PH adjustment will only start 30 minutes after start in 19      Redox_sensor val is : 1039 and RedoxValue is 1408.871704
+           CalculRedox val iseck CL >>
+ 704
+
+    ==> REDOX VALUE avec moyenne sur les dm now
+<< Chernieres vaCalibration IS : 1408.87
+        leurs avant  : 1408.871 minutes fro       calcul avec juste RedoxHIGH, delta: -1140.5000    ==>>>   REDOX VALUE APRES calibration IS : 268.37
+       indRedoxVAL is :268
+  PHvalue (5.053261) is out of bounds, can't set CL at this time CL is -1       indCLVAL is :-100
+  !!!   Exceptional CL adjustment will only start 30 minutes after start in 19 minutes from now
+Now sending on available Channels - clVal index=8 value=-100
+Now sending on available Channels - redoxVal index=7 value=268
+Now sending on available Channels - phVal index=6 value=505
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+   cycle en cours pompe en marche 
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+  ==> temps restant pompe principale:188 (durreePompe:12000, counter_Filtration:725)
+Now sending on available Channels - PP index=16 value=188
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+Check Alerts
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+   cycle en cours pompe en marche 
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+  ==> temps restant pompe principale:187 (durreePompe:12000, counter_Filtration:785)
+Now sending on available Channels - PP index=16 value=187
+ Keyboard !
+ message to    Now sending hello    Now sending hello message to Keyboard !
+    Now sending hello meboard !
+ssage to Key    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+Check Alerts
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+   cycle en cours pompe en marche 
+<< Check PH >>
+       PH_sensor val is : 652 and phValue is 0.348509
+           CalculPH val is : 0.348509
+    ==> PH VALUE FLOAT avec moyenne sur les dernieres valeurs avant Calibration IS : 0.35
+             calcul avec PH7 (0.0260) et PH4 (-1.2460)
+    ==>>>   PH VALUE FLOAT APRES Calibrati779
+  !!!   9
+       inPH adjustment will onlydPHVAL is :on IS : 7.7 start 30 minutes after start in 17 minutes from now
+<< Check CL >>
+       Redox_sensor val is : 974 and RedoxValue is 1471.552612
+           CalculRedox val is : 1471.552612
+
+    ==> REDOX VALUE avec moyenne sur les dernieres valeurs avant Calibration IS : 1471.55
+               calcul avec juste RedoxHIGH, delta: -1140.5000    ==>>>   REDOX VALUE APRES calibration IS : 331.05
+       indRedoxVAL is :331
+    ==>>>   CL VALUE IS : 0.100000, with indPH=13 and indCL=0
+       indCLVAL is :10
+  !!!   Exceptional CL adjustment will only start 30 minutes after start in 17 minutes from now
+Now sending on available Channels - clVal index=8 value=10
+Now sending on available Channels - redoxVal index=7 value=331
+Now sending on available Channels - phVal index=6 value=779
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+  ==> temps restant pompe principale:186 (durreePompe:12000, counter_Filtration:845)
+Now sending on available Channels - PP index=16 value=186
+    Now sending hello message to Keyboard !
+    Now sending hello message t!
+o Keyboard     Now sending hello message to Keyboard !
+    Got message (time) from web : source is : W, cmd is : T, size is : 8, sizeof datastruc is 4 message is : 76, 161, 53, 104, 0, 0, 0, 0, 
+    Got new t27/05/55 11Value is -5:26:04, timeime message from Web : 530420344957591220
+    Sme message iending TimeClavier, Ti303248101708 and time i2
+Now sending on available Channels - EPOCH index=48 value=0
+ message to s : 7509085s 3543316091    Got message (hello) from Web : source is : W, cmd is : H, size is : 1, sizeof datastruc is 4 message is : 0, 
+    Now sending hello message to web !
+    Got message (hello) from Web : source is : W, cmd is : H, size is : 1, sizeof datastruc is 4 message is : 0, 
+    Now sending hello message to web !
+    Got message (hello) from Web : source is : W, cmd is : H, size is : 1, si, 
+    Now sage is : 0zeof datastruc is 4 messending hello message to web !
+    Now sending hello message to Keyboard !
+    Got message (hello) from Web : source is : W, cmd is : H, size is : 1, sizeof datastruc is 4 message is : 0, 
+    Now sending hello message to web !
+    Got s : W, cmd is : H, sizemessage (hello) from Web : source i is : 1, sizeof datastruc is 4 message is : 0, 
+    Now sending hello message to web !
+    Got message (hello) from Web : source is : W, cmd is : H, size is : 1, sizeof datastruc is 4 message is : 0, 
+    Now sending hello message to web !
+    Got message (hello) from Web : source is : W, cmd is : H, size is : 1, sizeof datastruc is 4 message is : 0, 
+    Now sending hello message to web !
+    Got (synch) message from web : source is : W, cmd is : S, size is : 1, sizeof datastruc is 4 message is : F
+    Now sending synch message to Web with type sync is F !
+    Got (synch) message from web : source is : W, cmd is : S, size is : 1, sizeof datastruc is 4 message is : F
+    Now sending synch message to Web with type sync is F !
+    Got (synch) message from web : source is : W, cmd is : S, size is : 1, sizeof datastruc is 4 message is : F
+    Now sending synch message to Web with type sync is F !
+    Got (s : W, cmd is : S, sizeb : source isynch) message from we is : 1, sizeof datastruc is 4 message is : F
+    Now sending synch message to Web with type sync is F !
+    Got (synch) message from web : source is : W, cmd is : S, size is : 1, sizeof datastruc is 4 message is : F
+    Now sending synch message to Web with type sync is F !
+    Got (synch) message from web : source is : W, cmd is : S, size eof datastris : 1, sizding synch message to Web with type sync is F !
+uc is 4 message is : F
+    Now sen  : source is : W, cmd is : S, size    Got (synch) message from webis : 1, sizeof datastruc is 4 message is : F
+    Now sending synch message to Web with type sync is F !
+    Now sending hello message to Keyboard !
+Check Alerts
+Check Temp Int
+Failed to read from DHT sensor!
+Check Temp Ext
+Failed to read from AIR temp sensor ! (bad addressp Eau
+)
+Check TemCheck Temp PAC
+Check Temp Ext
+Failed to read from AIR temp sensor ! (bad address)
+Check Temp Eau
+Check Temp PAC
+Now sending on available Channels - tempPAC index=4 value=2225
+Now sending on available Channels - tempEau index=2 value=2206
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Got message (time) from web : source is : W, cmd is : T, size is : 8, sizeof datastruc is 4 message is : 101, 161, 53, 104, 0, 0, 0, 0, 
+    Got new time message from Web : 27/05/55 11:26:29, timeValue is -5530420344957591195
+    Sending Time message to Clavier, Time message is : 7509085410622284133 and time is 35433160912
+Now sending on available Channels - EPOCH index=48 value=0
+    Got message (hello) from Web : source is : W, cmd is : H, size is : 1, sizeof datastruc is 4 message is : 0, 
+    Now sending hello message to Now sending hello message to Keybo web !
+   ard !
+    Got message (hello) from Web : source is : W, cmd is : H, size is : 1, sizeof datastruc is 4 message is : 0, 
+    Now sending hello message to web !
+    Got message (hello) from Web : source is : W, cmd is : H, size is : 1, sizeof datastruc is 4 message is : 0, 
+    Now sending hello message to web !
+    Got message (hello) from Web : source is : W, cmd is : H, size is : 1, sizeof datastruc is 4 message is : 0, 
+    Now sending hello message to web !
+    Got message (hello) from Web : source is : W, cmd is : H, size is : 1, sizeof datastruc is 4 message is : 0, 
+    Now sending hello message to web !
+    Got message (hello) from Web : source is : W, cmd is : H, size is : 1, sizeof datastruc is 4 message is : 0, 
+    Now se message to nding helloweb !
+ : source is : W, cmd is : H, size is : 1, sizeof datastruc is 4 message is : 0, 
+    Now sending hello message to web !
+o) from Web    Got message (hell    Got message (hello) from Web : source is : W, cmd is : H, size is : 1, sizeof datastruc is 4 message is : 0, 
+    Now sending hello message to web !
+    Got message (hell: source is : W, cmd is : H, size is : 1, sizec is 4 messao) from Web of datastruge is : 0, 
+    Now sending hello message to web !
+    Got message (hello) from Web : source is : W, cmd is : H, size is : 1, sizeof datastruc is 4 message is : 0, 
+    Now sending hello message to web !
+    Got (synch) message from web : source is : W, cmd is : S, size is : 1, sizeof datastruc is 4 message is : F
+    Now sending synch message to Web with type sync is F !
+    Got (synch) message from web : source is : W, cmd is : S, size is : 1, sizeof datastruc is 4 message is : F
+    Now sending synch message to Web with type sync is F !
+    Got (synch) message from web : source is : W, cmd is : S, size is : 1, sizeof datastruc is 4 messa   Now sending synch message to Web with type sync is F !
+    Now sending hello message to Keyboard !
+ge is : F
+     Got (synch) message from web : source is : W, cmd is : S, size is : 1, sizeof datastruc is 4 message is : F
+    Now sending synch message to Web with type sync is F !
+    Got (s: W, cmd is : S, size is : 1, sizeoe from web  is 4 message is : F
+ : source is    Now sending synch message to Web with type sync is F !
+f datastrucynch) messag    Got (synch) message from web : source is : W, cmd is : S, size is : 1, sizeof datastruc is 4 message is : F
+    Now sending synch message to Web with type sync is F !
+    Got (synch) message from web : source is : W, cmd is : S, size is : 1, sizeof datastruc is 4 message is : F
+    Now sending synch message to Web with type sync is F !
+   cycle en cours pompe en marche 
+    Got (synch) message from web : source is : W, cmd is : S, size is : 1, sizeof datastruc is 4 message is : F
+    Now sending synch message to Web with type sync is F !
+    Got (synch) message from web :: S, size i: W, cmd is s : 1, sizeo source is f datastruc is 4 message is : F
+    Now sending synch message to Web with type sync is F !
+    Got (synch) message from web : source is : W, cmd is : S, size is : 1, sizeof datastruc is 4 message is : F
+    Now sending synch message to Web with type sync is F !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+  ==> temps restant pompe principale:185 (durreePompe:12000, counter_Filtration:903)
+Now sending on available Channels - PP index=16 value=185
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+Check Alerts
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+   cycle en cours pompe en marche 
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+<< Check PH >>
+       PH_sensor val is : 415 and phValue is -0.501345
+           CalculPH val is : -0.501345
+    ==> PH VALUE FLOAT avec moyenne sur les dernieres valeurs avant Calibration IS : -0.50
+             calcul avec PH7 (0.0260) et PH4 (-1.2460)
+    ==>>>   PH VALUE FLOAT APRES Calibration IS : 5.81
+       indPHVAL is :580
+  !!!   PH adjustment will only start 30 minutes after start in 15 minutes from now
+<< Check CL >>
+       Redox_sensor val is : 987 and RedoxValue is 1459.016357
+           CalculRedox val is : 1459.016357
+
+    ==> REDOX VALUE avec moyenne sur les dernieres valeurs avant Calibration IS : 1459.02
+               calcul avec juste RedoxHIGH, delta: -1140.5000    ==>>>   REDOX VALUE APRES calibration IS : 318.52
+       indRedoxVAL is :318
+  PHvalue (5.806219) is out of bounds, can't set CL at this time CL is -1       indCLVAL is :-100
+  !!!   Exceptional CL adjustment will only start 30 minutes after start in 15 minutes from now
+Now sending on available Channels - clVal index=8 value=-100
+Now sending on available Channels - redoxVal index=7 value=318
+Now sending on available Channels - phVal index=6 value=580
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+  ==> temps restant pompe principale:184 (durreePompe:12000, counter_Filtration:963)
+Now sending on available Channels - PP index=16 value=184
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !
+    Now sending hello message to Keyboard !

@@ -1,0 +1,28 @@
+{
+  "adminPassword": "manager",
+  "users":[		
+    	{ "name": "ludovic", "password": "Ludovic"}
+  ],
+  "wifi":[		
+    	{ "ssid": "SFR_2E48", "password": "rsionardishoodbe2rmo"},        ; in APssid , APpassword vars
+	    { "ssid": "SFR_2E48_EXT", "password": "rsionardishoodbe2rmo"}
+  ],
+  "solarEdge":"8INR9G7TVYP03QAMRMNKJYRNN0MTVJSQ",   ; get api key from solaredge portal in solarEdgeApiKey var
+  "parametres": {
+      "volumeBallon" : 150,         ; volume du ballon en litres in volumeBallon var
+      "puissanceBallon": 1500,      ; puissance de la resistance du chauffe-eau in resistance var
+      "heureBackup" : "20:00",      ; heure:minute début marche forcée in heureOnMarcheForcee;minuteOnMarcheForcee vars
+      "tempEauMin" : 50,            ; réglage de la température minimale de l'eau en marche forcée in temperatureEauMin var
+      "secondBackup" : false,       ; si marche forcee secondaire dans la journee in marcheForceeSec var
+      "heureSecondBackup": "20:00", ; heure début marche forcée sec in heureOnMarcheForceeSec:minuteOnMarcheForceeSec var
+      "sondeTemp" : false,          ; si sonde DS18B20 in sondeTemp var
+      "pacPresent" : true,          ; si relay pour la PAC in relayPAC var
+      "puissancePac": 1000,         ; Puissance de la PAC in puissancePAC var
+      "puissPacOn" : 1000,          ; puissance du surplus pour déclencher le relay in relayPACOn var
+      "puissPacOff" : 800,          ; puissance du surplus pour stopper le relay in relayPACOff var
+      "tempsOverProd" : 900,        ; 900=15*60 ou DEBUG 1*60 : temps en sec d'overproduction avant de passer en PAC on si assez de puissance (relayOn) in tempsOverP var
+      "tempsMinPac" : 7200,         ; 7200=2*3600 ou DEBUG 2*60 : si PAC en Marche au moins 2h de marche même si pas assez de puissance in tempsMinPAC var
+      "afficheur" : true,           ; on-off de l'ecran in oled var
+      "motionSensor" : true         ; si module de detection in motionSensor var
+    }
+}

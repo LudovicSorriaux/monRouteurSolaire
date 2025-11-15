@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!--
+  Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
+      https://cordova.apache.org/docs/en/latest/
+  Some notes:
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+      * Enable inline JS: add 'unsafe-inline' to default-src
+  -->
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: content:">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+
+  <meta name="theme-color" content="#fff">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <title>Routeur Solaire</title>
+  
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <link rel="apple-touch-icon" href="icons/032-domotics.png">
+  <link rel="icon" href="icons/047-smarthouse.png">
+  
+<!-- build:css style.css -->
+  <link rel="stylesheet" href="css/framework7-bundle.css">
+  <link rel="stylesheet" href="css/icons.css">
+  <link rel="stylesheet" href="css/app.css">
+
+	<link rel="stylesheet" href="/css/jqm-fluid960.min.css" />	
+  <link rel="stylesheet" href="css/arrow.css">
+  <link rel="stylesheet" href="css/switch.css"/>
+  <link rel="stylesheet" href="css/flipswitch.css"/>
+  <link rel="stylesheet" href="css/led.css"/>
+<!-- endbuild -->
+
+
+</head>
+<body class="dark" > <!-- class="dark" -->
+  <div id="app">
+    <!-- Left panel with cover effect-->
+    <div class="panel panel-left panel-cover dark panel-init" id="panel-on-left">
+      <div class="view">
+        <div class="page">
+          <div class="navbar">
+            <div class="navbar-bg"></div>
+            <div class="navbar-inner">
+              <div class="title">Left Panel</div>
+            </div>
+          </div>
+          <div class="page-content">
+            <div class="block">Left panel content goes here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Right panel with reveal effect-->
+    <div class="panel panel-right panel-reveal dark" id="panel-on-right">
+      <div class="view">
+        <div class="page">
+          <div class="navbar">
+            <div class="navbar-bg"></div>
+            <div class="navbar-inner">
+              <div class="title">Options</div>
+            </div>
+          </div>
+          <div class="page-content">
+            <div class="list list-strong inset list-dividers-ios simple-list">
+              <ul>
+                <li><a href="/about/" class="item-content panel-close" data-view="current" >
+                  <div class="item-inner">About</div>
+                </a></li>
+                <li><a href="/params/" class="item-content panel-close" data-view="current" >
+                  <div class="item-inner">Paramètres</div>
+                </a></li>
+              </ul>  
+            </div>
+            <div class="block">
+              <div class="list list-strong inset list-dividers-ios simple-list">
+                <ul>
+                  <li><a href="#" class="popup-open" data-popup="#logoff-popup">Logoff</a></li>
+                  <li><a href="#" class="popup-open" data-popup="#addUsr-popup">Add User</a></li>
+                  <li><a href="#" class="popup-open" data-popup="#deleteUsr-popup">Delete User</a></li>
+                  <li><a href="#" class="popup-open" data-popup="#adminUsrPasswd-popup">Admin Passwd</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="list list-strong inset list-dividers-ios simple-list">
+              <ul>
+                <li><a href="#" class="panel-close">Close panel</a></li>
+              </ul>  
+            </div>  
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Your main view, should have "view-main" class -->
+    <div class="view view-init view-main safe-areas" id="view-main">
+      <div class="page" data-name="home">
+        <!-- Top Navbar -->
+        <div class="navbar">
+          <div class="navbar-bg"></div>
+          <div class="navbar-inner">
+<!--            <div class="left">
+              <a href="#" class="link icon-only panel-open" data-panel="left">
+                <i class="icon f7-icons if-not-md">menu</i>
+                <i class="icon material-icons if-md">menu</i>
+              </a>
+            </div>
+-->
+            <div class="right">
+              <a href="#" class="link icon-only panel-open" data-panel="right">
+                <i class="icon f7-icons if-not-md">menu</i>
+                <i class="icon material-icons if-md">menu</i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Toolbar-->
+  <!--      <div class="toolbar toolbar-bottom">
+          <div class="toolbar-inner">
+            <a href="#" class="link">Left Link</a>
+            <a href="#" class="link">Right Link</a>
+          </div>
+        </div>
+  -->
+        <!-- Scrollable page content-->
+        <div class="page-content">
+          <div class="block">
+            <div class="container_12">
+              <div class="grid_9">
+                <h1 class="myh1">Routeur Solaire</h1>
+              </div>
+              <div id="mainIconDiv">
+                <div class="grid_2 suffix_1" typeIcon="sad" id="mainIcon" style="margin-top: 15px;">
+                  <svg height="50px" width="50px" style="color: orangered;" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M32 2C15.428 2 2 15.428 2 32s13.428 30 30 30s30-13.428 30-30S48.572 2 32 2zm0 57.5C16.836 59.5 4.5 47.164 4.5 32S16.836 4.5 32 4.5c15.163 0 27.5 12.336 27.5 27.5c0 1.357-.103 2.69-.294 3.996c-.838-5.66-5.69-10.766-5.69-10.766s-5.828 6.113-5.828 12.375c0 6.353 6.393 7.996 9.708 4.937C53.251 52.488 43.431 59.5 32 59.5z" fill="currentColor"/>
+                    <path d="M21.992 21.58c.541-.469-.971-2.061-1.414-1.674a14.232 14.232 0 0 1-11.693 3.133c-.578-.113-1.088 2.021-.385 2.156a16.417 16.417 0 0 0 13.492-3.615m23.121 1.307c-4.168.748-8.455-.4-11.691-3.133c-.443-.389-1.955 1.205-1.412 1.674a16.418 16.418 0 0 0 13.492 3.615c.703-.135.191-2.27-.389-2.156M38.074 47.33c-5.766-1.549-12.049-.428-16.93 3.014c-1.205.869 1.053 4.027 2.252 3.152c3.223-2.268 8.352-3.834 13.66-2.432c1.423.377 2.536-3.308 1.018-3.734" fill="currentColor"/>
+                    <circle cx="38.498" cy="35" fill="currentColor" r="5"/>
+                    <circle cx="15.498" cy="35" fill="currentColor" r="5"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="routeur-container">
+            <div id="routeurImgDiv">
+              <div class="smallFillContent" item="maison">
+                <label for="maison" class="normalLabel center">Maison (kW)</label>
+                <input type="text" value="23.45" id="maison" class="smallTextInput rouge center" maxlength="5" readonly style="font-size: 1.3em !important">
+              </div>
+              <img src = 'img/routeur.png' />
+              <div id="pnxArrowDiv">
+                <div class="arrow" id="pnxArrow" item="pnx" sens="right" color="green">
+                  <span></span><span></span><span></span>
+                </div>
+              </div>
+              <div class="smallFillContent" item="pnx">
+                <label for="pnx" class="normalLabel" >Pnx (kW)</label>
+                <input type="text" value="23.45" id="pnx" class="smallTextInput vert right" maxlength="5" readonly>
+              </div>
+              <div id="edfArrowDiv">
+                <div class="arrow" id="edfArrow" item="edfConso" sens="left" color="red">
+                  <span></span><span></span><span></span>
+                </div>
+              </div>
+              <div class="smallFillContent" item="edf">
+                <label for="edf" class="normalLabel" >EDF (kW)</label>
+                <input type="text" value="23.45" id="edf" class="smallTextInput rouge right" maxlength="5" readonly>
+              </div>
+            </div>
+            <div class="routeurBalonDiv" id="ballonDiv">
+              <div class="smallFillContent" item="ballon">
+                <label for="ballon" class="smallLabel" style="width:60px;text-align:center">Dispo Ballon (W)</label>
+                <input type="text" value="23.45" id="ballon" class="smallTextInput bleu right" maxlength="5" style="width:3.5em" readonly>
+              </div>
+              <div class="smallFillContent" item="tempEau" id="tempEauDiv">
+                <label for="tempEau" class="smallLabel" style="width:60px;text-align:center">Temp. Eau Ballon (C)</label>
+                <input type="text" value="43.4" id="tempEau" class="smallTextInput gris center" maxlength="5" style="width:3.5em" readonly>
+              </div>
+              
+              <img src = 'img/ballon.png' />
+              <div class="arrow" item="ballon" sens="left" color="blue">
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+            <div class="routeurPACDiv" id="PACDiv">
+              <img src = 'img/pac.png' />
+              <div class="arrow" item="pac" sens="right" color="blue">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="smallFillContent" item="pac">
+                <label for="pac" class="smallLabel" style="width:50px;text-align:center">Dispo PAC (W)</label>
+                <input type="text" value="23.45" id="pac" class="smallTextInput bleu right" maxlength="5" readonly>
+              </div>
+            </div>
+          </div>
+          
+          <div class="controles-container block block-strong block-outline inset">
+            <div class="display-flex flex-direction-row justify-content-space-around align-content-stretch align-items-stretch">
+              <div class="display-flex flex-direction-column justify-content-center align-content-stretch align-items-stretch">
+                <label for="marcheForceLed" class="mySmallLabel center">Marche Forcé</label>
+								<i class="led ledVert ledOn" id="marcheForceLed"></i>
+              </div>				
+              <div class="display-flex flex-direction-column justify-content-center align-content-stretch align-items-stretch">
+                <label for="modeManuLed" class="mySmallLabel center">Mode Manuel</label>
+								<i class="led ledRouge ledOn" id="modeManuLed"></i>
+              </div>				
+              <div class="display-flex flex-direction-column justify-content-center align-content-stretch align-items-stretch" id="chauffeEauSWDiv">
+                <label for="chauffeEauSW" class="mySmallLabel center">Chauffe Eau</label>
+                <div class="switch align-self-center" id="chauffeEauSW">
+                  <input type="checkbox" name="chauffeEau" id="chauffeEauSwitch">
+                  <label for="chauffeEau" class="switchLabel switchUnchecked">
+                    <i class="switchUnchecked"></i>
+                  </label>
+                  <span class="switchUnchecked"></span>
+                </div>
+              </div>				
+              <div class="display-flex flex-direction-column justify-content-center align-content-stretch align-items-stretch" id="pacSWDiv">
+                <label for="pacSW" class="mySmallLabel center">Pompe Chaleur</label>
+                <div class="switch align-self-center" id="pacSW">
+                  <input type="checkbox" name="pac" id="pacSwitch">
+                  <label for="pac" class="switchLabel switchUnchecked">
+                    <i class="switchUnchecked"></i>
+                  </label>
+                  <span class="switchUnchecked"></span>
+                </div>
+              </div>				
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+      <!-- Popups -->
+      <div class="popup" id="logoff-popup" data-name="logoff" data-close-on-escape="true" data-swipe-to-close="to-bottom" >
+        <div class="view">
+          <div class="page">
+            <div class="navbar">
+              <div class="navbar-bg"></div>
+              <div class="navbar-inner">
+                <div class="title">Log Off</div>
+                <div class="right">
+                  <a href="#" class="link popup-close">Close</a>
+                </div>
+              </div>
+            </div>
+            <div class="page-content">
+              <div class="block">
+                <div class="myform mypanel">
+                  <h1 class="myh1" id="pageRegisterTitle">LogOff</h1>
+                  <div class="block">
+                    <p class="myh4">Are you sure you want to disconnect ? </p>
+                    <div class="display-flex flex-direction-row justify-content-space-around align-content-stretch align-items-flex-start">
+                      <a href="#" id="logoffButton" class="button button-raised button-fill button-round popup-close "> LogOff </a>
+                      <a href="#" class="button button-raised button-fill button-round popup-close"> Cancel </a>
+                    </div>  
+                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>  <!-- page Logoff -->
+
+      <div class="popup" id="addUsr-popup" data-name="addUsr" data-close-on-escape="true" data-swipe-to-close="to-bottom" >
+        <div class="view">
+          <div class="page">
+            <div class="navbar">
+              <div class="navbar-bg"></div>
+              <div class="navbar-inner">
+                <div class="title">Add User</div>
+                <div class="right">
+                  <a href="#" class="link popup-close">Close</a>
+                </div>
+              </div>
+            </div>
+            <div class="page-content">
+              <div class="block">
+                <div class="myform mypanel">
+                  <h1 class="myh1" id="pageRegisterTitle">Register new User</h1>
+                  <form id="addUsr-form">
+                    <input type="hidden" id="flgLogin" name="flgLogin" value="true">  
+                    <div class="list list-strong-ios list-dividers-ios inset-ios">
+                      <ul>
+                        <li class="item-content item-input item-input-outline">
+                          <div class="item-media">
+                            <i class="icon demo-list-icon"></i>
+                          </div>
+                          <div class="item-inner">
+                            <div class="item-title item-floating-label">User Name</div>
+                            <div class="item-input-wrap">
+                              <input type="text" name="newusername" class="myinput" id="newname" placeholder="Your name" required validate>
+                              <span class="input-clear-button"></span>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="item-content item-input item-input-outline">
+                          <div class="item-media">
+                            <i class="icon demo-list-icon"></i>
+                          </div>
+                          <div class="item-inner">
+                            <div class="item-title item-floating-label">Password</div>
+                            <div class="item-input-wrap">
+                              <input type="password" name="newpassword" class="myinput" id="newpassword" placeholder="Enter password"required validate pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?!.* ).{8,16}$" data-error-message="8 to 16 chars nbr,cap,minus please!" />
+                              <span class="input-clear-button"></span>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="item-content item-input item-input-outline">
+                          <div class="item-media">
+                            <i class="icon demo-list-icon"></i>
+                          </div>
+                          <div class="item-inner">
+                            <div class="item-title item-floating-label">Password Check</div>
+                            <div class="item-input-wrap">
+                              <input type="password" name="newpassword2" class="myinput" id="newpassword2" placeholder="Re Enter your password" required validate pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?!.* ).{8,16}$" data-error-message="8 to 16 chars nbr,cap,minus please!" />
+                              <span class="input-clear-button"></span>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="item-content item-input item-input-outline">
+                          <div class="item-media">
+                            <i class="icon demo-list-icon"></i>
+                          </div>
+                          <div class="item-inner">
+                            <div class="item-title item-floating-label">Admin Password</div>
+                            <div class="item-input-wrap">
+                              <input type="password" name="adminpassword" class="myinput" id="adminpassword" placeholder="Enter Admin Password" required validate  />
+                              <span class="input-clear-button"></span>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="display-flex flex-direction-row justify-content-space-around align-content-stretch align-items-flex-start">
+                      <a href="#" id="addUsr" class="button button-raised button-fill button-round"> Add User and connect </a>
+                      <a href="#" class="button button-raised button-fill button-round popup-close"> Cancel </a>
+                    </div>  
+                  </form>
+                  <BR/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>  <!-- page Add User -->
+
+      <div class="popup" id="deleteUsr-popup" data-name="deleteUsr" data-close-on-escape="true" data-swipe-to-close="to-bottom" >
+        <div class="view">
+          <div class="page">
+            <div class="navbar">
+              <div class="navbar-bg"></div>
+              <div class="navbar-inner">
+                <div class="title">Delete User</div>
+                <div class="right">
+                  <a href="#" class="link popup-close">Close</a>
+                </div>
+              </div>
+            </div>
+            <div class="page-content">
+              <div class="block">
+                <div class="myform mypanel">
+                  <h1 class="myh1" id="pageRegisterTitle">Remove User(s)</h1>
+                  <form id="deleteUsr-form">
+                    <div class="list list-strong-ios list-dividers-ios inset-ios">
+                      <ul>
+                        <li class="item-content item-input item-input-outline">
+                          <div class="item-media">
+                            <i class="icon demo-list-icon"></i>
+                          </div>
+                          <div class="item-inner">
+                            <div class="item-title item-floating-label">Admin Password</div>
+                            <div class="item-input-wrap">
+                              <input type="password" name="adminpasswordDU" class="myinput" id="adminpasswordDU" placeholder="Enter Admin Password" required validate  />
+                              <span class="input-clear-button"></span>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="list list-strong-ios list-outline-ios list-dividers-ios inset-ios">
+                      <ul id="usersList">
+                      </ul>  
+                    </div>  
+                    <div class="display-flex flex-direction-row justify-content-space-around align-content-stretch align-items-flex-start">
+                      <a href="#" id="deleteUsr" class="button button-raised button-fill button-round"> Delete Selected Users </a>
+                      <a href="#" class="button button-raised button-fill button-round popup-close"> Cancel </a>
+                    </div>  
+                  </form>
+                  <BR/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>  <!-- page Delete User -->
+
+      <div class="popup" id="adminUsrPasswd-popup" data-name="adminUsrPasswd" data-close-on-escape="true" data-swipe-to-close="to-bottom" >
+        <div class="view">
+          <div class="page">
+            <div class="navbar">
+              <div class="navbar-bg"></div>
+              <div class="navbar-inner">
+                <div class="title">Add User</div>
+                <div class="right">
+                  <a href="#" class="link popup-close">Close</a>
+                </div>
+              </div>
+            </div>
+            <div class="page-content">
+              <div class="block">
+                <div class="myform mypanel">
+                  <h1 class="myh1" id="pageRegisterTitle">Change admin's Password</h1>
+                  <form id="adminUsrPasswd-form">
+                    <div class="list list-strong-ios list-dividers-ios inset-ios">
+                      <ul>
+                        <li class="item-content item-input item-input-outline">
+                          <div class="item-media">
+                            <i class="icon demo-list-icon"></i>
+                          </div>
+                          <div class="item-inner">
+                            <div class="item-title item-floating-label">Old Admin Password</div>
+                            <div class="item-input-wrap">
+                              <input type="password" name="adminpassword" class="myinput" id="oldadminpasswd" placeholder="Enter Old Admin Password" required validate pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?!.* ).{8,16}$" data-error-message="8 to 16 chars nbr,cap,minus please!">
+                              <span class="input-clear-button"></span>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="item-content item-input item-input-outline">
+                          <div class="item-media">
+                            <i class="icon demo-list-icon"></i>
+                          </div>
+                          <div class="item-inner">
+                            <div class="item-title item-floating-label">New Admin Password</div>
+                            <div class="item-input-wrap">
+                              <input type="password" name="newadminpassword" class="myinput" id="newadminpassword" placeholder="Enter new Admin Password" required validate pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?!.* ).{8,16}$" data-error-message="8 to 16 chars nbr,cap,minus please!" />
+                              <span class="input-clear-button"></span>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="item-content item-input item-input-outline">
+                          <div class="item-media">
+                            <i class="icon demo-list-icon"></i>
+                          </div>
+                          <div class="item-inner">
+                            <div class="item-title item-floating-label">New Admin Password Check</div>
+                            <div class="item-input-wrap">
+                              <input type="password" name="passwordchk" class="myinput" id="adminpasswordchk" placeholder="Re Enter your password" required validate pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?!.* ).{8,16}$" data-error-message="8 to 16 chars nbr,cap,minus please!" />
+                              <span class="input-clear-button"></span>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="display-flex flex-direction-row justify-content-space-around align-content-stretch align-items-flex-start">
+                      <a href="#" id="adminUsrPasswd" class="button button-raised button-fill button-round"> Change Admin Password </a>
+                      <a href="#" class="button button-raised button-fill button-round popup-close"> Cancel </a>
+                    </div>  
+                  </form>
+                  <BR/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>  <!-- page admin Usr Passwd -->
+
+      <div class="popup" id="EndSession-popup" data-name="EndSession" data-close-on-escape="true" data-swipe-to-close="to-bottom" >
+        <div class="view">
+          <div class="page">
+            <div class="navbar">
+              <div class="navbar-bg"></div>
+              <div class="navbar-inner">
+                <div class="title">Session End</div>
+                <div class="right">
+                  <a href="#" class="link popup-close">Close</a>
+                </div>
+              </div>
+            </div>
+            <div class="page-content">
+              <div class="block">
+                <h1 class="myh1">ALERT !</h1>
+                <div class="block grid grid-cols-1 grid-gap">
+                  <div class="block">
+                    <p class="myh4">Your Session has Expired, Need to login again</p>
+                    <a href="#" class="button button-raised button-fill button-round popup-close"> Login Again </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- End Session Alert -->
+
+      <div class="popup" id="Erreur-popup" data-name="Erreur" data-close-on-escape="true" data-swipe-to-close="to-bottom" >
+        <div class="view">
+          <div class="page">
+            <div class="navbar">
+              <div class="navbar-bg"></div>
+              <div class="navbar-inner">
+                <div class="title">Erreur</div>
+                <div class="right">
+                  <a href="#" class="link popup-close">Close</a>
+                </div>
+              </div>
+            </div>
+            <div class="page-content">
+              <div class="block">
+                <h1 class="myh1">ERREUR !</h1>
+                <div class="block">
+                  <div class="mypanel">
+                    <div id="Exception" class="display-flex flex-direction-row justify-content-center align-content-stretch align-items-stretch">
+                      <div style="margin:1em 0 0 0">Exception :</div>
+                      <input type="text" name="routeurException" class="myinput borderFeild" id="routeurException" placeholder="Status" style="width:20ch">
+                    </div>
+                    <div id="ErrorStatus" class="display-flex flex-direction-row justify-content-center align-content-stretch align-items-stretch">
+                      <div style="margin:1em 0 0 0">Erreur Status :</div>
+                      <input type="text" name="routeurErrorStatus" class="myinput borderFeild" id="routeurErrorStatus" placeholder="Status" style="width:20ch">
+                    </div>
+                    <div id="ErrorCorrection" class="display-flex flex-direction-row justify-content-center align-content-stretch align-items-stretch">
+                      <div style="margin:1em 0 0 0">Correction :</div>
+                      <input type="text" name="routeurErrorCorrection" class="myinput borderFeild" id="routeurErrorCorrection" placeholder="Correction" style="width:40ch">
+                    </div>
+                    <div class="display-flex flex-direction-row justify-content-center align-content-stretch align-items-stretch">
+                      <a href="javascript:window.history.go(-2);" class="button button-raised button-fill button-round"> OK </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- Error Dialog -->
+    
+      <!-- Login Screen -->
+      <div class="login-screen" id="my-login-screen">
+        <div class="view">
+          <div class="page login-screen-page" data-name="loginpage">
+            <div class="page-content login-screen-content">
+              <div class="block">
+                <div class="myform mypanel">
+                  <div class="login-screen-title myh1">Login</div>
+                  <!-- Login form -->
+                  <form id="my-login-form">
+                    <div class="list list-strong-ios list-dividers-ios inset-ios">
+                      <ul>
+                        <li class="item-content item-input item-input-outline">
+                          <div class="item-media">
+                            <i class="icon demo-list-icon"></i>
+                          </div>
+                          <div class="item-inner">
+                            <div class="item-title item-floating-label">User Name</div>
+                            <div class="item-input-wrap">
+                              <input type="text" name="username" id="thename" placeholder="Your name" required validate>
+                              <span class="input-clear-button"></span>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="item-content item-input item-input-outline">
+                          <div class="item-media">
+                            <i class="icon demo-list-icon"></i>
+                          </div>
+                          <div class="item-inner">
+                            <div class="item-title item-floating-label">Password</div>
+                            <div class="item-input-wrap">
+<!--
+                              <input type="password" name="password" id="thepassword" placeholder="Your password"required validate pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?!.* ).{8,16}$" data-error-message="8 to 16 chars nbr,cap,minus please!" />
+-->
+                              <input type="password" name="password" id="thepassword" placeholder="Your password"required validate pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{8,16}$" data-error-message="8 to 16 chars nbr,cap,minus please!" />
+                              <span class="input-clear-button"></span>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="block grid grid-cols-2 grid-gap">
+                      <a href="#" class="button button-raised button-fill button-round item-link list-button login-button"> LOGIN </a>
+                      <div>
+                        <label class="checkbox ">
+                          <input type="checkbox" name="keepAlive" id="keepAlive" checked/>
+                          <i class="icon icon-checkbox"></i>
+                        </label>
+                        <label for="keepAlive">KeepAlive</label>
+                      </div>
+                    </div>
+                  </form>
+                  <div class="login-or">
+                    <hr class="hr-or">
+                    <span class="span-or">or</span>
+                  </div>
+                  <div class="text-align-center">
+                    <a href="#" name="addUserButton" id="addUserButton" >Don't have account ?</a>
+                  </div>
+                </div>
+              </div>
+              <br/>
+              <div class="block-footer">
+                Password is between 8 to 16 Chars, with
+                <br/>
+                at least 1 Number, 1 Capital and 1 Minus char.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- Login Screen -->
+
+  </div>  <!-- APP -->
+
+<!-- build:js script.js -->
+  <!-- Framework7 library -->
+  <!-- <script src="js/framework7-bundle.min.js"></script> -->
+  <script src="js/framework7-bundle.js"></script>
+  <!-- App routes -->
+  <script src="js/routes.js"></script>
+  <!-- App store -->
+  <script src="js/store.js"></script>
+  <!-- App scripts -->
+  <script src="js/yaj-sse.js"></script>
+  <script src="js/app.js"></script>
+<!--  <script src="js/switch.js"></script>  -->
+<!-- endbuild -->
+  
+</body>
+</html>
+

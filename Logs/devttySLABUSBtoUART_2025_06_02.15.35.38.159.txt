@@ -1,0 +1,27 @@
+Check Alerts
+Check Alerts
+    Got (synch) message from web : source is : W, cmd is : S, size is : 1, sizeof datastruc is 4 message is : F
+    Now sending synch message to Web with type sync is F !
+    Got message (hello) from Web : source is : W, cmd is : H, size is : 1, sizeof datastruc is 4 message is : 0, 
+    Now sending hello message to web !
+    Got (synch) message from web : source is : W, cmd is : S, size is : tastruc is 4 message is : F
+    Now sending synch message to Web with type sync is F !
+1, sizeof da    Got (synch) message from web : source is : W, cmd is : S, size is : 1, sizeof datastruc is 4 message is : F
+    Now sending synch message to Web with type sync is F !
+    Got (synch) message from web : source is : W, cmd is : S, size is : 1, sizeof datastruc is 4 message is : F
+    Now sending synch message to Web with type sync is F !
+Check Alerts
+Check Alerts
+    Got message (data) from Web : BlinkWifiLed index=66 value=0
+    Got message (data) from Web : BlinkWifiLed index=66 value=-3
+ Now process and value=0essiong command : index=66 and value=-3
+ : index=66
+ Now prociong commandNow sending Clavier - BlinkWifiLed index=66 value=-3
+Now sending Clavier - BlinkWifiLed inde
+x=66 value=0Check Alerts
+Check Temp Int
+Failed to read from DHT sensor!
+    Got message (data) from Web : BlinkWifiLed index=66 value=-2
+ Now processiong command : index=66 and value=-2
+Now sending Clavier - BlinkWifiLed index=66 value=-2
+Check Alerts

@@ -1,0 +1,422 @@
+Check Alerts
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:4688
+load:0x40078000,len:15504
+load:0x40080400,len:4
+load:0x40080404,len:3196
+entry 0x400805a4
+Running Setup...
+[    45][E][esp32-hal-gpio.c:190] __digitalRead(): IO 34 is not set as GPIO.
+WifiPresent pin is true
+[    53][E][esp32-hal-gpio.c:190] __digitalRead(): IO 35 is not set as GPIO.
+radioPresent pin is true
+  in Temp DHT22 setup : 
+  in Temp OneWire setup : 
+  Capteur trouve ; Adresse : 28 FF 29 02 A0 16 03 16 
+ Storing unknown Capteur Adressse in ind:3
+  Capteur trouve ; Adresse : 28 FF 5D 33 A0 16 0eur Eau Adressse valide
+ Adresse d5 7E 
+ Captu capteur Ext invalide => pas de mesures de Temp
+ Adresse du capteur PAC invalide => pas de mesures de Temp 
+  in Action setup : 
+  in control setup : 
+    PH9etalon : 0
+    PH7etalon : 7.148
+    PH4etalon : 0
+    RedoxLowEtalon : 277.7
+    RedoxHighEtalon : 0
+
+    phRef : 7
+    redoxRef : 690
+
+    heureFonction : 9
+    heureArret : 23
+
+    debitPompePH : 10800
+    dosePH : 133
+    debitPompeCL : 18000
+    doseCL : 100
+    debitPompeALG : 14400
+    dosePHm : 133
+    doseALG : 800
+    volumePiscine : 50
+
+    Frequence ALG : 100
+    Quantite ALG : 200
+
+    tempEauFixe : 26
+    tempEauRel : -5
+
+  PAC is present : True
+  in Alertes setup : 
+  in TransmissionControler setup : 
+Need Time
+Check Temp Eau
+Check Temp PAC
+Failed to read from PAC temp sensor ! (bad address)
+Check Temp Ext
+Failed to read from AIR temp sensor ! (bad address)
+Check Temp Int
+Failed to read from DHT sensor!
+    Now sending hello message to Keyboard !
+    Now sending hello message to web !
+All is ready !
+
+Check Temp Ext
+Failed to read from AIR temp sensor ! (bad address)
+Check Temp Eau
+    Now sending hello message to Keyboard !
+    Now sending hello message to web !
+    Got (synch) message from Clavier : source is : K, cmd is : S, size is : 1, sizeof datastruc is 4 message is : F
+    Now sending synch message to Clavier with type sync is F !
+Now sending on available 206
+Channels - tempEau index=2 value=2    Now sending hello message to web !
+    Now sending hello message to web !
+    Got (synch) message from web : source is : W, cmd is : S, size is : 1, sizeof datastruc is 4 message is : F
+    Now sending synch message to Web with type sync is F !
+    Got (synch) message from web : source is : W, cmd is : S, size is : 1, sizeof datastruc is 4 message is : F
+    Now sending synch message to Web with type sync is F !
+    Got message (time) from web : source is : W, cmd is : T, size is : 8, sizeof datastruc is 4 message is : 38, 250, 61, 104, 0, 0, 0, 0, 
+    Got new time message from Web : 02/06/55 19:23:18, timeValue is 1748892198
+    Sending Time message to Clavier, Time message is : 1748892198 and time is 1748892198
+Now sending on available Channels - EPOCH ind0
+ex=48 value=    Got message (hello) from Web : source is : W, cmd is : H, size is : 1, sizeof datastruc is 4 message is : 0, 
+    Now sending hello message to web !
+1er lancement de cycle : calcul des cycles
+in calculPompe : temp Eau = 22.06
+ durre pompe calcule total : 39712 durre pompe (float) calculé total : 11.03
+   ==> nouvelles donnees pour ce jour : duree pompe : 13020, Interval : 0 et nbCycles = 1
+calculs pompe principale duree: 13020, interval: 0 0
+demarrage, nbcycles: pompe, 1er cycle:1
+ ==> Starting pompe principale for 217 mn
+   cycle en cours pompe en marche 
+Now sending on available Channels - PP index=16 value=217
+  ==> temps restant pompe principale:217 (durreePompe:0, counter_Filtration:13020)
+Now sending on available Channels - PP index=16 value=217
+Check Alerts
+   cycle en cours pompe en marche 
+  ==> temps restant pompe principale:216 (durreePompe:0, counter_Filtration:13020)
+Now sending on available Channels - PP index=16 value=216
+<< Check PH >>
+       PH_sensor val is : 474 and phValue is -0.289077
+           CalculPH val is : 655.000000
+    ==> PH VALUE FLOAT avec moyenne sur les dernieres valeurs avant CaS : 655.00
+libration I           1480    ==>>>   PH VALUE FLOAT APRES Calibration IS : 654.85
+       indPHVAL is :-51
+  !!!   PH adjustment will only start 30 minutes afte  calcul aver start in 2 delta: -0.c juste PH7,9 minutes from now
+<< Check CL >>
+       Redo is : 843 and RedoxValue is 1597.878540
+           CalculRedox val isx_sensor val : 1597.000000
+
+    ==> REDOX VALUE avec moyenne sur les dernieres valeurs avant Calibration IS : 1597.00
+               calcul avec juste RedoxLOW, delta: 190.3000    ==>>>   REDOX VALUE APRES calibration IS : 1787.30
+       indRedoxVAL is :1787
+  PHvalue (654.851990) is out of bounds, can't set CL at this time CL is -1       indCLVAL is :-100
+  !!!   Exceptional CL adjustment will only start 30 minutes after start in 29 minutes from now
+Check Alerts
+Now sending on available Channels - clVal index=8 value=-100
+Now sending on available Channels - redoxVal index=7 value=1787
+Now sending on available Channels - phVal index=6 value=-51
+   cycle en cours pompe en marche 
+  ==> temps restant pompe principale:215 (durreePompe:0, counter_Filtration:13020)
+Now sending on available Channels - PP index=16 value=215
+Check Alerts
+   cycle en cours pompe en marche 
+  ==> temps restant pompe principale:214 (durreePompe:0, counter_Filtration:13020)
+Now sending on available Channels - PP index=16 value=214
+Check Alerts
+<< Check PH >>
+       PH_sensor val is : 526 and phValue is -0.101993
+           CalculPH val is : 655.000000
+    ==> PH VALUE FLOAT avec moyenne sur les dernieres valeurs avant Calibration IS : 655.00
+             calcul avec juste PH7, delta: -0.1480    ==>>>   PH VALUE FLOAT APRES Calibration IS : 654.85
+       indPHVAL is :-51
+  !!!   PH adjustment will only start 30 minutes after start in 27 minutes from now
+<< Check CL >>
+       Redox_sensor val is : 580 and RedoxValue is 1851.494751
+           CalculRedox val is : 1724.000000
+
+    ==> REDOX VALUE avec moyenne sur les dernieres valeurs avant Calibration IS : 1724.00
+               calcul avec juste RedoxLOW, delta: 190.3000    ==>>>   REDOX VALUE APRES calibration IS : 1914.30
+       indRedoxVAL is :1914
+  PHvalue (654.851990) is out of bounds, can't set CL at this time CL is -1       indCLVAL is :-100
+  !!!   Exceptional CL adjustment will only start 30 minutes after start in 27 minutes from now
+Now sending on available Channels - clVal index=8 value=-100
+Now sending on available Channels - redoxVal index=7 value=1914
+Now sending on available Channels - phVal index=6 value=-51
+   cycle en cours pompe en marche 
+  ==> temps restant pompe principale:213 (durreePompe:0, counter_Filtration:13020)
+Now sending on available Channels - PP index=16 value=213
+Check Alerts
+Check Temp Int
+Failed to read from DHT sensor!
+   cycle en cours pompe en marche 
+  ==> temps restant pompe principale:212 (durreePompe:0, counter_Filtration:13020)
+Now sending on available Channels - PP index=16 value=212
+Check Alerts
+   cycle en cours pompe en marche 
+<< Check PH >>
+       PH_sensor val is : 553 and phValue is -0.004854
+           CalculPH val is : 655.000000
+    ==> PH VALUE Fyenne sur les dernieresLOAT avec mo valeurs avant Calibration IS : 655.00
+             calcul avec juste PH7, delta: -0.1480    ==>>>   PH VALUE FLOAT APRES Calibration IS : 654.85
+       indPHVAL is :-51
+  !!!   PH adjustment will only start 30 minutes after start in 25 minutes from now
+<< Check CL >>
+       Redox_sensor val is : 534 and RedoxValue is 1895.853394
+           CalculRedox val is : 1781.000000
+
+    ==> REDOX VALUE avec moyenne sur les dernieres valeurs avant Calibration IS : 1781.00
+               calcul avec juste RedoxLOW, delta: 190.3000    ==>>>   REDOX VALUE APRES calibration IS : 1971.30
+       indRedoxVAL is :1971
+  PHvalue (654.851990) is out of bounds, can't set CL at this time CL is -1       indCLVAL is :-100
+  !!!   Exceptional CL adjustment will only start 30 minutes after start in 25 minutes from now
+Now sending on available Channels - clVal index=8
+Now sendin value=-100g on available Channels - redoxVal index=7 value=1971
+Now sending on available Channels - phVal index=6 value=-51
+  ==> temps restant pompe principale:211 (durreePompe:0, counter_Filtration:13020)
+Now sending on available Channels - PP index=16 value=211
+Check Alerts
+   cycle en cours pompe en marche 
+  ==> temps restant pompe principale:210 (durreePompe:0, counter_Filtration:13020)
+Now sending on available Channels - PP index=16 value=210
+   cycle en cours pompe en marche 
+Check Alerts
+<< Check PH >>
+       PH_sensor val is : 532 and phValue is -0.080407
+           CalculPH val is : 655.0FLOAT avec m> PH VALUE 00000
+    ==oyenne sur les dernieres valeurs avant Calibration IS : 655.00
+             calcul avec juste PH7, delta: -0.1480    ==>>>   PH VALUE FLOAT APRES Calibration IS : 654.85
+       indPHVAL is :-51
+  !!!   PH adjustment will only start 30 minutes after start in 23 minutes from now
+<< Check CL >>
+       Redox_sensor val is : 566 and RedoxValue is 1864.995239
+           CalculRedox val is : 1801.750000
+
+    ==> REDOX VALUE avec moyenne sur les dernieres valeurs avant Calibration IS : 1801.75
+               calcul avec juste RedoxLOW, delta: 190.3000    ==>>>   REDOX VALUE APRES calibration IS : 1992.05
+       indRedoxVAL is :1992
+  PHvalue (654.851990) is out of bounds, can't set CL at this time CL is -1       indCLVAL is :-100
+  !!!   Exceptional CL adjustment will only start 30 minutes after start in 23 minutes from now
+Now sending on available Channels - clVal index=8 value=-100
+Now sending on available Channels - redoxVal index=7 value=1992
+Now sending on available Channels - phVal index=6 value=-51
+  ==> temps restant pompe principale:209 (durreePompe:0, counter_Filtration:13020)
+Now sending on available Channels - PP index=16 value=209
+   cycle en cours pompe en marche 
+Check Alerts
+  ==> temps restant pompe principale:208 (durreePompe:0, counter_Filtration:13020)
+Now sending on available Channels - PP index=16 value=208
+   cycle en cours pompe en marche 
+Check temp Eau PAC  
+ In doPAC temp Eau :  22.06  temp PAC :  0.00  temp Ext :  0.00  temp fixe :  26.00  temp rel :  -5.00  flag temp fixe :  Fixe
+Check Alerts
+Check Tempom DHT sensor!
+ Int
+Failed to read frNow sending on available Channels - PAC index=17 value=1
+<< Check PH >>
+       PH_sensor val is : 514 and phValue is -0.145166
+           CalculPH val is : 655.000000
+    ==> PH VALUE FLOAT avec moyenne sur les dernieres valeurs avant Calibration IS : 655.00
+             calcul avec juste PH7, delta: -0.1480    ==>>>   PH VALUE FLOAT APRES Calibration IS : 654.85
+       indPHVAL is :-51
+  !!!   PH adjustment will only start 30 minutes after start in 21 minutes from now
+<< Check CL >>
+       Redox_sensor val is : 591 and RedoxValue is 1840.887207
+           CalculRedox val is : 1809.400024
+
+    ==> REDOX VALUE avec moyenne sur les dernieres valeurs avant Calibration IS : 1809.40
+               calcul avec juste RedoxLOW, delta: 190.3000    ==>>>   REDOX VALUE APRES calibration IS : 1999.70
+       indRedoxVAL is :1999
+  PHvalue (654.851990) is out of bounds, can't set CL at this time CL is -1       indCLVAL is :-100
+  !!!   Excepti in 21 minutes from now
+onal CL adjustment will only start 30 minutes after startNow sending on available Channels - clVal index=8 value=-100
+Now sending on available Channels - redoxVal index=7 value=1999
+Now sending on available Channels - phVal index=6 value=-51
+   cycle en cours pompe en marche 
+  ==> temps restant pompe principale:207 (durreePompe:0, counter_Filtration:13020)
+Now sending on available Channels - PP index=16 value=207
+Check Alerts
+   cycle en cours pompe en marche 
+  ==> temps restant pompe principale:206 (durreePompe:0, counter_Filtration:13020)
+Now sending on available Channels - PP index=16 value=206
+Check Alerts
+<< Check PH >>
+       PH_sensor val is : 511 and phValue is -0.155960
+           CalculPH val is : 655.000000
+    ==> PH VALUE FLOAT avec moyenne sur les dernieres valeurs avant Calibration IS : 655.00
+             calcul avec juste PH7, delta: -0.1480    ==>>>   PH VALUE FLOAT APRES Calibration IS : 654.85
+       indPHVAL is :-51
+  !!!   PH adjustment will only start 30 minutes after start in 19 minutes from now
+<< Check CL >>
+       Redox_sensor val is : 610 and RedoxValue is 1822.565063
+           CalculRedox val is : 1811.500000
+
+    ==> REDOX VALUE avec moyenne sur les dernieres valeurs avant Calibration IS : 1811.50
+               calcul avec juste RedoxLOW, delta: 190.3000    ==>>>   REDOX VALUE APRES calibration IS : 2001.80
+       indRedoxVAL is :2001
+  PHvalue (654.851990) is out of bounds, can't set CL at this time CL is -1       indCLVAL is :-100
+  !!!   Exceptional CL adjustment will only start 30 minutes after start in 19 minutes from now
+Now sending on available Channels - clVal index=8 value=-100
+Now sending on available Channels - redoxVal index=7 value=2001
+Now sending on available Channels - phVal index=6 value=-51
+   cycle en cours pompe en marche 
+  ==> temps restant pompe principale:205 (durreePompe:0, counter_Filtration:13020)
+Now sending on available Channels - PP index=16 value=205
+Check Alerts
+   cycle en cours pompe en marche 
+  ==> temps restant pompe principale:204 (durreePompe:0, counter_Filtration:13020)
+Now sending on available Channels - PP index=16 value=204
+Check Alerts
+   cycle en cours pompe en marche 
+<< Check PH >>
+       PH_sensor val is : 511 and phValue is -0.155960
+           CalculPH val is : 655.000000
+    ==> PH VALUE FLOAT avec moyenne sur les dernieres valeurs avant Calibration IS : 655.00
+             calcul avec juste PH7, delta: -0.1480    ==>>>   PH VALUE FLOAT APRES Calibration IS : 654.85
+       indPHVAL is :-51
+  !!!   PH adjustment will only start 30 minutes after start in 17 minutes from now
+<< Check CL >>
+       Redox_sensor val is : 594 and RedoxValue is 1837.994263
+           CalculRedox val is : 1815.142822
+
+    ==> REDOX VALUE avec moyenne sur les dernieres valeurs avant Calibration IS : 1815.14
+               calcul avec juste RedoxLOW, delta: 190.3000    ==>>>   REDOX VALUE APRES calibration IS : 2005.44
+       indRedoxVAL is :2005
+  PHvalue (654.851990) is out of bounds, can't set CL at this time CL is -1       indCLVAL is :-100
+  !!!   Exceptional CL adjustment will only start 30 minutes after start in 17 minutes from now
+Now sending on available Channels - clVal index=8 value=-100
+Now sending on available Channels - redoxVal index=7 value=2005
+Now sending on available Channels - phVal index=6 value=-51
+  ==> temps restant pompe principale:203 (durreePompe:0, counter_Filtration:13020)
+Now sending on available Channels - PP index=16 value=203
+Check Alerts
+Check Temp Int
+Failed to read from DHT sensor!
+Check Temp Ext
+Failed to read from AIR temp sensor ! (bad address)
+Check Temp Ext
+Failed to read from AIR temp sensor ! (bad address)
+Check Temp Eau
+Check Temp Eau
+Now sending on available Channels - tempEau index=2 value=2168
+   cycle en cours pompe en marche 
+  ==> temps restant pompe principale:202 (durreePompe:0, counter_Filtration:13020)
+Now sending on available Channels - PP index=16 value=202
+Check Alerts
+   cycle en cours pompe en marche 
+<< Check PH >>
+       PH_sensor val is : 545 and phValue is -0.042581
+           CalculPH val is : 655.000000
+    ==> PH VALUE FLOAT avec moyenne sur les dernieres valeurs avant Calibration IS : 655.00
+             calcul avec juste PH7, delta: -0.1480    ==>>>   PH VALUE FLOAT APRES Calibration IS : 654.85
+       indPHVAL is :-51
+  !!!   PH adjustment will only start 30 minutes after start in 15 minutes from now
+<< Check CL >>
+       Redox_sensor val is : 618 and RedoxValue is 1814.850586
+           CalculRedox val is : 1815.000000
+
+    ==> REDOX VALUE avec moyenne sur les dernieres valeurs avant Calibration IS : 1815.00
+               calcul avec juste RedoxLOW, delta: 190.3000    ==>>>   REDOX VALUE APRES calibration IS : 2005.30
+       indRedoxVAL is :2005
+  PHvalue (654.851990) is out of bounds, can't set CL at this time CL is -1       indCLVAL is :-100
+  !!!   Exceptional CL adjustment will only start 30 minutes after start in 15 minutes from now
+Now sending on available Channels - clVal index=8 value=-100
+Now sending on available Channels - redoxVal index=7 value=2005
+Now sending on available Channels - phVal index=6 value=-51
+  ==> temps restant pompe principale:201 (durreePompe:0, counter_Filtration:13020)
+Now sending on available Channels - PP index=16 value=201
+Check Alerts
+   cycle en cours pompe en marche 
+  ==> temps restant pompe principale:200 (durreePompe:0, counter_Filtration:13020)
+Now sending on available Channels - PP index=16 value=200
+Check Alerts
+   cycle en cours pompe en marche 
+<< Check PH >>
+       PH_sensor val is : 616 and phValue is 0.213185
+           CalculPH val is : 655.000000
+    ==> PH VALUE FLOAT avec moyenne sur les dernieres valeurs avant Calibration IS : 655.00
+             calcul avec juste PH7, delta: -0.1480    ==>>>   PH VALUE FLOAT APRES Calibration IS : 654.85
+       indPHVAL is :-51
+  !!!   PH adjustment will only start 30 minutes after start in 13 minutes from now
+<< Check CL >>
+       Redox_sensor val is : 571 and RedoxValue is 1860.173584
+           CalculRedox val is : 1820.000000
+
+    ==> REDOX VALUE avec moyenne sur les dernieres valeurs avant Calibration IS : 1820.00
+               calcul avec juste RedoxLOW, delta: 190.3000    ==>>>   REDOX VALUE APRES calibration IS : 2010.30
+       indRedoxVAL is :2010
+  PHvalue (654.851990) is out of bounds, can't set CL at this time CL is -1       indCLVAL is :-100
+  !!!   Exceptional CL adjustment will only start 30 minutes after start in 12 minutes from now
+Now sending on available Channels - clVal index=8 value=-100
+Now sending on available Channels - redoxVal index=7 value=2010
+Now sending on available Channels - phVal index=6 value=-51
+  ==> temps restant pompe principale:199 (durreePompe:0, counter_Filtration:13020)
+Now sending on available Channels - PP index=16 value=199
+   cycle en cours pompe en marche 
+Check Alerts
+  ==> temps restant pompe principale:198 (durreePompe:0, counter_Filtration:13020)
+Now sending on available Channels - PP index=16 value=198
+   cycle en cours pompe en marche 
+Check Alerts
+Check Temp Int
+Failed to read from DHT sensor!
+Check temp Eau PAC  
+ In doPAC temp Eau :  21.69  temp PAC :  0.00  temp Ext :  0.00  temp fixe :  26.00  temp rel :  -5.00  flag temp fixe :  Fixe
+Now sending on available Channels - PAC index=17 value=1
+  ==> temps restant pompe principale:197 (durreePompe:0, counter_Filtration:13020)
+<< Check PH >>
+       PH_sensor val is : 552 and phValue is -0.017365
+           CalculPH val is : 655.000000
+    ==> PH VALUE FLOAT avec moyenne sur les dernieres valeurs avant Calibration IS : 655.00
+             calcul avec juste PH7, delta: -0.1480    ==>>>   PH VALUE FLOAT APRES Calibration IS : 654.85
+       indPHVAL is :-51
+  !!!   PH adjustment will only start 30 minutes after start in 10 minutes from now
+<< Check CL >>
+       Redox_sensor val is : 630 and RedoxValue is 1803.278687
+           CalculRedox val is : 1818.300049
+
+    ==> REDOX VALUE avec moyenne sur les dernieres valeurs avant Calibration IS : 1818.30
+               calcul avec juste RedoxLOW, delta: 190.3000    ==>>>   REDOX VALUE APRES calibration IS : 2008.60
+       indRedoxVAL is :2008
+  PHvalue (654.851990) is out of bounds, can't set CL at this time CL is -1       indCLVAL is :-100
+  !!!   Exceptional CL adjustment will only start 30 minutes after start in 10 minutes from now
+Now sending on available Channels - clVal index=8 value=-100
+Now sending on available Channels - redoxVal index=7 value=2008
+Now sending on available Channels - phVal index=6 value=-51
+Now sending on available Channels - PP index=16 value=197
+   cycle en cours pompe en marche 
+Check Alerts
+   cycle en cours pompe en marche 
+  ==> temps restant pompe principale:196 (durreePompe:0, counter_Filtration:13020)
+Now sending on avail96
+s - PP index=16 value=1able ChannelCheck Alerts
+   cycle en cours pompe en marche 
+  ==> temps restant pompe principale:195 (durreePompe:0, counter_Filtration:13020)
+Now sending on available Channels - PP index=16 value=195
+<< Check PH >>
+       PH_sensor val is : 500 and phValue is -0.204687
+           CalculPH val is : 655.000000
+    ==> PH VALUE FLOAT avec moyenne sur les dernieres valeurs avant Calibration IS : 655.00
+             calcul avec juste PH7, delta: -0.1480    ==>>>   PH VALUE FLOAT APRES Calibration IS : 654.85
+       indPHVAL is :-51
+  !!!   PH adjustment will only start 30 minutes after start in 8 minutes from now
+<< Check CL >>
+       Redox_sensor val is : 607 and RedoxValue is 1825.458008
+           CalculRedox val is : 1841.099976
+
+    ==> REDOX VALUE avec moyenne sur les dernieres valeurs avant Calibration IS : 1841.10
+               calcul avec juste RedoxLOW, delta: 190.3000    ==>>>   REDOX VALUE APRES calibration IS : 2031.40
+       indRedoxVAL is :2031
+  PHvalue (654.851990) is out of bounds, can't set CL at this time CL is -1       indCLVAL is :-100
+  !!!   Exceptional CL adjustment will only start 30 minutes after start in 8 minutes from now
+Now sending on available Channels - clVal index=8 value=-100
+Now sending on available Channels - redoxVal index=7 value=2031
+Now sending on available Channels - phVal index=6 value=-51
+Check Alerts
+   cycle en cours pompe en marche 

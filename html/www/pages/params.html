@@ -1,0 +1,196 @@
+
+<div class="page" data-name="parametres">
+  <div class="navbar">
+    <div class="navbar-bg"></div>
+    <div class="navbar-inner sliding">
+      <div class="left">
+        <a href="#" class="link back">
+          <i class="icon icon-back"></i>
+          <span class="if-not-md">Back</span>
+        </a>
+      </div>
+      <div class="title">Paramètres..</div>
+    </div>
+  </div>
+  <div class="page-content">
+    <div class="block block-strong block-outline inset" style="margin-bottom: 15px;">
+      <div class="container_12">
+        <div class="prefix_1 grid_4 suffix_2">
+          <button class="button button-small button-raised button-fill button-round color-blue" id="validParams">Valider</button>
+        </div>
+        <div class="grid_4 suffix_1">
+          <button class="button button-small button-raised button-fill button-round color-blue" id="annulParams" @click="annulParams" >Annuler</button>
+        </div>
+      </div>
+    </div>
+    <div class="block-title" style="margin-top: 10px;">Chauffage Supplémentaire</div>
+    <div class="block block-strong block-outline inset" style="margin-bottom: 15px;">
+      <div class="container_12">
+        <div class="grid_7">
+          <label for="heureMarcheForce" class="">Heure Backup</label>
+        </div>
+        <div class="grid_4 suffix_1">
+          <input type="time" class="myinput" id="heureMarcheForce" name="heureMarcheForce" style="font-size: 18px;">
+        </div>
+      </div>
+      <p style="font-size:4px;"> </p>
+      <div class="container_12">
+        <div class="grid_8">
+          <label >Second Backup</label>
+        </div>  
+        <div class="grid_4">
+          <div class="flipswitch" id="secondBackupSwitch">
+            <input type="checkbox" name="flipswitch" class="flipswitch-cb" id="marcheForceSuppSW" checked>
+            <label class="flipswitch-label" for="marcheForceSuppSW">
+              <div class="flipswitch-inner"></div>
+              <div class="flipswitch-switch"></div>
+            </label>
+          </div>
+        </div> 
+      </div>
+      <p style="font-size:10px;"> </p>
+      <div class="container_12" id="secondHeureDiv">
+        <div class="grid_7">
+          <label for="heureMarcheForceSec" class="">Second Heure</label>
+        </div>
+        <div class="grid_4 suffix_1">
+          <input type="time" class="myinput" id="heureMarcheForceSec" name="heureMarcheForceSec" style="font-size: 18px;">
+        </div>
+      </div>
+    </div>
+    <div class="block-title" style="margin-top: 10px;">Option Température</div>
+    <div class="block block-strong block-outline inset" style="margin-bottom: 15px;">
+      <p style="font-size:4px;"> </p>
+      <div class="container_12">
+        <div class="grid_8">
+          <label>Sonde Temp.</label>
+        </div>  
+        <div class="grid_4">
+          <div class="flipswitch">
+            <input type="checkbox" name="sondeTempSW" class="flipswitch-cb" id="sondeTempSW">
+            <label class="flipswitch-label" for="sondeTempSW">
+              <div class="flipswitch-inner"></div>
+              <div class="flipswitch-switch"></div>
+            </label>
+          </div>
+        </div> 
+      </div>
+      <p style="font-size:10px;"> </p>
+      <div class="container_12" id="tempEauDiv">
+        <div class="grid_8">
+          <label for="tempEauMin" class="">Temp Eau Min (°C)</label>
+        </div>
+        <div class="grid_4">
+          <input type="number" class="myinput" id="tempEauMin" min="1" max="100" style="text-align: right;">
+        </div>
+      </div>
+    </div>
+    <div class="block-title" style="margin-top: 10px;">Pompe à Chaleur</div>
+    <div class="block block-strong block-outline inset" style="margin-bottom: 15px;">
+      <p style="font-size:4px;"> </p>
+      <div class="container_12">
+        <div class="grid_8">
+          <label>PAC Présent</label>
+        </div>  
+        <div class="grid_4">
+          <div class="flipswitch">
+            <input type="checkbox" name="flipswitch" class="flipswitch-cb" id="pacPresentSW" checked="false">
+            <label class="flipswitch-label" for="pacPresentSW">
+              <div class="flipswitch-inner"></div>
+              <div class="flipswitch-switch"></div>
+            </label>
+          </div>
+        </div> 
+      </div>
+      <p style="font-size:10px;"> </p>
+      <div id="pacPresentDiv">
+        <div class="container_12">
+          <div class="grid_8">
+            <label>Puiss PAC ON (W)</label>
+          </div>
+          <div class="grid_4">
+            <input type="number" class="myinput" id="puissPacOn" min="1" max="6000" style="text-align: right;">
+          </div>
+        </div>  
+        <div class="container_12">
+          <div class="grid_8">
+            <label>Puiss PAC OFF (W)</label>
+          </div>
+          <div class="grid_4">
+            <input type="number" class="myinput" id="puissPacOff" min="1" max="6000" style="text-align: right;">
+          </div>
+        </div>  
+        <div class="container_12">
+          <div class="grid_8">
+            <label for="tempsOverProd">Temps Over Prod (s)</label>
+          </div>
+          <div class="grid_4">
+            <input type="number" class="myinput" id="tempsOverProd" min="1" max="1000" style="text-align: right;">
+          </div>
+        </div>
+        <div class="container_12">
+          <div class="grid_8">
+            <label for="tempsPacMin">Temps PAC On min (s)</label>
+          </div>
+          <div class="grid_4">
+            <input type="number" class="myinput" id="tempsPacMin" min="1" max="1000" style="text-align: right;">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="block-title" style="margin-top: 10px;">Options</div>
+    <div class="block block-strong block-outline inset" style="margin-bottom: 15px;">
+      <p style="font-size:4px;"> </p>
+      <div class="container_12">
+        <div class="grid_8">
+          <label>Afficheur</label>
+        </div>  
+        <div class="grid_4">
+          <div class="flipswitch">
+            <input type="checkbox" name="afficheurSW" class="flipswitch-cb" id="afficheurSW" checked>
+            <label class="flipswitch-label" for="afficheurSW">
+              <div class="flipswitch-inner"></div>
+              <div class="flipswitch-switch"></div>
+            </label>
+          </div>
+        </div> 
+      </div>
+      <p style="font-size:10px;"> </p>
+      <div class="container_12">
+        <div class="grid_8">
+          <label>Motion Sensor</label>
+        </div>  
+        <div class="grid_4">
+          <div class="flipswitch">
+            <input type="checkbox" name="motionSensorSW" class="flipswitch-cb" id="motionSensorSW" checked>
+            <label class="flipswitch-label" for="motionSensorSW">
+              <div class="flipswitch-inner"></div>
+              <div class="flipswitch-switch"></div>
+            </label>
+          </div>
+        </div> 
+      </div>
+    </div>
+    <div class="block-title" style="margin-top: 10px;">Ballon d'eau chaude</div>
+    <div class="block block-strong block-outline inset" style="margin-bottom: 15px;">
+      <div clas="params-container">
+        <div class="container_12">
+          <div class="grid_6">
+            <label for="volBallon" class="">Volume Ballon (l)</label>
+          </div>
+          <div class="grid_6">
+            <input type="number" class="myinput" id="volBallon" min="50" max="500" style="width:60px; text-align: right;">
+          </div>
+        </div>
+        <div class="container_12">
+          <div class="grid_6">
+            <label for="puissanceBallon" class="">Puissance (W)</label>
+          </div>
+          <div class="grid_6">
+            <input type="number" class="myinput" id="puissanceBallon" min="100" max="5000" style="width:60px; text-align: right;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

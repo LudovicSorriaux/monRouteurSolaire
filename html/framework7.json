@@ -1,0 +1,18 @@
+{
+  "cwd": "/Users/ludovic1/Documents/PlatformIO/Projects/maCuveControl/html",
+  "type": [
+    "web"
+  ],
+  "name": "Ma Cuve Control",
+  "framework": "core",
+  "template": "single-view",
+  "bundler": false,
+  "cssPreProcessor": false,
+  "theming": {
+    "customColor": false,
+    "color": "#007aff",
+    "darkMode": false,
+    "iconFonts": true
+  },
+  "customBuild": false
+}

@@ -1,0 +1,1640 @@
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+add 1
+aid 1
+station: 88:a9:b7:6c:5f:a3 join, AID = 1
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+*WM: Handle root
+*WM: Request redirected to captive portal
+*WM: About to scan()
+scandone
+*WM: About to scan()
+*WM: Handle root
+*WM: Sending Captive Portal
+*WM: Sent...
+scandone
+*WM: Scan done
+*WM: DUP AP: LudosHomeM5G
+*WM: DUP AP: SFR_2E48
+*WM: DUP AP: SFR_2E48
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+*WM: Handle not found
+*WM: Request redirected to captive portal
+*WM: Handle root
+*WM: Sending Captive Portal
+*WM: Sent...
+*WM: About to scan()
+scandone
+*WM: About to scan()
+*WM: Handle not found
+*WM: Request redirected to captive portal
+scandone
+*WM: Scan done
+*WM: DUP AP: LudosHomeM5G
+*WM: DUP AP: SFR_2E48
+*WM: Handle root
+*WM: Sending Captive Portal
+*WM: Sent...
+*WM: About to scan()
+scandone
+*WM: About to scan()
+*WM: Handle not found
+*WM: Request redirected to captive portal
+*WM: Handle root
+*WM: Sending Captive Portal
+*WM: Sent...
+*WM: Handle not found
+*WM: Request redirected to captive portal
+*WM: Handle root
+*WM: Sending Captive Portal
+*WM: Sent...
+scandone
+*WM: Scan done
+*WM: DUP AP: LudosHomeM5G
+*WM: DUP AP: SFR_2E48
+*WM: DUP AP: SFR_2E48
+*WM: Handle root
+*WM: Request redirected to captive portal
+*WM: About to scan()
+scandone
+*WM: About to scan()
+*WM: Handle root
+*WM: Sending Captive Portal
+*WM: Sent...
+scandone
+*WM: Scan done
+*WM: DUP AP: LudosHomeM5G
+*WM: DUP AP: SFR_2E48
+scandone
+no LudosHomeMain found, reconnect after 1s
+*WM: Handle wifi
+*WM: Scan done
+*WM: Sent config page
+*WM: About to scan()
+*WM: About to scan()
+*WM: Handle not found
+*WM: Request redirected to captive portal
+*WM: Handle root
+*WM: Sending Captive Portal
+*WM: Sent...
+scandone
+*WM: Scan done
+*WM: DUP AP: LudosHomeM5G
+*WM: DUP AP: SFR_2E48
+*WM: DUP AP: SFR_2E48
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+*WM: Handle root
+*WM: Request redirected to captive portal
+*WM: About to scan()
+scandone
+*WM: About to scan()
+*WM: Handle root
+*WM: Sending Captive Portal
+*WM: Sent...
+scandone
+*WM: Scan done
+*WM: DUP AP: SFR_2E48
+*WM: DUP AP: SFR_2E48
+*WM: DUP AP: LudosHomeM5G
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+err already associed!
+station: 88:a9:b7:6c:5f:a3 leave, AID = 1
+rm 1
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+add 1
+aid 1
+station: 88:a9:b7:6c:5f:a3 join, AID = 1
+*WM: About to scan()
+scandone
+*WM: About to scan()
+scandone
+*WM: Scan done
+*WM: DUP AP: SFR_2E48
+*WM: Handle not found
+*WM: Request redirected to captive portal
+*WM: Handle root
+*WM: Request redirected to captive portal
+*WM: About to scan()
+scandone
+*WM: About to scan()
+*WM: Handle root
+*WM: Sending Captive Portal
+*WM: Sent...
+*WM: Handle root
+*WM: Sending Captive Portal
+*WM: Sent...
+scandone
+*WM: Scan done
+*WM: DUP AP: LudosHomeM5G
+*WM: DUP AP: SFR_2E48
+failed to connect and hit timeout
+wifimanager WiFi connection FAILED
+Can't connect to WIFI ...
+ maxWriteData = 2  writeData is : ind=66 & val=0
+Got message : source is : C, cmd is : V, size is : 4, sizeof datastruc is 4 message is : 0Got message from Controler : EPOCH index=48 value=1
+    Now sending command BlinkWifiLed with index=66 and value=0
+Got message : source is : C, cmd is : V, size is : 4, sizeof datastruc is 4 message is : 0Got message from Controler : EPOCH index=48 value=1
+ Action is now processiong command IND_EPOCH with index=48 and value=1
+Ask for new time...
+Can't get time because not connected to WIFI
+Time asked but Can't get time from ntp server
+ maxWriteData = 1  writeData is : ind=66 & val=-3
+Got message : source is : C, cmd is : V, size is : 4, sizeof datastruc is 4 message is : 0Got message from Controler : EPOCH index=48 value=1
+    Now sending command BlinkWifiLed with index=66 and value=-3
+ Try to connect the Wifi...
+station: 88:a9:b7:6c:5f:a3 leave, AID = 1
+rm 1
+bcn 0
+del if1
+mode : sta(dc:4f:22:7c:08:4c)
+ First try with last used wifi ssid ...
+scandone
+.....scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+....scandone
+no LudosHomeMain found, reconnect after 1s
+.reconnect
+....scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+.....scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+...
+WiFi cnx with last connection FAILED, Next try with ssids in config ...
+Retry 3 
+Looking for networks : scandone
+scandone
+8
+network 1 : LudosMFB2G 
+network 2 : SFR_2E48 
+network 3 : LudosHomeM5G 
+network 4 : SFR_2E48_EXT 
+network 5 : ESP-30CEE2 
+network 6 : SFR_2E48 
+network 7 : LudosHomeM5G 
+network 8 : SFR_2E48 
+ssid: LudosMFB2G 
+ssid: SFR_2E48 
+ssid: LudosHomeM5G 
+ssid: SFR_2E48_EXT 
+ssid: ESP-30CEE2 
+ssid: SFR_2E48 
+ssid: LudosHomeM5G 
+ssid: SFR_2E48 
+Retry 2 
+Looking for networks : scandone
+8
+network 1 : LudosMFB2G 
+network 2 : SFR_2E48 
+network 3 : ESP-30CEE2 
+network 4 : LudosHomeM5G 
+network 5 : SFR_2E48 
+network 6 : SFR_2E48_EXT 
+network 7 : LudosHomeM5G 
+network 8 : SFR_2E48 
+ssid: LudosMFB2G 
+ssid: SFR_2E48 
+ssid: ESP-30CEE2 
+ssid: LudosHomeM5G 
+ssid: SFR_2E48 
+ssid: SFR_2E48_EXT 
+ssid: LudosHomeM5G 
+ssid: SFR_2E48 
+Retry 1 
+Looking for networks : scandone
+8
+network 1 : LudosMFB2G 
+network 2 : SFR_2E48 
+network 3 : LudosHomeM5G 
+network 4 : ESP-30CEE2 
+network 5 : LudosHomeM5G 
+network 6 : SFR_2E48 
+network 7 : SFR_2E48_EXT 
+network 8 : SFR_2E48 
+ssid: LudosMFB2G 
+ssid: SFR_2E48 
+ssid: LudosHomeM5G 
+ssid: ESP-30CEE2 
+ssid: LudosHomeM5G 
+ssid: SFR_2E48 
+ssid: SFR_2E48_EXT 
+ssid: SFR_2E48 
+Retry 0 
+Looking for networks : scandone
+8
+network 1 : LudosMFB2G 
+network 2 : SFR_2E48 
+network 3 : SFR_2E48_EXT 
+network 4 : ESP-30CEE2 
+network 5 : LudosHomeM5G 
+network 6 : LudosHomeM5G 
+network 7 : SFR_2E48 
+network 8 : SFR_2E48 
+ssid: LudosMFB2G 
+ssid: SFR_2E48 
+ssid: SFR_2E48_EXT 
+ssid: ESP-30CEE2 
+ssid: LudosHomeM5G 
+ssid: SFR_2E48 
+WiFi with saved connections FAILED, using WifiManager
+del if0
+usl
+mode : softAP(de:4f:22:7c:08:4c)
+add if1
+dhcp server start:(ip:192.168.4.1,mask:255.255.255.0,gw:192.168.4.1)
+bcn 100
+*WM: Adding parameter
+*WM: user
+*WM: Adding parameter
+*WM: passwd
+*WM: Adding parameter
+*WM: Admpasswd
+ maxWriteData = 1  writeData is : ind=66 & val=-2
+Got message : source is : C, cmd is : V, size is : 4, sizeof datastruc is 4 message is : 0Got message from Controler : EPOCH index=48 value=1
+    Now sending command BlinkWifiLed with index=66 and value=-2
+mode : sta(dc:4f:22:7c:08:4c) + softAP(de:4f:22:7c:08:4c)
+add if0
+*WM: SET AP STA
+Entered config mode
+192.168.4.1
+maPiscineAP
+ maxWriteData = 1  writeData is : ind=66 & val=-2
+*WM: 
+*WM: Configuring access point... 
+*WM: maPiscineAP
+*WM: maPiscine
+*WM: AP IP address: 
+*WM: 192.168.4.1
+*WM: HTTP server started
+*WM: About to scan()
+*WM: About to scan()
+scandone
+*WM: Scan done
+*WM: DUP AP: SFR_2E48
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+add 1
+aid 1
+station: 88:a9:b7:6c:5f:a3 join, AID = 1
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+*WM: Handle root
+*WM: Request redirected to captial
+*WM: Sent...
+ve portal
+*WM: About to scan()
+scandone
+*WM: About to scan()
+*WM: Handle root
+*WM: Sending Captive Port*WM: Handle not found
+*WM: Request redirected to captive portal
+*WM: Handle root
+*WM: Sending Captive Portal
+*WM: Sent...
+*WM: Handle not found
+*WM: Request redirected to captive portal
+*WM: Handle root
+*WM: Sending Captive Portal
+*WM: Sent...
+scandone
+*WM: Scan done
+*WM: DUP AP: SFR_2E48
+*WM: DUP AP: SFR_2E48
+*WM: DUP AP: LudosHomeM5G
+*WM: Handle not found
+*WM: Request redirected to captive portal
+*WM: Handle root
+*WM: Sending Captive Portal
+*WM: Sent...
+*WM: About to scan()
+scandone
+*WM: About to scan()
+*WM: Handle wifi
+*WM: Scan done
+*WM: Sent config page
+*WM: Handle not found
+*WM: Request redirected to captive portal
+*WM: Handle root
+*WM: Sending Captive Portal
+*WM: Sent...
+scandone
+*WM: Scan done
+*WM: DUP AP: LudosHomeM5G
+*WM: DUP AP: SFR_2E48
+*WM: DUP AP: SFR_2E48
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+*WM: Handle root
+*WM: Request redirected to captive portal
+*WM: About to scan()
+scandone
+*WM: About to scan()
+*WM: Handle root
+*WM: Sending Captive Portal
+*WM: Sent...
+scandone
+*WM: Scan done
+*WM: DUP AP: SFR_2E48
+*WM: DUP AP: SFR_2E48
+*WM: DUP AP: LudosHomeM5G
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+err already associed!
+station: 88:a9:b7:6c:5f:a3 leave, AID = 1
+rm 1
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+add 1
+aid 1
+station: 88:a9:b7:6c:5f:a3 join, AID = 1
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+*WM: Handle not found
+*WM: Request redirected to captive portal
+*WM: Handle root
+*WM: Request redirected to captive portal
+*WM: About to scan()
+scandone
+*WM: About to scan()
+*WM: Handle root
+*WM: Sending Captive Portal
+*WM: Sent...
+*WM: Handle root
+*WM: Sending Captive Portal
+*WM: Sent...
+*WM: Handle not found
+*WM: Request redirected to captive portal
+scandone
+*WM: Scan done
+*WM: DUP AP: LudosHomeM5G
+*WM: DUP AP: SFR_2E48
+*WM: DUP AP: SFR_2E48
+*WM: Handle root
+*WM: Sending Captive Portal
+*WM: Sent...
+*WM: About to scan()
+scandone
+*WM: About to scan()
+*WM: Handle not found
+*WM: Request redirected to captive portal
+*WM: Handle root
+*WM: Sending Captive Portal
+*WM: Sent...
+*WM: Handle wifi
+*WM: Scan done
+*WM: Sent config page
+scandone
+*WM: Scan done
+*WM: DUP AP: LudosHomeM5G
+*WM: DUP AP: SFR_2E48
+*WM: DUP AP: SFR_2E48
+*WM: Handle root
+*WM: Request redirected to captive portal
+*WM: About to scan()
+scandone
+*WM: About to scan()
+*WM: Handle root
+*WM: Sending Captive Portal
+*WM: Sent...
+scandone
+*WM: Scan done
+*WM: DUP AP: SFR_2E48
+*WM: DUP AP: SFR_2E48
+*WM: DUP AP: LudosHomeM5G
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+����������f������� $���������}����@<�� ��������������������������� ~�sc}ndo�e���{�om媥�����	rֽ������aVW�/��.�����h�� ����`�������"#re{�nmu������`� ���h��������� @�������������    �������������    ���    ������   v���� ������������ d���������������������   @B�  �t���������  ���  @@�������� ! �����������������  ����������    �~�������  ��������  �����A �����������������    @������������  �����     ���������  � ������  ����������   �������������� �H`���������������   @ "����������x   ���� �������������  @
+X�������������������  @����  @�������������  ����������������   ������������ ���������������  �  ����������������    �������  " �������������  �������������   ������������������   ����������������   �������    ���������������� @ ����������� �������������   @0����������������    ����������� �`����������������� @ ������������  ������������������    |�����~���������������   ���� ������ �  ��   ��������������� 	�����������������  �����������   `N����� @��������"@ ����  ����������   �����������   �������    ��������  ��������� ��x�� ������o� ��@&����  �X��������o� � G����������@���'��� �����"������@ �
+���  ����0^����� @�  ��  ����������������  ���` �����scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+*WM: About to scan()
+scandone
+*WM: About to scan()
+scandone
+*WM: Scan done
+*WM: DUP AP: LudosHomeM5G
+*WM: DUP AP: SFR_2E48
+*WM: DUP AP: SFR_2E48
+failed to connect and hit timeout
+wifimanager WiFi connection FAILED
+Can't connect to WIFI ...
+ maxWriteData = 2  writeData is : ind=66 & val=0
+Got message : source is : C, cmd is : V, size is : 4, sizeof datastruc is 4 message is : 0Got message from Controler : EPOCH index=48 value=1
+    Now sending command BlinkWifiLed with index=66 and value=0
+Got message : source is : C, cmd is : V, size is : 4, sizeof datastruc is 4 message is : 0Got message from Controler : EPOCH index=48 value=1
+ Action is now processiong command IND_EPOCH with index=48 and value=1
+Ask for new time...
+Can't get time because not connected to WIFI
+Time asked but Can't get time from ntp server
+ maxWriteData = 1  writeData is : ind=66 & val=-3
+Got message : source is : C, cmd is : V, size is : 4, sizeof datastruc is 4 message is : 0Got message from Controler : EPOCH index=48 value=1
+    Now sending command BlinkWifiLed with index=66 and value=-3
+ Try to connect the Wifi...
+station: 88:a9:b7:6c:5f:a3 leave, AID = 1
+rm 1
+bcn 0
+del if1
+mode : sta(dc:4f:22:7c:08:4c)
+ First try with last used wifi ssid ...
+scandone
+.....scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+....scandone
+no LudosHomeMain found, reconnect after 1s
+.reconnect
+....scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+.....scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+..
+WiFi cnx with last connection FAILED, Next try with ssids in config ...
+Retry 3 
+Looking for networks : scandone
+scandone
+7
+network 1 : LudosMFB2G 
+network 2 : SFR_2E48 
+network 3 : LudosHomeM5G 
+network 4 : LudosHomeM5G 
+network 5 : SFR_2E48 
+network 6 : ESP-30CEE2 
+network 7 : SFR_2E48_EXT 
+ssid: LudosMFB2G 
+ssid: SFR_2E48 
+ssid: LudosHomeM5G 
+ssid: SFR_2E48 
+ssid: ESP-30CEE2 
+ssid: SFR_2E48_EXT 
+Retry 2 
+Looking for networks : scandone
+8
+network 1 : LudosMFB2G 
+network 2 : SFR_2E48 
+network 3 : LudosHomeM5G 
+network 4 : SFR_2E48 
+network 5 : ESP-30CEE2 
+network 6 : LudosHomeM5G 
+network 7 : SFR_2E48_EXT 
+network 8 : SFR_2E48 
+ssid: LudosMFB2G 
+ssid: SFR_2E48 
+ssid: LudosHomeM5G 
+ssid: SFR_2E48 
+ssid: ESP-30CEE2 
+ssid: LudosHomeM5G 
+ssid: SFR_2E48_EXT 
+ssid: SFR_2E48 
+Retry 1 
+Looking for networks : scandone
+7
+network 1 : LudosMFB2G 
+network 2 : SFR_2E48 
+network 3 : ESP-30CEE2 
+network 4 : LudosHomeM5G 
+network 5 : SFR_2E48 
+network 6 : SFR_2E48 
+network 7 : LudosHomeM5G 
+ssid: LudosMFB2G 
+ssid: SFR_2E48 
+ssid: ESP-30CEE2 
+ssid: LudosHomeM5G 
+ssid: SFR_2E48 
+ssid: LudosHomeM5G 
+Retry 0 
+Looking for networks : scandone
+7
+network 1 : LudosMFB2G 
+network 2 : SFR_2E48 
+network 3 : LudosHomeM5G 
+network 4 : ESP-30CEE2 
+network 5 : SFR_2E48 
+network 6 : LudosHomeM5G 
+network 7 : SFR_2E48 
+ssid: LudosMFB2G 
+ssid: SFR_2E48 
+ssid: LudosHomeM5G 
+ssid: ESP-30CEE2 
+ssid: SFR_2E48 
+ssid: LudosHomeM5G 
+ssid: SFR_2E48 
+WiFi with saved connections FAILED, using WifiManager
+del if0
+usl
+mode : softAP(de:4f:22:7c:08:4c)
+add if1
+dhcp server start:(ip:192.168.4.1,mask:255.255.255.0,gw:192.168.4.1)
+bcn 100
+*WM: Adding parameter
+*WM: user
+*WM: Adding parameter
+*WM: passwd
+*WM: Adding parameter
+*WM: Admpasswd
+ maxWriteData = 1  writeData is : ind=66 & val=-2
+Got message : source is : C, cmd is : V, size is : 4, sizeof datastruc is 4 message is : 0Got message from Controler : EPOCH index=48 value=1
+    Now sending command BlinkWifiLed with index=66 and value=-2
+mode : sta(dc:4f:22:7c:08:4c) + softAP(de:4f:22:7c:08:4c)
+add if0
+*WM: SET AP STA
+Entered config mode
+192.168.4.1
+maPiscineAP
+ maxWriteData = 1  writeData is : ind=66 & val=-2
+*WM: 
+*WM: Configuring access point... 
+*WM: maPiscineAP
+*WM: maPiscine
+*WM: AP IP address: 
+*WM: 192.168.4.1
+*WM: HTTP server started
+*WM: About to scan()
+*WM: About to scan()
+scandone
+*WM: Scan done
+*WM: DUP AP: LudosHomeM5G
+*WM: DUP AP: SFR_2E48
+*WM: DUP AP: SFR_2E48
+add 1
+aid 1
+station: 88:a9:b7:6c:5f:a3 join, AID = 1
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+*WM: Handle not found
+*WM: Request redirected to captive portal
+*WM: Handle root
+*WM: Request redirected to captive portal
+*WM: About to scan()
+scandone
+*WM: About to scan()
+*WM: Handle root
+*WM: Sending Captive Portal
+*WM: Sent...
+*WM: Handle root
+*WM: Sending Captive Portal
+*WM: Sent...
+*WM: Handle not found
+*WM: Request redirected to captive portal
+*WM: Handle root
+*WM: Sending Captive Portal
+*WM: Sent...
+*WM: Handle not found
+*WM: Request redirected to captive portal
+*WM: Handle root
+*WM: Sending Captive Portal
+
+User exception (panic/abort/assert)
+--------------- CUT HERE FOR EXCEPTION DECODER ---------------
+
+Unhandled C++ exception: OOM
+
+>>>stack>>>
+
+ctx: sys
+sp: 3fffec70 end: 3fffffb0 offset: 0010
+3fffec80:  00000000 000001b0 00000018 4022a38c  
+3fffec90:  3fffed00 3fffad3c 3fffed44 402154bf  
+3fffeca0:  3ffeb7e0 0000000d 3fffecdc 402291a3  
+3fffecb0:  3fffecdc 00000004 3fffecd0 402291e5  
+3fffecc0:  00000001 3fffad3c 3fffed44 40215586  
+3fffecd0:  656e6f6e 00000000 04000000 3fffadb4  
+3fffece0:  000d000f 80000000 3fffed00 402291e5  
+3fffecf0:  3fffad80 402154a8 3fffad3c 40215ca0  
+3fffed00:  00000000 00000065 00000000 3fffa85c  
+3fffed10:  00000002 3fffa85c 3fffad3c 40214e0b  
+3fffed20:  000000c8 40213045 00000020 4010105c  
+3fffed30:  000001a6 00000001 00000050 00000002  
+3fffed40:  00000002 3fffa85c 3fffad3c 40213050  
+3fffed50:  000000c8 3fffed80 3fffed8c 00000000  
+3fffed60:  00000002 00000009 3fffa85c 00000002  
+3fffed70:  00000002 3fffa85c 3ffffd00 4022018d  
+3fffed80:  74786574 6d74682f 0900006c 3fffab84  
+3fffed90:  01a601af 80000000 3fffa85c 402145b5  
+3fffeda0:  00000000 3fffaacb 3fffa85c 40216651  
+3fffedb0:  3fffa85c 3fffaacb 00000020 4010050c  
+3fffedc0:  3fffaacb 3fff4da8 00000005 00000002  
+3fffedd0:  00000002 3fffaacb 3fffa85c 402146e2  
+3fffede0:  401030b7 3fff15a0 3fff1d78 00000000  
+3fffedf0:  ffffffe5 1b3b254f 3fff1ed4 40103294  
+3fffee00:  3fffa890 00000000 ba1cac08 080f765f  
+3fffee10:  ffffffe5 1b3b254f 4010374e 3fffa9a4  
+3fffee20:  3fffee70 3fffb884 3fffb374 4022cad4  
+3fffee30:  000000e3 3fffa9ea 3fffb884 3fffa85c  
+3fffee40:  00000000 00000a09 3ffe88dc 1b3b254f  
+3fffee50:  3ffe000a 2c9f0300 4000050c 00000000  
+3fffee60:  3fffa9a4 3fffb374 3fffb884 4022cb34  
+3fffee70:  3fffb978 3fffb96c 00000010 3fff4da8  
+3fffee80:  3fff4fd0 3fff4da8 3fffa9a4 3fff5018  
+3fffee90:  3fffb374 3fff501c 3fff501d 40265d91  
+3fffeea0:  40106ec8 00000050 00000000 00000008  
+3fffeeb0:  00000018 00000000 00000020 4010105c  
+3fffeec0:  00000000 3fffb80c 0000001d 3fff4da8  
+3fffeed0:  3fff4fd0 3fffa9c2 3fffa9a4 4026ae2d  
+3fffeee0:  00000014 3fff4da8 00000000 40262985  
+3fffeef0:  00000000 00000aa6 3ffe88dc 40100cda  
+3fffef00:  40287ee8 3fffb80c 3fff7e54 3fff8d0c  
+3fffef10:  3fff4da8 00000008 3fffa9a4 40262045  
+3fffef20:  3fffdc90 3fff7e54 3fffb80c 40261e58  
+3fffef30:  4028b09d 3fff7e54 3fffb80c 4028b0af  
+3fffef40:  3fffa9b4 3fffa9a4 00000000 3fffdcc0  
+3fffef50:  40287b17 00000000 3fffb80c 4028c3bf  
+3fffef60:  40000f49 3fffdab0 ffffff00 40000f49  
+3fffef70:  40000e19 000a2ee1 bff00000 0000bfff  
+3fffef80:  00000005 aa55aa55 000000be 401058c5  
+3fffef90:  401058cb bff00000 0000bfff f403f30b  
+3fffefa0:  4010000d bff00000 000a2ee1 401000ab  
+3fffefb0:  4027ca58 3fffef4c 4027ca09 3ffffc18  
+3fffefc0:  3fffffd0 00000000 00000000 feefeffe  
+3fffefd0:  feefeffe feefeffe feefeffe feefeffe  
+3fffefe0:  feefeffe feefeffe feefeffe feefeffe  
+3fffeff0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff000:  feefeffe feefeffe feefeffe feefeffe  
+3ffff010:  feefeffe feefeffe feefeffe feefeffe  
+3ffff020:  feefeffe feefeffe feefeffe feefeffe  
+3ffff030:  feefeffe feefeffe feefeffe feefeffe  
+3ffff040:  feefeffe feefeffe feefeffe feefeffe  
+3ffff050:  feefeffe feefeffe feefeffe feefeffe  
+3ffff060:  feefeffe feefeffe feefeffe feefeffe  
+3ffff070:  feefeffe feefeffe feefeffe feefeffe  
+3ffff080:  feefeffe feefeffe feefeffe feefeffe  
+3ffff090:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff100:  feefeffe feefeffe feefeffe feefeffe  
+3ffff110:  feefeffe feefeffe feefeffe feefeffe  
+3ffff120:  feefeffe feefeffe feefeffe feefeffe  
+3ffff130:  feefeffe feefeffe feefeffe feefeffe  
+3ffff140:  feefeffe feefeffe feefeffe feefeffe  
+3ffff150:  feefeffe feefeffe feefeffe feefeffe  
+3ffff160:  feefeffe feefeffe feefeffe feefeffe  
+3ffff170:  feefeffe feefeffe feefeffe feefeffe  
+3ffff180:  feefeffe feefeffe feefeffe feefeffe  
+3ffff190:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff200:  feefeffe feefeffe feefeffe feefeffe  
+3ffff210:  feefeffe feefeffe feefeffe feefeffe  
+3ffff220:  feefeffe feefeffe feefeffe feefeffe  
+3ffff230:  feefeffe feefeffe feefeffe feefeffe  
+3ffff240:  feefeffe feefeffe feefeffe feefeffe  
+3ffff250:  feefeffe feefeffe feefeffe feefeffe  
+3ffff260:  feefeffe feefeffe feefeffe feefeffe  
+3ffff270:  feefeffe feefeffe feefeffe feefeffe  
+3ffff280:  feefeffe feefeffe feefeffe feefeffe  
+3ffff290:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff300:  feefeffe feefeffe feefeffe feefeffe  
+3ffff310:  feefeffe feefeffe feefeffe feefeffe  
+3ffff320:  feefeffe feefeffe feefeffe feefeffe  
+3ffff330:  feefeffe feefeffe feefeffe feefeffe  
+3ffff340:  feefeffe feefeffe feefeffe feefeffe  
+3ffff350:  feefeffe feefeffe feefeffe feefeffe  
+3ffff360:  feefeffe feefeffe feefeffe feefeffe  
+3ffff370:  feefeffe feefeffe feefeffe feefeffe  
+3ffff380:  feefeffe feefeffe feefeffe feefeffe  
+3ffff390:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff400:  feefeffe feefeffe feefeffe feefeffe  
+3ffff410:  feefeffe feefeffe feefeffe feefeffe  
+3ffff420:  feefeffe feefeffe feefeffe feefeffe  
+3ffff430:  feefeffe feefeffe feefeffe feefeffe  
+3ffff440:  feefeffe feefeffe feefeffe feefeffe  
+3ffff450:  feefeffe feefeffe feefeffe feefeffe  
+3ffff460:  feefeffe feefeffe feefeffe feefeffe  
+3ffff470:  feefeffe feefeffe feefeffe feefeffe  
+3ffff480:  feefeffe feefeffe feefeffe feefeffe  
+3ffff490:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff500:  feefeffe feefeffe feefeffe feefeffe  
+3ffff510:  feefeffe feefeffe feefeffe feefeffe  
+3ffff520:  feefeffe feefeffe feefeffe feefeffe  
+3ffff530:  feefeffe feefeffe feefeffe feefeffe  
+3ffff540:  feefeffe feefeffe feefeffe feefeffe  
+3ffff550:  feefeffe feefeffe feefeffe feefeffe  
+3ffff560:  feefeffe feefeffe feefeffe feefeffe  
+3ffff570:  feefeffe feefeffe feefeffe feefeffe  
+3ffff580:  feefeffe feefeffe feefeffe feefeffe  
+3ffff590:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff600:  feefeffe feefeffe feefeffe feefeffe  
+3ffff610:  feefeffe feefeffe feefeffe feefeffe  
+3ffff620:  feefeffe feefeffe feefeffe feefeffe  
+3ffff630:  feefeffe feefeffe feefeffe feefeffe  
+3ffff640:  feefeffe feefeffe feefeffe feefeffe  
+3ffff650:  feefeffe feefeffe feefeffe feefeffe  
+3ffff660:  feefeffe feefeffe feefeffe feefeffe  
+3ffff670:  feefeffe feefeffe feefeffe feefeffe  
+3ffff680:  feefeffe feefeffe feefeffe feefeffe  
+3ffff690:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff700:  feefeffe feefeffe feefeffe feefeffe  
+3ffff710:  feefeffe feefeffe feefeffe feefeffe  
+3ffff720:  feefeffe feefeffe feefeffe feefeffe  
+3ffff730:  feefeffe feefeffe feefeffe feefeffe  
+3ffff740:  feefeffe feefeffe feefeffe feefeffe  
+3ffff750:  feefeffe feefeffe feefeffe feefeffe  
+3ffff760:  feefeffe feefeffe feefeffe feefeffe  
+3ffff770:  feefeffe feefeffe feefeffe feefeffe  
+3ffff780:  feefeffe feefeffe feefeffe feefeffe  
+3ffff790:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff800:  feefeffe feefeffe feefeffe feefeffe  
+3ffff810:  00000002 00000000 00000020 4010050c  
+3ffff820:  4010295d 00000000 00000002 4010252c  
+3ffff830:  3ffedbb2 401057ab 3fff12f8 4010252c  
+3ffff840:  00000002 00000000 00000020 4010050c  
+3ffff850:  4010295d 00000000 00000002 4010252c  
+3ffff860:  3ffedbb2 401057ab 3fff1258 4010050c  
+3ffff870:  00000001 40104986 3fff1d78 4010252c  
+3ffff880:  40104df7 401057c3 3fff1640 40103294  
+3ffff890:  401030b7 3fff1640 3fff1ed4 40103294  
+3ffff8a0:  401048bf 00000042 00000002 00040000  
+3ffff8b0:  00002200 00000000 00000000 00040000  
+3ffff8c0:  40103788 00080000 4010374e 00000100  
+3ffff8d0:  3ffee448 00000000 00002200 00000001  
+3ffff8e0:  00000001 2c9f0300 4000050c 3fffc278  
+3ffff8f0:  40103470 3fffc200 00000022 1b104ad5  
+3ffff900:  40288e90 00000030 00000001 ffffffff  
+3ffff910:  0000000c 3fff1348 3ffe8b48 00002009  
+3ffff920:  3ffede9c c009c004 3fff0a20 0009c000  
+3ffff930:  ff000fff 00ffffff 00000084 3fff1348  
+3ffff940:  3fff7bac 00020021 3fff9044 00000030  
+3ffff950:  00000000 fffffffe 00000001 3fff8d7c  
+3ffff960:  3fff7bac 3fff7654 3fff9144 00000030  
+3ffff970:  40261c6f 00000000 000000b3 40105df0  
+3ffff980:  00000050 3fff8206 00000020 00000003  
+3ffff990:  00000000 00000000 00000002 3fff7670  
+3ffff9a0:  3fff4d44 3fff7e54 3fff81c4 00000030  
+3ffff9b0:  00000002 00000000 40288c6b 00000001  
+3ffff9c0:  ffffffff 00000000 3ffedd01 00000008  
+3ffff9d0:  40288cba 3fff12a8 3fff7bac 00020021  
+3ffff9e0:  00000002 00000000 00000020 4010050c  
+3ffff9f0:  00000005 00000005 00000002 4010252c  
+3ffffa00:  3ffedbb2 40287d7b 3fff12a8 3fffa274  
+3ffffa10:  00000000 40270f97 3fff8d7c 3fff7bac  
+3ffffa20:  00000000 00000002 00000000 3fff12a8  
+3ffffa30:  00000002 00000000 00000020 4010050c  
+3ffffa40:  4010295d 1b0ffc04 00000002 4010252c  
+3ffffa50:  3ffedbb2 401057ab 3fff1258 3fff4d44  
+3ffffa60:  00000001 40104986 3fff1d78 40262985  
+3ffffa70:  40104df7 00000030 0000001f 3fff4da8  
+3ffffa80:  3fff4da8 3fffa274 3fffa274 40261c6f  
+3ffffa90:  401048bf 00000042 00000002 00040000  
+3ffffaa0:  00002200 00000000 00000020 4010050c  
+3ffffab0:  40103788 00080000 40288c6b 00000001  
+3ffffac0:  ffffffff 00000000 3ffedd01 00000008  
+3ffffad0:  40288cba 3fff9f7c 3fff9f7c 00000000  
+3ffffae0:  00000000 00000000 00000020 4010050c  
+3ffffaf0:  000000c0 3fff9f7c 00000000 4010252c  
+3ffffb00:  3ffedbb0 40287d7b 3fff9f7c 3fff1e50  
+3ffffb10:  00000000 402719c3 3fff1e50 3fff9f7c  
+3ffffb20:  3ffebfaf 4022745c 00000000 00000003  
+3ffffb30:  3fff8246 3fff8a14 00000000 00000000  
+3ffffb40:  3ffebfaf 3ffebfaf 3fff98f7 402737db  
+3ffffb50:  3fff2548 402733d4 40210b04 3fff2548  
+3ffffb60:  401061a1 087a66a4 3fff2678 00000000  
+3ffffb70:  3fff2d80 3fff2678 3ffe88dc 40100cda  
+3ffffb80:  00000000 0879d428 402753d7 3fff2640  
+3ffffb90:  3fff2678 40210b04 3fff2548 4022b958  
+3ffffba0:  3fff1ed4 4027534c 3fff1e50 00000012  
+3ffffbb0:  402733c4 40273398 3fff1ed4 00000012  
+3ffffbc0:  40273363 3fff1e50 00000012 40228960  
+3ffffbd0:  40273914 3fff1e50 3fff1fcc 40210b04  
+3ffffbe0:  40273341 3fff1fcc 00000003 3fff1fcc  
+3ffffbf0:  40275769 3ffffc40 0000010f 3fff1fcc  
+3ffffc00:  00000000 0000010f 00000004 3fff45c4  
+3ffffc10:  40210b04 4028edb5 3ffe88d8 00000000  
+3ffffc20:  00000000 00000000 4022a504 3fffefb0  
+3ffffc30:  3ffffc40 40210b04 3fff45f0 40210cad  
+3ffffc40:  00000000 00000000 00000000 00000000  
+3ffffc50:  00000000 00000000 00000080 402629ac  
+3ffffc60:  00000000 3ffeb468 3fff4720 0000ea5f  
+3ffffc70:  00000001 0000000f 3fff4720 0000ea5f  
+3ffffc80:  00000001 00000000 3ffffd00 4021f3d4  
+3ffffc90:  4028f194 3ffffcb0 3ffffd00 4021fd0f  
+3ffffca0:  40220708 3fff45c4 3ffffd00 4022070f  
+3ffffcb0:  00000000 01c301cf 00000000 00000040  
+3ffffcc0:  4022745c 3ffeb468 3fff4720 3fff35b8  
+3ffffcd0:  00000001 3fff36d8 3fff35b8 4020aa58  
+3ffffce0:  fffe0042 3fff4720 3fff35b8 3fff35b8  
+3ffffcf0:  3fff4470 3fff45c4 3fff35b8 4020ed8b  
+3ffffd00:  3fff4470 3fff442c 00000000 00000000  
+3ffffd10:  00000001 3fff832c 017a017f 80000000  
+3ffffd20:  00000000 3ffeb289 3ffeb27f 00000000  
+3ffffd30:  402728c5 00000000 00000000 0000000a  
+3ffffd40:  00000000 0001d4c0 00000000 0006cfd4  
+3ffffd50:  40232a24 00000000 40232a24 00000000  
+3ffffd60:  40232a24 00000000 40232a24 00000000  
+3ffffd70:  40232a24 00000000 40232a24 00000000  
+3ffffd80:  40232a24 00000000 40232a24 00000000  
+3ffffd90:  00000003 00000000 3fff0001 3ffe8f03  
+3ffffda0:  3ffe8f03 01003500 3fff8038 00000008  
+3ffffdb0:  00000101 4020c558 00000003 402309f8  
+3ffffdc0:  402309f0 4020c534 4026e16a 40230a14  
+3ffffdd0:  40230a0c 3ffffe84 3ffffe70 3ffffe5c  
+3ffffde0:  00000000 3fff925a 00000000 3fff9260  
+3ffffdf0:  00330001 00000000 00000000 4020c534  
+3ffffe00:  401061a1 40230a14 40230a0c 00000000  
+3ffffe10:  3fff2d80 3fff4928 3ffe88d8 3fff4928  
+3ffffe20:  0006cef0 000003e8 4022a504 000003e8  
+3ffffe30:  0006cef0 3fff4928 00000064 4022a659  
+3ffffe40:  4022a6cf 0006cef0 0006cef0 4022a6cf  
+3ffffe50:  00000000 0006cef0 570a3d70 3ffeb1db  
+3ffffe60:  3ffeb1d0 3fff7f9c 0000000b 3ffe8f03  
+3ffffe70:  3ffeb1de 3ffe9b4e 3fff7f8c 0000000b  
+3ffffe80:  3ffe8f03 3ffe9e65 3ffeb1cb 3fff7adc  
+3ffffe90:  0000000b 3ffe8f03 00000000 00000000  
+3ffffea0:  3fff8a00 00000000 3fff4720 00000000  
+3ffffeb0:  0006cef0 00000007 00000000 4020cf64  
+3ffffec0:  3fff3bd0 00000027 3fff4720 00000000  
+3ffffed0:  3fff3bd0 3fff45c4 3fff35b8 4020efbd  
+3ffffee0:  000000ff 000000ff 3fffa3b4 3fffa3b4  
+3ffffef0:  3fffa9dc 3fffa9dc 00000000 000000ff  
+3fffff00:  00003ce8 0000079d 3ffe88dc 40100cda  
+3fffff10:  00000002 000003e8 00000020 3fff4950  
+3fffff20:  00000002 00000020 3fff9fc4 40101028  
+3fffff30:  00000002 3ffe8f03 00000000 40207b96  
+3fffff40:  00000000 00000000 00000000 00000000  
+3fffff50:  4028dfea 3fff4508 3fff44c4 00000003  
+3fffff60:  3fff4720 00000000 00000000 3fff38e8  
+3fffff70:  3fff8a14 4021077c 3fff35b8 3fff45c4  
+3fffff80:  00000007 3fff44c4 3fff4508 4020f13c  
+3fffff90:  00000000 3fff44c4 3fff3840 3fff4950  
+3fffffa0:  00000007 3fff44c4 3fff4508 402266ad  
+<<<stack<<<
+
+last failed alloc call: 402154BF(24)
+
+--------------- CUT HERE FOR EXCEPTION DECODER ---------------
+
+last failed alloc caller: 0x402154bf
+
+ ets Jan  8 2013,rst cause:2, boot mode:(3,1)
+
+load 0x4010f000, len 3424, room 16 
+tail 0
+chksum 0x2e
+load 0x3fff20b8, len 40, room 8 
+tail 0
+chksum 0x2b
+csum 0x2b
+v000a2ef0
+~ld
+
+Ma piscine web INITIALIZATION
+Master pin is false
+SDCard Initialization Failed
+Cant to open config file, file not found
+loading config
+config is now :
+AdminPassword : manager
+ User0 : user name : , passwd : 
+ User1 : user name : , passwd : 
+ User2 : user name : , passwd : 
+ User3 : user name : , passwd : 
+ User4 : user name : , passwd : 
+ SSID0 : SSID name : , SSID passwd : 
+ SSID1 : SSID name : , SSID passwd : 
+ SSID2 : SSID name : , SSID passwd : 
+ maxWriteData = 1  writeData is : ind=66 & val=-3
+ Try to connect the Wifi...
+fpm close 1 
+mode : sta(dc:4f:22:7c:08:4c)
+add if0
+ First try with last used wifi ssid ...
+......scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+......scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+......scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+....
+WiFi cnx with last connection FAILED, Next try with ssids in config ...
+Retry 3 
+Looking for networks : scandone
+scandone
+7
+network 1 : LudosMFB2G 
+network 2 : SFR_2E48 
+network 3 : ESP-30CEE2 
+network 4 : LudosHomeM5G 
+network 5 : SFR_2E48 
+network 6 : SFR_2E48 
+network 7 : LudosHomeM5G 
+ssid: LudosMFB2G 
+ssid: SFR_2E48 
+ssid: ESP-30CEE2 
+ssid: LudosHomeM5G 
+ssid: SFR_2E48 
+ssid: LudosHomeM5G 
+Retry 2 
+Looking for networks : scandone
+7
+network 1 : LudosMFB2G 
+network 2 : LudosHomeM5G 
+network 3 : SFR_2E48 
+network 4 : ESP-30CEE2 
+network 5 : SFR_2E48_EXT 
+network 6 : LudosHomeM5G 
+network 7 : SFR_2E48 
+ssid: LudosMFB2G 
+ssid: LudosHomeM5G 
+ssid: SFR_2E48 
+ssid: ESP-30CEE2 
+ssid: SFR_2E48_EXT 
+ssid: LudosHomeM5G 
+ssid: SFR_2E48 
+Retry 1 
+Looking for networks : scandone
+7
+network 1 : LudosMFB2G 
+network 2 : LudosHomeM5G 
+network 3 : LudosHomeM5G 
+network 4 : ESP-30CEE2 
+network 5 : SFR_2E48 
+network 6 : SFR_2E48 
+network 7 : SFR_2E48_EXT 
+ssid: LudosMFB2G 
+ssid: LudosHomeM5G 
+ssid: ESP-30CEE2 
+ssid: SFR_2E48 
+ssid: SFR_2E48_EXT 
+Retry 0 
+Looking for networks : scandone
+8
+network 1 : LudosMFB2G 
+network 2 : SFR_2E48 
+network 3 : LudosHomeM5G 
+network 4 : LudosHomeM5G 
+network 5 : ESP-30CEE2 
+network 6 : SFR_2E48_EXT 
+network 7 : SFR_2E48 
+network 8 : SFR_2E48 
+ssid: LudosMFB2G 
+ssid: SFR_2E48 
+ssid: LudosHomeM5G 
+ssid: ESP-30CEE2 
+ssid: SFR_2E48_EXT 
+ssid: SFR_2E48 
+WiFi with saved connections FAILED, using WifiManager
+del if0
+usl
+mode : softAP(de:4f:22:7c:08:4c)
+add if1
+dhcp server start:(ip:192.168.4.1,mask:255.255.255.0,gw:192.168.4.1)
+bcn 100
+*WM: Adding parameter
+*WM: user
+*WM: Adding parameter
+*WM: passwd
+*WM: Adding parameter
+*WM: Admpasswd
+ maxWriteData = 2  writeData is : ind=66 & val=-2
+Got message : source is : C, cmd is : V, size is : 4, sizeof datastruc is 4 message is : 0Got message from Controler : EPOCH index=48 value=1
+mode : sta(dc:4f:22:7c:08:4c) + softAP(de:4f:22:7c:08:4c)
+add if0
+*WM: SET AP STA
+Entered config mode
+192.168.4.1
+maPiscineAP
+ maxWriteData = 3  writeData is : ind=66 & val=-2
+*WM: 
+*WM: Configuring access point... 
+*WM: maPiscineAP
+*WM: maPiscine
+*WM: AP IP address: 
+*WM: 192.168.4.1
+*WM: HTTP server started
+*WM: About to scan()
+*WM: About to scan()
+scandone
+*WM: Scan done
+*WM: DUP AP: LudosHomeM5G
+*WM: DUP AP: SFR_2E48
+*WM: DUP AP: SFR_2E48
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+*WM: About to scan()
+scandone
+*WM: About to scan()
+scandone
+*WM: Scan done
+*WM: DUP AP: SFR_2E48
+*WM: DUP AP: SFR_2E48
+*WM: DUP AP: LudosHomeM5G
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+failed to connect and hit timeout
+wifimanager WiFi connection FAILED
+Can't connect to WIFI ...
+ maxWriteData = 4  writeData is : ind=66 & val=0
+Got message : source is : C, cmd is : V, size is : 4, sizeof datastruc is 4 message is : 0Got message from Controler : EPOCH index=48 value=1
+    Now sending hello message to controleur !
+maPiscine Web is Ready !
+Got message : source is : C, cmd is : V, size is : 4, sizeof datastruc is 4 message is : 0Got message from Controler : EPOCH index=48 value=1
+ maxWriteData = 5  writeData is : ind=66 & val=-3
+Got message : source is : C, cmd is : V, size is : 4, sizeof datastruc is 4 message is : 0Got message from Controler : EPOCH index=48 value=1
+ Try to connect the Wifi...
+bcn 0
+del if1
+mode : sta(dc:4f:22:7c:08:4c)
+ First try with last used wifi ssid ...
+scandone
+.....scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+....scandone
+no LudosHomeMain found, reconnect after 1s
+.reconnect
+....scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+.....scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+...
+WiFi cnx with last connection FAILED, Next try with ssids in config ...
+Retry 3 
+Looking for networks : scandone
+scandone
+8
+network 1 : LudosMFB2G 
+network 2 : LudosHomeM5G 
+network 3 : SFR_2E48 
+network 4 : LudosHomeM5G 
+network 5 : SFR_2E48_EXT 
+network 6 : ESP-30CEE2 
+network 7 : SFR_2E48 
+network 8 : SFR_2E48 
+ssid: LudosMFB2G 
+ssid: LudosHomeM5G 
+ssid: SFR_2E48 
+ssid: LudosHomeM5G 
+ssid: SFR_2E48_EXT 
+ssid: ESP-30CEE2 
+ssid: SFR_2E48 
+Retry 2 
+Looking for networks : scandone
+7
+network 1 : LudosMFB2G 
+network 2 : SFR_2E48 
+network 3 : ESP-30CEE2 
+network 4 : LudosHomeM5G 
+network 5 : LudosHomeM5G 
+network 6 : SFR_2E48 
+network 7 : SFR_2E48 
+ssid: LudosMFB2G 
+ssid: SFR_2E48 
+ssid: ESP-30CEE2 
+ssid: LudosHomeM5G 
+ssid: SFR_2E48 
+Retry 1 
+Looking for networks : scandone
+8
+network 1 : LudosMFB2G 
+network 2 : LudosHomeM5G 
+network 3 : SFR_2E48 
+network 4 : LudosHomeM5G 
+network 5 : ESP-30CEE2 
+network 6 : SFR_2E48_EXT 
+network 7 : SFR_2E48 
+network 8 : SFR_2E48 
+ssid: LudosMFB2G 
+ssid: LudosHomeM5G 
+ssid: SFR_2E48 
+ssid: LudosHomeM5G 
+ssid: ESP-30CEE2 
+ssid: SFR_2E48_EXT 
+ssid: SFR_2E48 
+Retry 0 
+Looking for networks : scandone
+8
+network 1 : LudosMFB2G 
+network 2 : SFR_2E48 
+network 3 : LudosHomeM5G 
+network 4 : LudosHomeM5G 
+network 5 : ESP-30CEE2 
+network 6 : SFR_2E48 
+network 7 : SFR_2E48 
+network 8 : SFR_2E48_EXT 
+ssid: LudosMFB2G 
+ssid: SFR_2E48 
+ssid: LudosHomeM5G 
+ssid: ESP-30CEE2 
+ssid: SFR_2E48 
+ssid: SFR_2E48_EXT 
+WiFi with saved connections FAILED, using WifiManager
+del if0
+usl
+mode : softAP(de:4f:22:7c:08:4c)
+add if1
+dhcp server start:(ip:192.168.4.1,mask:255.255.255.0,gw:192.168.4.1)
+bcn 100
+*WM: Adding parameter
+*WM: user
+*WM: Adding parameter
+*WM: passwd
+*WM: Adding parameter
+*WM: Admpasswd
+ maxWriteData = 6  writeData is : ind=66 & val=-2
+Got message : source is : C, cmd is : V, size is : 4, sizeof datastruc is 4 message is : 0Got message from Controler : EPOCH index=48 value=1
+mode : sta(dc:4f:22:7c:08:4c) + softAP(de:4f:22:7c:08:4c)
+add if0
+*WM: SET AP STA
+Entered config mode
+192.168.4.1
+maPiscineAP
+ maxWriteData = 7  writeData is : ind=66 & val=-2
+*WM: 
+*WM: Configuring access point... 
+*WM: maPiscineAP
+*WM: maPiscine
+*WM: AP IP address: 
+*WM: 192.168.4.1
+*WM: HTTP server started
+*WM: About to scan()
+*WM: About to scan()
+scandone
+*WM: Scan done
+*WM: DUP AP: LudosHomeM5G
+*WM: DUP AP: SFR_2E48
+*WM: DUP AP: SFR_2E48
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+scandone
+no LudosHomeMain found, reconnect after 1s
+reconnect
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           �                     ��   ���������������������y���������������'������������������������������������������������������   ���������������������������������������������������������~��������������������������������������������������������  ��������������������������������v������������������������������������������ @���������L���������������������������   ������������������������������������r���������������������������Ȁ�������������������������������������������  |�����������������������������������������������������������������������������Ц�����b������q�����������~���������  �

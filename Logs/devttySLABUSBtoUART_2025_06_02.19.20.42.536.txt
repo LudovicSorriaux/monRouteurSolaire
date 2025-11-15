@@ -1,0 +1,32 @@
+*WM: Adding parameter
+*WM: user
+*WM: Adding parameter
+*WM: passwd
+*WM: Adding parameter
+*WM: Admpasswd
+ Can't open alert file
+ Can't open alert file
+ Can't open alert file
+ Can't open alert file
+ Can't open alert file
+ Can't open alert file
+*WM: SET AP STA
+ Can't open alert file
+ Can't open alert file
+ Can't open alert file
+ Can't open alert file
+ Can't open alert file
+ Can't open alert file
+*WM: 
+*WM: Configuring access point... 
+*WM: maPiscineAP
+*WM: maPiscine
+*WM: AP IP address: 
+*WM: 192.168.4.1
+*WM: HTTP server started
+*WM: About to scan()
+*WM: About to scan()
+*WM: Scan done
+*WM: DUP AP: LudosHomeM5G
+*WM: DUP AP: SFR_2E48
+*WM: DUP AP: SFR_2E48

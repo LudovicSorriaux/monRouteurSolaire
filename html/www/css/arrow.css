@@ -1,0 +1,111 @@
+
+.arrow {
+    position: absolute;
+      transform: translate(20%, 20%);
+    cursor: pointer;
+  }
+  
+  .arrow[sens="right"] {
+    transform: rotate(-90deg);
+  }
+  
+  .arrow[sens="left"] {
+    transform: rotate(90deg);
+  }
+  
+  .arrow[color="red"] {
+    --couleur : red;
+  }
+  
+  .arrow[color="green"] {
+    --couleur : green;
+  }
+  
+  .arrow[color="blue"] {
+    --couleur : blue;
+  }
+  
+  .arrow[item="pnx"] {
+    z-index: 1;
+    top: 175px;
+    left: 147px;
+  }
+  
+  .arrow[item="edfConso"] {
+    top: 175px;
+    left: 270px;
+    z-index: 1;
+  }
+  
+  .arrow[item="edfVente"] {
+    top: 174px;
+    left: 250px;
+    z-index: 1;
+  }
+  
+  .arrow[item="ballon"] {
+    z-index: 2;
+    top: 72px;
+    left: 100px;
+  }
+  
+  .arrow[item="pac"] {
+    z-index: 2;
+    top: 69px;
+    left: 30px;
+  }
+  
+  .arrow span {
+      display: block;
+      width: 2vw;
+      height: 2vw;
+      border-bottom: 3px solid var(--couleur);
+      border-right: 3px solid var(--couleur);
+      transform: rotate(45deg);
+      margin: -5px;
+      animation: animate 2s infinite;
+  }
+  
+  .arrow span:nth-child(2) {
+      animation-delay: -0.2s;
+  }
+  
+  .arrow span:nth-child(3) {
+      animation-delay: -0.4s;
+  }
+  
+  @keyframes animate {
+      0% {
+          opacity: 0;
+          transform: rotate(45deg) translate(-20px, -20px);
+      }
+      50% {
+          opacity: 1;
+      }
+      100% {
+          opacity: 0;
+          transform: rotate(45deg) translate(20px, 20px);
+      }
+  }
+  
+  /*
+<html>
+    <head>
+        <title>JS affichage image</title>
+    </head>
+     
+    <body>
+         
+        <script type="text/javascript">
+            function viewImage(id) {
+                document.getElementById(id).innerHTML="<img src='images/be-drapeau.jpg'>";
+            }
+        </script>
+ 
+        <div id="bouton" onclick="javascript:viewImage('image');"> Afficher l'image  </div>
+        <div id="image"></div>
+         
+    </body>
+</html>
+*/
+

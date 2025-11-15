@@ -1,0 +1,2 @@
+  ==> temps restant pompe principale:434 (durreePompe:0, counter_Filtration:26100)
+Now sending on available Channels - PP index=16 value=434

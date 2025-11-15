@@ -1,0 +1,149 @@
+/* Your app custom styles here */
+     .login-or {
+        position: relative;
+        color: #aaa;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        }
+    .span-or {
+       display: block;
+       position: absolute;
+       left: 50%;
+       top: 0px;
+       margin-left: -25px;
+       background-color: #fff;
+       width: 50px;
+       text-align: center;
+       text-shadow: 0 0 0 #111;
+       color: #424040;
+        }
+    .hr-or {
+        height: 0px;
+        margin-top: 0px !important;
+        margin-bottom: 0px !important;
+        margin-left: 30px;
+        margin-right: 30px;
+        }
+    
+    .myh1{
+        font-family: 'Kaushan Script', cursive;
+        font-size: 2.5em;
+        color: #fff;
+        margin: 0.4em 0 0.2em 0;
+        text-align: center;
+        }
+    .myh2,.myh3{
+        font-family: 'Kaushan Script', cursive;
+        }
+    .myh4,.myh5,.myh6{
+        font-family: 'Kaushan Script';
+        }
+    .mypanel {
+        background-color: #1F2736;
+        margin: 5px 0px;
+        position: relative;
+        border-radius: 1rem;
+        border: .2rem solid;
+        border-bottom-color: #121212;
+        border-left-color: #252525;
+        border-right-color: #080808;
+        border-top-color: #3a3939;
+        box-shadow: inset -2px -2px 2px #353535, inset 5px 5px 3px #000000;
+    }	 
+            
+    .myform{
+        position: relative;
+        display: -ms-flexbox;
+        display: flex;
+        padding: 1rem;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        pointer-events: auto;
+        background-color: #1e1e1e;
+        background-clip: padding-box;
+        border: 1px solid rgba(0,0,0,.2);
+        border-radius: 0.5em;
+        outline: 0;
+        max-width: 400px;
+        color: #777;
+    }
+    .myinput{
+    background-color: #333;
+        color: #777;
+        border-color: #454545;
+        border-width: 1px;
+        border-radius: 0.3em;
+        padding: 3px;
+        margin: 0 0 .4em .4em;
+    }
+    .mybtn{
+        border-radius:50px !important;
+        margin: 0.6em 0 !important;
+        box-shadow: -2px -2px 4px #353535, 2px 2px 2px #000 !important;
+    }
+    .myCancelBtn{
+        border-radius:50px !important;
+        margin: 0.6em 0 !important;
+        box-shadow: -2px -2px 4px #353535, 2px 2px 2px #000 !important;
+        font-weight: 400 !important;
+        font-size: 14px !important;
+    }
+
+    .myLabel{
+        font-size: 20px !important;
+        margin: 0.15em 1em !important;	
+    }
+
+    .mySmallLabel{
+        font-size: 15px !important;
+        margin: 0.15em 1em !important;	
+    }
+
+    .hidden {
+        display: none !important;
+    }
+        
+    tank {
+        width: 70%;
+        height: 300px;  /* 50% */
+        background: linear-gradient(90deg, #E6E6FA 0%, #e0e0e0 50%, #D3D3D3 100%) center no-repeat;
+        box-shadow: 2px 2px 5px #bebebe,
+         -2px -2px 5px #ffffff;
+        border-radius: 10px 10px 20px 20px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-content: stretch;
+        align-items: stretch;
+    }
+
+    tank .water {
+        width: 100%;
+        transition: height 0.5s ease-out;
+        background: linear-gradient(90deg, rgba(92, 142, 238, 0.51) 0%, #5C8EEE 100%);
+        border-radius: 5px 5px 20px 20px;
+        align-self:flex-end;
+        font-family: 'Roboto';
+        color: #081531;
+        font-weight: 700;
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .waterLevel{
+        width: 70%;
+        font-family: 'Roboto';
+        font-weight: 700;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .copyright {
+        font-size: 12px;
+        position:fixed;
+        bottom:-2%;
+        left:0.1%;
+    }

@@ -1,0 +1,38 @@
+Check Temp Ensor ! (bad address)
+Check Temp Eauxt
+Failed to read from AIR temp se
+Now sending on available Channels - tempEau index=2 value=2087
+    Now sending hello message to web !
+    Now sending hello message to web !
+    Now sending hello message to web !
+    Now sending hello message to web !
+    Now sending hello message to web !
+    Now sending hello message to web !
+    Now sending hello message to web !
+    Now sending hello message to web !
+    Now sending hello message to web !
+    Now sending hello message to web !
+    Now sending hello message to web !
+    Got (synch) message from web : source is : W, cmd is : S, size is : 1, sizeof datastruc is 4 message is : F
+    Now sending synch message to Web with type sync is F !
+    Got (synch) message from web : source is : W, cmd is : S, size is : 1, sizeof datastruc is 4 message is : F
+    Now sending synch message to Web with type sync is F !
+    Got message (time) from web : source is : W, cmd is : T, size is : 8, sizeof datastruc is 4 message is : 69, 0, 62, 104, 0, 0, 0, 0, 
+    Got new time message from Web : 02/06/55 19:49:25, timeValue is 1748893765
+    Sending Time message to Clavier, Time message is : 1748893765 and time is 1748893765
+Now sending on available Channels - EPOCH index=48 value=0
+    Got message (hello) from Web : source is : W, cmd is : H, size is : 1, sizeof datastruc is 4 message is : 0, 
+    Now sending hello message to web !
+1er lancement de cycle : calcul des cycles
+in calculPompe : temp Eau = 20.87
+ durre pompe calcule total : 37575 durre pompe (float) calculé total : 10.44
+   ==> nouvelles donnees pour ce jour : duree pompe : 11460, Interval : 0 et nbCycles = 1
+calculs pompe principale duree: 11460, intervrrage pompe,les: 0
+demaal: 0, nbcyc 1er cycle:1
+ ==> Starting pompe principale for 191 mn
+  urs pompe en marche 
+ cycle en coNow sending on available Channels - PP index=16 value=191
+  ==> temps restant pompe principale:191 (durreePompe:0, counter_Filtration:11460)
+Check Alerts
+Now sending on available Channels - PP index=16 value=191
+   cycle en cours pompe en marche 

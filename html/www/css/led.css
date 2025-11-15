@@ -1,0 +1,210 @@
+
+/* ADD 6(e), 7(f) and 8(g) column grid */
+.ui-grid-e, .ui-grid-f, .ui-grid-g { 
+	overflow: hidden; 
+}
+
+/* grid e: 16/16/16/16/16/16 */
+.ui-grid-e .ui-block-a,
+.ui-grid-e .ui-block-b,
+.ui-grid-e .ui-block-c,
+.ui-grid-e .ui-block-d,
+.ui-grid-e .ui-block-e,
+.ui-grid-e .ui-block-f { 
+	width: 16.66666666666667%; 
+}
+.ui-grid-e > :nth-child(n) { 
+	width: 16.66666666666667%; 
+}
+.ui-grid-e .ui-block-a { 
+	clear: left; 
+}
+
+/* grid f: 14/14/14/14/14 */
+.ui-grid-f .ui-block-a,
+.ui-grid-f .ui-block-b,
+.ui-grid-f .ui-block-c,
+.ui-grid-f .ui-block-d,
+.ui-grid-f .ui-block-e,
+.ui-grid-f .ui-block-f,
+.ui-grid-f .ui-block-g { 
+	width: 14.28571428571429%; 
+}
+.ui-grid-f > :nth-child(n) { 
+	width: 14.28571428571429%; 
+}
+.ui-grid-f .ui-block-a { 
+	clear: left; 
+}
+
+/* grid g: 12/12/12/12/12/12/12/12 */
+.ui-grid-g .ui-block-a,
+.ui-grid-g .ui-block-b,
+.ui-grid-g .ui-block-c,
+.ui-grid-g .ui-block-d,
+.ui-grid-g .ui-block-e,
+.ui-grid-g .ui-block-f,
+.ui-grid-g .ui-block-g,
+.ui-grid-g .ui-block-h { 
+	width: 12.5%; 
+}
+.ui-grid-h > :nth-child(n) { 
+	width: 12,5%; 
+}
+.ui-grid-h .ui-block-a { 
+	clear: left; 
+}
+
+/* ADD 6th (f) and 7th (g) blocks in grid */
+.ui-header .ui-navbar .ui-grid-e li.ui-block-f .ui-btn,
+.ui-footer .ui-navbar .ui-grid-e li.ui-block-f .ui-btn { 
+	margin-right: -3px; /* NOT TESTED */
+}
+
+.ui-header .ui-navbar .ui-grid-f li.ui-block-g .ui-btn,
+.ui-footer .ui-navbar .ui-grid-f li.ui-block-g .ui-btn { 
+	margin-right: -2px; /* NOT TESTED */
+}
+
+.ui-header .ui-navbar .ui-grid-g li.ui-block-g .ui-btn,
+.ui-footer .ui-navbar .ui-grid-g li.ui-block-g .ui-btn { 
+	margin-right: -1px; /* NOT TESTED */
+}
+
+.ui-grid-e .ui-btn,
+.ui-grid-f .ui-btn,
+.ui-grid-g .ui-btn { 
+	margin-right: 5px; 
+	margin-left: 5px; 
+}
+
+.ui-block-f, 
+.ui-block-g,
+.ui-block-h  { 
+	margin: 0; 
+	padding: 0; 
+	border: 0; 
+	float: left; 
+	min-height: 1px; 
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box; 
+	-ms-box-sizing: border-box; 
+	box-sizing: border-box; 
+}
+
+.ui-header .ui-navbar .ui-grid-e li.ui-block-f .ui-btn-icon-right .ui-icon,
+.ui-footer .ui-navbar .ui-grid-f li.ui-block-g .ui-btn-icon-right .ui-icon,
+.ui-footer .ui-navbar .ui-grid-g li.ui-block-h .ui-btn-icon-right .ui-icon   { 
+	right: 8px; 
+}
+
+
+.ledpanel{
+	background-color: #1F2736;
+	margin: 5px 0px;
+    border-radius: 3px;
+    position: relative;
+    border-radius: 1rem;
+    border: .2rem solid;
+    border-bottom-color: #121212;
+    border-left-color: #252525;
+    border-right-color: #080808;
+    border-top-color: #3a3939;
+    box-shadow: inset -2px -2px 2px #353535, inset 5px 5px 3px #000000;
+}
+
+.led {
+	font-size: 1.5em;
+    box-sizing: border-box;
+    margin: 5px auto 5px auto;
+	position: relative;
+  display: block;
+  width: 1em;
+  height: 1em;
+  background: #808080;
+  border-radius: 50%;
+  vertical-align: text-bottom;
+  mix-blend-mode: hard-light;
+  box-shadow: inset .25em .25em .25em rgba(255,255,255,.25), inset -.25em -.25em .25em .5em rgba(0,0,0,.25), inset 1em .5em .5em rgba(0,0,0,.5);
+  &:before {
+    content: '';
+    border-radius: 50%;
+    display: block;
+    width: .25em;
+    height: .25em;
+    background: #fff;
+    opacity: .1;
+    margin-top: .2em;
+    margin-left: .2em;
+    mix-blend-mode: overlay;
+  }
+}
+
+.ledOn {
+    border: 0px solid rgba(0,0,0,.75);
+    box-shadow: 0 0 4px 2px;
+}
+
+.ledOff {
+    border: 2px solid #504b4b;
+    box-shadow: inset .25em .25em .25em rgba(255,255,255,.25), inset -.25em -.25em .25em .5em rgba(0,0,0,.25), inset 1em .5em .5em rgba(0,0,0,.5);
+}
+
+.ledOn.blink {
+      -webkit-animation: blink .5s infinite;
+      -moz-animation:    blink .5s infinite;
+      -o-animation:      blink .5s infinite;
+      animation:         blink .5s infinite;
+}
+	
+.ledVert {
+    background:SpringGreen;
+    color:SpringGreen;
+}
+.ledCyan {
+    background:Cyan;
+    color:Cyan;
+}
+.ledRose {
+    background:Orchid;
+    color:Orchid;
+}
+.ledViolet {
+    background:#ddd3ff;
+    color:#ddd3ff;
+}
+.ledBlanc {
+    background:OldLace;
+    color:OldLace;
+}
+.ledRouge {
+    background:#ff4500;
+    color:#ff4500;
+  }
+.ledOrange {
+    background:#ffa500;
+    color:#ffa500;
+  }
+.ledJaune {
+    background:#ffff00;
+    color:#ffff00;
+  }
+.ledBleu {
+    background:#009eff;
+    color:#81b2ff;
+  }
+
+@keyframes blink {
+  0% {
+    border: 1px solid rgba(0,0,0,.75);
+      box-shadow: inset .25em .25em .25em rgba(255,255,255,.25), inset -.25em -.25em .25em .5em rgba(0,0,0,.25), inset 1em .5em .5em rgba(0,0,0,.5);
+  }
+  50% {
+    border: 2px solid rgba(0,0,0,.05);
+      box-shadow: 0 0 .25em .1em, 0 0 1em .5em;
+  }
+  100% {
+    border: 1px solid rgba(0,0,0,.75);
+      box-shadow: inset .25em .25em .25em rgba(255,255,255,.25), inset -.25em -.25em .25em .5em rgba(0,0,0,.25), inset 1em .5em .5em rgba(0,0,0,.5);
+  }
+}

@@ -1,0 +1,4 @@
+Check Alerts
+Check Temp Int
+Failed to read from DHT sensor!
+   cycle en cours pompe en marche 
