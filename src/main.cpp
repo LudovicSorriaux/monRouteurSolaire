@@ -253,16 +253,30 @@ using namespace ace_button;
 
 /*_________________________________________Timers & interuptions functions__________________________________________________________*/
 
-    void IRAM_ATTR detectsMovementRising() {                      // sensor edge detection interrupt service routine
-        changePIR = true;                                        	// status change detected
-        candidatePIR = HIGH;  //digitalRead(config.motionSensor);       // we have a new status candidate (noise/spike might still cause this change)
-        lastPIR_Time = millis();	    	                          // mark the time of the change
+  /**
+   * @brief ISR détection front montant du capteur PIR - enregistre candidat HIGH pour détection mouvement
+   * 
+   * Interrupteur matériel (IRAM_ATTR) déclenché sur RISING du pin PIR.
+   * Positionne candidatePIR=HIGH, changePIR=true et mémorise timestamp pour filtrage anti-rebond
+   * (delayNoise 500ms). Ne modifie pas statusPIR directement (fait dans loop pour éviter glitches).
+   */
+    void IRAM_ATTR detectsMovementRising() {
+        changePIR = true;                                        	// Status change detected
+        candidatePIR = HIGH;                                         // Nouveau candidat (filtrage anti-rebond dans Task2code)
+        lastPIR_Time = millis();	    	                          // Timestamp pour debouncing logiciel
     }
 
-    void IRAM_ATTR detectsMovementFalling() {                     // sensor edge detection interrupt service routine
-        changePIR = true;                                        	// status change detected
-        candidatePIR = LOW; // digitalRead(config.motionSensor);        // we have a new status candidate (noise/spike might still cause this change)
-        lastPIR_Time = millis();	    	                          // mark the time of the change
+  /**
+   * @brief ISR détection front descendant du capteur PIR - enregistre candidat LOW pour fin mouvement
+   * 
+   * Interrupteur matériel déclenché sur FALLING du pin PIR.
+   * Positionne candidatePIR=LOW, changePIR=true et timestamp.
+   * Filtrage anti-rebond géré dans Task2code (debouncing logiciel via delayNoise).
+   */
+    void IRAM_ATTR detectsMovementFalling() {
+        changePIR = true;                                        	// Status change detected
+        candidatePIR = LOW;                                          // Nouveau candidat fin mouvement
+        lastPIR_Time = millis();	    	                          // Timestamp pour debouncing logiciel
     }
 
     #if defined(ESP8266)
@@ -1132,6 +1146,32 @@ using namespace ace_button;
           plageMarcheForcee[1].marcheForceeDone = true;   
         }
 
+  /**
+   * @brief Init ESP32 : Serial, OLED, LittleFS, config, DS18B20, TRIAC, WiFi, NTP, WebServer, 2 tasks (cores 0/1)
+   * 
+   * Séquence complète :
+   * 1. Serial 115200, U8g2 OLED splash 'Init Solar Routeur'
+   * 2. startSPIFFS()+loadConfiguration() - charge /cfg/routeur.cfg
+   * 3. Calcul pasPuissance = puissanceBallon/100 pour contrôle TRIAC (0-100%)
+   * 4. Calcul tempsChauffe (formule 4185*volume*(tempIdéale-tempActuelle)/puissance)
+   * 5. ds18b20.begin() - init sondes température DS18B20
+   * 6. DimmableLight::setSyncPin(pinZeroCross) + DimmableLight::begin() - init TRIAC dimmer
+   * 7. pinMode RelayPAC/PIR/button, init AceButton avec handleButtonEvent
+   * 8. WiFi.mode(WIFI_STA) + callbacks ESP32 (WiFiStationConnected, WiFiGotIP, WiFiStationDisconnected)
+   * 9. startWiFi() - cascade connexion WiFi (reconnect / config / scan)
+   * 10. getNTPTime() loop MaxNTPRetries - synchro horloge NTP
+   * 11. calculDureeJour() - calcul timestamps jour/nuit depuis table journee[][]
+   * 12. routeurWeb.startup() - démarre AsyncWebServer + mDNS
+   * 13. Init plageMarcheForcee[] (heureOnMarcheForcee/minuteOnMarcheForcee) depuis config
+   *     avec breakTime/makeTime pour vérifier si dans le futur
+   * 14. xTaskCreatePinnedToCore(Task1code, core0) - TRIAC/SolarEdge/PAC
+   * 15. xTaskCreatePinnedToCore(Task2code, core1) - OLED/PIR/WiFi/NTP/timers
+   * 
+   * Variables clés initialisées :
+   * - pasPuissance : puissanceBallon/100 (pas de contrôle TRIAC 0-100%)
+   * - tempsChauffe : durée marche forcée calculée (secondes)
+   * - plageMarcheForcee[0/1] : marche forcée primaire/secondaire avec marcheForceeDone flag
+   */
           /* ------- gestion des taches sur les deux cores ----------*/
       xTaskCreatePinnedToCore(      //Code pour créer un Task Core 0//
           Task1code,   /* Task function. */
@@ -1158,7 +1198,25 @@ using namespace ace_button;
 
 /*_________________________________________TASK CORE 1&2__________________________________________________________*/
 
-  		//programme utilisant le Core 1 de l'ESP32//
+  /**
+   * @brief Core 0 : gestion TRIAC dimmer, lecture SolarEdge, régulation surplus PV, contrôle PAC, marche forcée
+   * 
+   * Boucle infinie delay(25ms) :
+   * 1. Debounce PIR (candidatePIR->statusPIR si delayNoise>500ms)
+   * 2. Check plageMarcheForcee[0/1] (heure/minute) → démarre MF si temperatureEau<tempEauMin
+   * 3. Mode normal : getSolarEdgeValues(), calcul currentPower=(PV-LOAD)*1000W,
+   *    ajuste valTriac (brightness 0-255), gestion restePuissance
+   * 4. Contrôle relay PAC si debutOverPuissance>tempsOverProd et restePuissance>puissPacOn,
+   *    stop si >tempsMinPac et <puissPacOff
+   * 5. Mode marcheForcee : check finMarcheForcee (volume ou température)
+   * 6. gestEcran()+gestWeb()
+   * 
+   * Variables clés :
+   * - valTriac : 0-100% (converti en brightness 0-255 pour DimmableLight)
+   * - currentPower : surplus PV disponible (W), positif=production, négatif=consommation
+   * - restePuissance : surplus après chauffe-eau, utilisé pour PAC
+   * - marcheForcee : true si marche forcée active (TRIAC 100%)
+   */
     void Task1code( void * pvParameters ){
         bool doMarcheForcee = false;
 
@@ -1216,22 +1274,28 @@ using namespace ace_button;
             time_t maintenant = now();
 //            if((maintenant > jour) && (maintenant < nuit)){   // do it only in daylight
               if( getSolarEdgeValues() ) {
-                currentPower = (PVCurrentPower - LOADCurrentPower)*1000; //Kw en W; si > 0 on produit trop ajouter triac, si < 0 arreter triac on ne produit pas assez
+                // Calcul surplus = Production PV - Consommation maison (kW → W)
+                // Si > 0 : surplus à router vers chauffe-eau
+                // Si < 0 : consommation > production → stop TRIAC
+                currentPower = (PVCurrentPower - LOADCurrentPower)*1000;
                 Serial.printf("\nCurrentPower: %.0fW, PVPower; %.2fkW, LoadPower: %.2fkW\n\n",currentPower,PVCurrentPower,LOADCurrentPower);
                 Serial.printf("    debutOverPuissance: %02d:%02d, now: %02d:%02d\n\n",minute(debutOverPuissance),second(debutOverPuissance),minute(),second());
-                if ( currentPower >= 0 ){ 		    // currentPower > 0 puissance en trop rendue EDF : montée du triac
+                if ( currentPower >= 0 ){ 		    // Surplus disponible : router vers chauffe-eau
+                  // Calcul % TRIAC : currentPower / pasPuissance (pasPuissance = puissanceBallon/100)
+                  // Exemple : 2000W surplus, 3000W ballon → valTriac = 2000/(3000/100) = 66%
                   valTriac = currentPower / pasPuissance;
                   Serial.printf(" ValTriac calculated is: %.2f\n",valTriac);
                   if (valTriac > 100) {
-                    valTriac = 100;
-                    if(triac1.getBrightness()==255){    // triac already started resteP = current
-                      restePuissance = currentPower;      // over production modulo resistance
+                    valTriac = 100;  // Clip à 100% max
+                    // Calcul restePuissance pour PAC (surplus après chauffe-eau 100%)
+                    if(triac1.getBrightness()==255){    // TRIAC déjà à fond
+                      restePuissance = currentPower;      // Reste = surplus total (modulo résistance)
                     } else {
-                      restePuissance = currentPower-config.puissanceBallon ; // over production first time
+                      restePuissance = currentPower-config.puissanceBallon ; // 1ère fois à 100%
                     }
-                    if(debutOverPuissance == 0) debutOverPuissance = now();   // only if not set yet
+                    if(debutOverPuissance == 0) debutOverPuissance = now();   // Mémoriser début surplus
                   } else {
-                    restePuissance = 0.0;
+                    restePuissance = 0.0;  // Pas assez pour PAC
                     debutOverPuissance = 0;      
                   }
                   if( (int)valTriac == 0){
@@ -1255,18 +1319,23 @@ using namespace ace_button;
                 }
                 gestEcran(values);
                 gestWeb();
-                        // gestion relayPAC on si puissance > relayOn pendant 15mn et off si puissance < relayoff apres tempsMinPAC
+                // Gestion relay PAC (hystérésis temporelle pour éviter cycles start/stop)
+                // ON : si restePuissance > puissPacOn pendant tempsOverProd secondes (ex: 15min)
+                // OFF : si restePuissance < puissPacOff après tempsMinPac min (ex: 30min)
                 if(config.pacPresent){
-                  if(debutRelayPAC == 0) {   // relayPAC pas encore démarrée
+                  if(debutRelayPAC == 0) {   // PAC éteinte
                     Serial.printf("\n==> Test si start pac: debutOverPuissance:%02d:%02d:%02d, , now:%02d:%02d:%02d, delta(now - debutOP)(sec):%d, temps OverP: %i\n\n",hour(debutOverPuissance),minute(debutOverPuissance),second(debutOverPuissance),hour(),minute(),second(),now()-debutOverPuissance,config.tempsOverProd);
-                    if ( (restePuissance >= config.puissPacOn ) && (debutOverPuissance != 0) && ((now() - debutOverPuissance) > config.tempsOverProd ) ){   // overpuissance depuis plus de 15mn
+                    // Conditions démarrage PAC : surplus stable (restePuissance ≥ puissPacOn) pendant tempsOverProd
+                    if ( (restePuissance >= config.puissPacOn ) && (debutOverPuissance != 0) && ((now() - debutOverPuissance) > config.tempsOverProd ) ){
                       Serial.printf("\n ==> Start PAC at %2d:%2d:%2d\n",hour(),minute(),second());
                       mfPAC = true;
                       debutRelayPAC = now();
                       setRelayPac(HIGH);
                     }
-                  } else {
+                  } else {  // PAC allumée
                     Serial.printf("\n==>Test si stop PAC delta(now-debutRelayPac)(s):%d, tempsMinPac:%i, restPuissance:%.2f\n\n",now()-debutRelayPAC,config.tempsMinPac, restePuissance);
+                    // Condition arrêt PAC : si restePuissance < puissPacOff ET PAC tourne depuis > tempsMinPac
+                    // (évite arrêt prématuré : PAC doit tourner au moins tempsMinPac secondes)
                     if( (!modeManuPAC) && (now()-debutRelayPAC) > config.tempsMinPac ){
                       if(restePuissance < config.puissPacOff){
                         Serial.printf("\n ==> Stop PAC at %2d:%2d:%2d\n",hour(),minute(),second());
@@ -1316,7 +1385,26 @@ using namespace ace_button;
       }				// end for ever
     }
 
-  		//programme utilisant le Core 2 de l'ESP32//
+  /**
+   * @brief Core 1 : gestion écran OLED, PIR calibration, WiFi reconnect, NTP updates, timers secondes/minutes/heures
+   * 
+   * Boucle infinie delay(25ms) :
+   * 1. Init écran si WiFi+initEcran
+   * 2. Gestion motion PIR->allume OLED
+   * 3. Timeout écran (timeoutEcran 5min)
+   * 4. Check buttons (buttonChauffeEau)
+   * 5. Timer secondes : PIR calibration 60s, WiFi reconnect, gestEcran(horloge),
+   *    NTP retry si !ntpOK, appel getSolarEdgeInfos() toutes les solarEdgeGetInfos secondes
+   * 6. Timer minutes : ds18b20.requestTemperatures(), NTP retry (ntpWait 60min),
+   *    refresh écran 3min, switch solarEdgeGetInfos jour/nuit
+   * 7. Timer heures : getNTPTime(), calculDureeJour(), reset plageMarcheForcee[]
+   * 
+   * Variables clés :
+   * - nbSecondes/nbMinutes/nbHeures : timers incrémentaux pour actions périodiques
+   * - solarEdgeGetInfos : 60s (jour) ou 1800s (nuit) entre appels API SolarEdge
+   * - initPIRphase : calibration 60s après boot avant attachInterrupt()
+   * - oled : true si écran allumé, false si éteint (power save)
+   */
     void Task2code( void * pvParameters ){
       for(;;) {
         if(config.afficheur){                          // if ecran gestion

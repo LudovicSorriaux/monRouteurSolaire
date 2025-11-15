@@ -16,29 +16,26 @@
 
 #include <espnow.h>
 
-  /*
-   * EspNowClass::EspNowClass
-   * But : (description automatique) — expliquer brièvement l'objectif de la fonction
-   * Entrées : voir la signature de la fonction (paramètres)
-   * Sortie : valeur de retour ou effet sur l'état interne
-   */
+  /**
+ * @brief Constructeur vide classe EspNowClass (ESP-NOW communication)
+ * 
+ * @note EspNowClass::EspNowClass
+ */
   EspNowClass::EspNowClass(){};
-  /*
-   * EspNowClass::~EspNowClass
-   * But : (description automatique) — expliquer brièvement l'objectif de la fonction
-   * Entrées : voir la signature de la fonction (paramètres)
-   * Sortie : valeur de retour ou effet sur l'état interne
-   */
+  /**
+ * @brief Destructeur vide classe EspNowClass
+ * 
+ * @note EspNowClass::~EspNowClass
+ */
   EspNowClass::~EspNowClass(){};
 
 // public
 
-  /*
-   * void EspNowClass::initESPNOW
-   * But : (description automatique) — expliquer brièvement l'objectif de la fonction
-   * Entrées : voir la signature de la fonction (paramètres)
-   * Sortie : valeur de retour ou effet sur l'état interne
-   */
+  /**
+ * @brief Initialise ESP-NOW : WiFi.mode(WIFI_STA), esp_now_init(), register callbacks send/recv, register peers
+ * 
+ * @note void EspNowClass::initESPNOW
+ */
   void EspNowClass::initESPNOW(){
         char macStr[18];
   
@@ -93,12 +90,11 @@
       }
   }
 
-  /*
-   * void EspNowClass::sendClientHello
-   * But : (description automatique) — expliquer brièvement l'objectif de la fonction
-   * Entrées : voir la signature de la fonction (paramètres)
-   * Sortie : valeur de retour ou effet sur l'état interne
-   */
+  /**
+ * @brief Envoie message CLIENT_HELLO en broadcast si !foundManager (init phase discovery)
+ * 
+ * @note void EspNowClass::sendClientHello
+ */
   void EspNowClass::sendClientHello(){
     if(!foundManager){                          // in initialisation phase need to send Client Hello msg
         initNodeMessage.sendingId = nbSendReties;
@@ -106,24 +102,22 @@
     } 
   }
 
-  /*
-   * void EspNowClass::sendRouteurData
-   * But : (description automatique) — expliquer brièvement l'objectif de la fonction
-   * Entrées : voir la signature de la fonction (paramètres)
-   * Sortie : valeur de retour ou effet sur l'état interne
-   */
+  /**
+ * @brief Envoie structure routeurData (GRID/LOAD/PV power, relayPAC status) au manager si foundManager
+ * 
+ * @note void EspNowClass::sendRouteurData
+ */
   void EspNowClass::sendRouteurData(){
     if(foundManager){
       sendData(managerMac,routeurData);
     }  
   }
 
-  /*
-   * void EspNowClass::registerPeer
-   * But : (description automatique) — expliquer brièvement l'objectif de la fonction
-   * Entrées : voir la signature de la fonction (paramètres)
-   * Sortie : valeur de retour ou effet sur l'état interne
-   */
+  /**
+ * @brief Ajoute peer ESP-NOW (manager ou broadcast) si pas déjà existant via esp_now_add_peer()
+ * 
+ * @note void EspNowClass::registerPeer
+ */
   void EspNowClass::registerPeer(const uint8_t peerMac[]){           //Register peer (manager for slave)
     if ( !esp_now_is_peer_exist(peerMac)) {     // Manager not paired, attempt pair       
         if(debug) Serial.print("Register Manager with status : ");       
@@ -154,12 +148,11 @@
     routeurData.debutRelayPAC = debutRelayPAC;
   }
 
-  /*
-   * bool EspNowClass::hasManager
-   * But : (description automatique) — expliquer brièvement l'objectif de la fonction
-   * Entrées : voir la signature de la fonction (paramètres)
-   * Sortie : valeur de retour ou effet sur l'état interne
-   */
+  /**
+ * @brief Retourne bool foundManager (true si SERVER_HELLO reçu et peer enregistré)
+ * 
+ * @note bool EspNowClass::hasManager
+ */
   bool EspNowClass::hasManager(){
     return foundManager;
   }
@@ -168,12 +161,11 @@
 
 
   // callback for message sent out
-  /*
-   * void EspNowClass::sentCallback
-   * But : (description automatique) — expliquer brièvement l'objectif de la fonction
-   * Entrées : voir la signature de la fonction (paramètres)
-   * Sortie : valeur de retour ou effet sur l'état interne
-   */
+  /**
+ * @brief Callback ESP-NOW envoi : gère ACK (sendStatus=0) ou retry (max maxSendRetries, sinon foundManager=false)
+ * 
+ * @note void EspNowClass::sentCallback
+ */
   void EspNowClass::sentCallback(const uint8_t* macAddr, esp_now_send_status_t sendStatus) {
     char macStr[18];
     formatMacAddressToStr(macAddr, macStr, 18); // to get a printable string
@@ -195,12 +187,11 @@
   }
 
   // callback for message recieved
-  /*
-   * void EspNowClass::receiveCallback
-   * But : (description automatique) — expliquer brièvement l'objectif de la fonction
-   * Entrées : voir la signature de la fonction (paramètres)
-   * Sortie : valeur de retour ou effet sur l'état interne
-   */
+  /**
+ * @brief Callback ESP-NOW réception : parse buffer[0] (message type) et traite SERVER_HELLO, SYNCH_TIME, ROUTEUR_REQ_MSG, ERROR_MSG
+ * 
+ * @note void EspNowClass::receiveCallback
+ */
   void EspNowClass::receiveCallback(const uint8_t *macAddr, const uint8_t *data, int dataLen){
     // only allow a maximum of 250 characters in the message + a null terminating byte
 
@@ -273,12 +264,11 @@
 
 
 
-  /*
-   * void EspNowClass::getMessageType
-   * But : (description automatique) — expliquer brièvement l'objectif de la fonction
-   * Entrées : voir la signature de la fonction (paramètres)
-   * Sortie : valeur de retour ou effet sur l'état interne
-   */
+  /**
+ * @brief Convertit uint8_t message ID en string descriptif (DATA_MSG, CLIENT_HELLO, SERVER_HELLO, etc.)
+ * 
+ * @note void EspNowClass::getMessageType
+ */
     void EspNowClass::getMessageType(uint8_t messId, char *messagetypeStr){
       switch (messId) {
         case DATA_MSG:
@@ -315,22 +305,20 @@
       }
     }
 
-  /*
-   * uint8_t EspNowClass::getMessageStatus
-   * But : (description automatique) — expliquer brièvement l'objectif de la fonction
-   * Entrées : voir la signature de la fonction (paramètres)
-   * Sortie : valeur de retour ou effet sur l'état interne
-   */
+  /**
+ * @brief Retourne uint8_t messageStatus (SENTOK, SENTNOACK, SENTABORTED, DATARECEIVEDOK)
+ * 
+ * @note uint8_t EspNowClass::getMessageStatus
+ */
     uint8_t EspNowClass::getMessageStatus(){
       return messageStatus;
     }
 
-  /*
-   * template <typename T> void EspNowClass::sendData
-   * But : (description automatique) — expliquer brièvement l'objectif de la fonction
-   * Entrées : voir la signature de la fonction (paramètres)
-   * Sortie : valeur de retour ou effet sur l'état interne
-   */
+  /**
+ * @brief Template générique envoi struct via ESP-NOW : sérialise message en uint8_t[] et appelle esp_now_send()
+ * 
+ * @note template <typename T> void EspNowClass::sendData
+ */
     template <typename T> void EspNowClass::sendData(uint8_t *peerAddress, const T message){
       uint8_t s_data[sizeof(message)]; 
       char msgTypStr[20];
@@ -346,22 +334,20 @@
       }
     }
 
-  /*
-   * void EspNowClass::formatMacAddressToStr
-   * But : (description automatique) — expliquer brièvement l'objectif de la fonction
-   * Entrées : voir la signature de la fonction (paramètres)
-   * Sortie : valeur de retour ou effet sur l'état interne
-   */
+  /**
+ * @brief Convertit MAC address uint8_t[6] en string formaté 'XX:XX:XX:XX:XX:XX' via snprintf
+ * 
+ * @note void EspNowClass::formatMacAddressToStr
+ */
     void EspNowClass::formatMacAddressToStr(const uint8_t *macAddr, char *buffer, int maxLength) {
       snprintf(buffer, maxLength, "%02x:%02x:%02x:%02x:%02x:%02x", macAddr[0], macAddr[1], macAddr[2], macAddr[3], macAddr[4], macAddr[5]);
     }
 
-  /*
-   * bool EspNowClass::compareMacAdd
-   * But : (description automatique) — expliquer brièvement l'objectif de la fonction
-   * Entrées : voir la signature de la fonction (paramètres)
-   * Sortie : valeur de retour ou effet sur l'état interne
-   */
+  /**
+ * @brief Compare deux adresses MAC uint8_t[6] byte par byte - retourne true si identiques
+ * 
+ * @note bool EspNowClass::compareMacAdd
+ */
     bool EspNowClass::compareMacAdd(uint8_t *mac1, uint8_t *mac2){
         bool isSame = true;
       for (int i=0; i<ESP_NOW_ETH_ALEN; i++){
