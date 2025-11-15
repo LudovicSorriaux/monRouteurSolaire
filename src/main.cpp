@@ -370,6 +370,11 @@ using namespace ace_button;
     
 /*_________________________________________ Wifi functions __________________________________________________________*/
 
+    /**
+     * @brief Convertit l'état WiFi (wl_status_t) en chaîne de caractères lisible
+     * @param status Code d'état WiFi (WL_CONNECTED, WL_DISCONNECTED, etc.)
+     * @return Chaîne descriptive ("WL_CONNECTED", "WL_NO_SSID_AVAIL", etc.)
+     */
     const char* wl_status_to_string(wl_status_t status) {
       switch (status) {
         case WL_NO_SHIELD: return "WL_NO_SHIELD";
@@ -387,6 +392,11 @@ using namespace ace_button;
       return "";
     }
 
+    /**
+     * @brief Recherche le mot de passe WiFi correspondant à un SSID dans config.wifi[]
+     * @param ssid Nom du réseau WiFi à chercher
+     * @return Pointeur vers le mot de passe si trouvé, nullptr sinon
+     */
     char* findPassword(const char *ssid){
       for(int i=0; i<MAX_WIFI; i++){
         if(strcmp(  ssid,config.wifi[i].ssid) == 0){
@@ -397,6 +407,12 @@ using namespace ace_button;
       return nullptr;
     }
 
+    /**
+     * @brief Tente une connexion WiFi avec SSID et mot de passe, timeout 10 secondes
+     * @param ssid SSID du réseau (nullptr = dernier réseau utilisé)
+     * @param passphrase Mot de passe WiFi
+     * @return true si connexion réussie (WL_CONNECTED), false sinon
+     */
     bool WiFiConnect(const char *ssid, const char *passphrase){
        unsigned long mytimeout = millis() / 1000;
        WiFi.persistent( true );
@@ -418,6 +434,10 @@ using namespace ace_button;
         return false;
     }
 
+    /**
+     * @brief Scan les réseaux WiFi disponibles et tente connexion avec chaque SSID connu dans config.wifi[] (4 essais)
+     * @return true si connexion réussie avec un réseau trouvé, false après épuisement des tentatives
+     */
     bool ConnectWithStoredCredentials(){
       const char *ssid = "null";
       const char *password = nullptr;
@@ -458,6 +478,10 @@ using namespace ace_button;
     return false;
   }
 
+    /**
+     * @brief Tente connexion WiFi séquentielle avec tous les SSID de config.wifi[] (sans scan préalable)
+     * @return true si connexion réussie avec un SSID du fichier de configuration, false sinon
+     */
     bool ConnectWithConfigFileCredentials(){
       char ssid[MAX_NAME_SIZE];
       char password[MAX_NAME_SIZE*2];
@@ -484,6 +508,10 @@ using namespace ace_button;
       return rtn;
     }
 
+    /**
+     * @brief Lance cascade complète de connexion WiFi : 1) WiFi.reconnect() si WiFiConnectedOnce, 2) dernier SSID, 3) ConfigFile, 4) scan + credentials stockés
+     * @return true si WiFi connecté (WL_CONNECTED), false après échec de toutes les méthodes
+     */
     bool startWiFi() {
       bool rtn = false;
 
@@ -552,6 +580,10 @@ using namespace ace_button;
 
 /*_________________________________________ Web functions __________________________________________________________*/
 
+    /**
+     * @brief Parse le payload JSON SolarEdge (solarEdgePayload) et extrait GRID/LOAD/PV currentPower + direction (from/to)
+     * @return true si parsing réussi et valeurs extraites, false en cas d'erreur deserializeJson
+     */
     bool getSolarEdgeValues(){
             bool rtn = false;
             const char *localFrom;
@@ -616,6 +648,10 @@ using namespace ace_button;
         return rtn;
       }
 
+    /**
+     * @brief Effectue requête HTTPS GET vers API SolarEdge endpoint currentPowerFlow (WiFiClientSecure setInsecure), stocke réponse dans solarEdgePayload
+     * @note Appelée périodiquement (toutes les minutes). Positionne gotSolarEdgePayload=true si succès
+     */
     void getSolarEdgeInfos() {  //Interruption every minute
       if(WiFi.status() == WL_CONNECTED){
         clientSolarEdge = new WiFiClientSecure;
@@ -662,6 +698,11 @@ using namespace ace_button;
       }
     }
 
+    /**
+     * @brief Convertit codes HTTP (200, 404, 500...) et codes d'erreur HTTPClient (-1 à -13) en chaînes descriptives
+     * @param status Code HTTP ou code erreur HTTPClient négatif
+     * @return Chaîne lisible ("CODE OK", "NOT FOUND", "CONNECTION FAILED", "Not Connected to wifi", etc.)
+     */
     const char* http_status_to_string(int status) {
       switch (status) {
         case HTTP_CODE_OK: return "CODE OK";                                  // = 200,
@@ -697,6 +738,10 @@ using namespace ace_button;
 
 /*__________________________________________________________Config_FUNCTIONS__________________________________________________________*/
 
+    /**
+     * @brief Monte le système de fichiers LittleFS et affiche liste récursive de tous les fichiers/dossiers
+     * @note Appelle listAllFilesInDir("/", 0) après montage réussi
+     */
     void startSPIFFS() { // Start the SPIFFS and list all contents
 
       if(!LittleFS.begin()){          // Start the SPI Flash File System (LittleFS)
@@ -707,7 +752,11 @@ using namespace ace_button;
       }
     }
 
-    // list files in FileSystem
+    /**
+     * @brief Liste récursivement fichiers/répertoires LittleFS avec indentation (tabs) selon profondeur
+     * @param dir_path Chemin du répertoire à lister (ex: "/cfg/")
+     * @param deep Profondeur actuelle (0=racine) pour indentation
+     */
     void listAllFilesInDir(String dir_path,uint8_t deep){
       String tabs;
       for (uint8_t i=0;i<deep;i++){
@@ -733,7 +782,10 @@ using namespace ace_button;
       }
     }
 
-    // Prints the content of a file to the Serial
+    /**
+     * @brief Affiche sur Serial le contenu complet de la structure config (adminPassword, users[], wifi[], parametres SolarEdge, ballon, PAC)
+     * @note Utilisé pour debug après loadConfiguration() ou saveConfiguration()
+     */
     void printConfiguration() {
       uint8_t i = 0;
 
@@ -763,7 +815,10 @@ using namespace ace_button;
       Serial.println();
     } 
 
-    // Loads the configuration from a file
+    /**
+     * @brief Charge configuration depuis /cfg/routeur.cfg (LittleFS JSON) vers struct config, init plageMarcheForcee[] et appelle printConfiguration()
+     * @note En cas d'erreur deserializeJson, charge valeurs par défaut (adminPassword="manager", user="ludovic", wifi="SFR_2E48")
+     */
     void loadConfiguration() {
         JsonDocument jsonConfig;         // config file
         JsonArray table;
@@ -896,7 +951,10 @@ using namespace ace_button;
       printConfiguration();
     }
 
-    // Saves the configuration to a file
+    /**
+     * @brief Sérialise struct config vers fichier JSON /cfg/routeur.cfg (adminPassword, users[], wifi[], parametres), puis appelle printConfiguration()
+     * @note Ouvre fichier en mode "w" (écrase contenu existant)
+     */
     void saveConfiguration() {
           JsonDocument jsonConfig;         // config file
           JsonArray users, wifis;
@@ -955,6 +1013,15 @@ using namespace ace_button;
       printConfiguration();
     }
 
+    /**
+     * @brief Met à jour struct config avec nouveaux adminPassword/user/wifi (ajoute ou remplace) puis appelle saveConfiguration()
+     * @param adminPassword Nouveau mot de passe admin (nullptr si inchangé)
+     * @param user Nouveau nom utilisateur (nullptr si inchangé)
+     * @param user_password Mot de passe utilisateur
+     * @param ssid Nouveau SSID WiFi (nullptr si inchangé)
+     * @param ssid_password Mot de passe WiFi
+     * @note Si tableau plein (MAX_USERS/MAX_WIFI), remplace première entrée (plus ancienne)
+     */
     void saveNewConfiguration(const char *adminPassword,const char *user,const char * user_password,const char * ssid, const char * ssid_password) {
           bool foundUser = false, foundSSID = false;
           int i = 0;
@@ -1009,6 +1076,10 @@ using namespace ace_button;
       saveConfiguration();
     }
 
+    /**
+     * @brief Efface toutes les entrées WiFi dans config.wifi[] (ssid="", ssid_passwd="") puis appelle saveConfiguration()
+     * @note Utilisé pour réinitialisation complète des paramètres WiFi mémorisés
+     */
     void resetWifiSettingsInConfig() {
       for(uint8_t i=0;i<MAX_WIFI;i++){
         strcpy(config.wifi[i].ssid,"");
@@ -1017,6 +1088,11 @@ using namespace ace_button;
       saveConfiguration();
     }  
 
+    /**
+     * @brief Convertit taille en bytes vers format lisible (B, KB ou MB avec décimales)
+     * @param bytes Taille en octets
+     * @return Chaîne formatée (ex: "1.5KB", "2.3MB")
+     */
     String formatBytes(size_t bytes) { // convert sizes in bytes to KB and MB
       String rtn;
       if (bytes < 1024) {
@@ -1030,6 +1106,33 @@ using namespace ace_button;
     }
 
 /*_________________________________________SETUP__________________________________________________________*/
+
+  /**
+   * @brief Init ESP32 : Serial, OLED, LittleFS, config, DS18B20, TRIAC, WiFi, NTP, WebServer, 2 tasks (cores 0/1)
+   * 
+   * Séquence complète :
+   * 1. Serial 115200, U8g2 OLED splash 'Init Solar Routeur'
+   * 2. startSPIFFS()+loadConfiguration() - charge /cfg/routeur.cfg
+   * 3. Calcul pasPuissance = puissanceBallon/100 pour contrôle TRIAC (0-100%)
+   * 4. Calcul tempsChauffe (formule 4185*volume*(tempIdéale-tempActuelle)/puissance)
+   * 5. ds18b20.begin() - init sondes température DS18B20
+   * 6. DimmableLight::setSyncPin(pinZeroCross) + DimmableLight::begin() - init TRIAC dimmer
+   * 7. pinMode RelayPAC/PIR/button, init AceButton avec handleButtonEvent
+   * 8. WiFi.mode(WIFI_STA) + callbacks ESP32 (WiFiStationConnected, WiFiGotIP, WiFiStationDisconnected)
+   * 9. startWiFi() - cascade connexion WiFi (reconnect / config / scan)
+   * 10. getNTPTime() loop MaxNTPRetries - synchro horloge NTP
+   * 11. calculDureeJour() - calcul timestamps jour/nuit depuis table journee[][]
+   * 12. routeurWeb.startup() - démarre AsyncWebServer + mDNS
+   * 13. Init plageMarcheForcee[] (heureOnMarcheForcee/minuteOnMarcheForcee) depuis config
+   *     avec breakTime/makeTime pour vérifier si dans le futur
+   * 14. xTaskCreatePinnedToCore(Task1code, core0) - TRIAC/SolarEdge/PAC
+   * 15. xTaskCreatePinnedToCore(Task2code, core1) - OLED/PIR/WiFi/NTP/timers
+   * 
+   * Variables clés initialisées :
+   * - pasPuissance : puissanceBallon/100 (pas de contrôle TRIAC 0-100%)
+   * - tempsChauffe : durée marche forcée calculée (secondes)
+   * - plageMarcheForcee[0/1] : marche forcée primaire/secondaire avec marcheForceeDone flag
+   */
 
     void setup() {
 
@@ -1145,33 +1248,6 @@ using namespace ace_button;
         } else {
           plageMarcheForcee[1].marcheForceeDone = true;   
         }
-
-  /**
-   * @brief Init ESP32 : Serial, OLED, LittleFS, config, DS18B20, TRIAC, WiFi, NTP, WebServer, 2 tasks (cores 0/1)
-   * 
-   * Séquence complète :
-   * 1. Serial 115200, U8g2 OLED splash 'Init Solar Routeur'
-   * 2. startSPIFFS()+loadConfiguration() - charge /cfg/routeur.cfg
-   * 3. Calcul pasPuissance = puissanceBallon/100 pour contrôle TRIAC (0-100%)
-   * 4. Calcul tempsChauffe (formule 4185*volume*(tempIdéale-tempActuelle)/puissance)
-   * 5. ds18b20.begin() - init sondes température DS18B20
-   * 6. DimmableLight::setSyncPin(pinZeroCross) + DimmableLight::begin() - init TRIAC dimmer
-   * 7. pinMode RelayPAC/PIR/button, init AceButton avec handleButtonEvent
-   * 8. WiFi.mode(WIFI_STA) + callbacks ESP32 (WiFiStationConnected, WiFiGotIP, WiFiStationDisconnected)
-   * 9. startWiFi() - cascade connexion WiFi (reconnect / config / scan)
-   * 10. getNTPTime() loop MaxNTPRetries - synchro horloge NTP
-   * 11. calculDureeJour() - calcul timestamps jour/nuit depuis table journee[][]
-   * 12. routeurWeb.startup() - démarre AsyncWebServer + mDNS
-   * 13. Init plageMarcheForcee[] (heureOnMarcheForcee/minuteOnMarcheForcee) depuis config
-   *     avec breakTime/makeTime pour vérifier si dans le futur
-   * 14. xTaskCreatePinnedToCore(Task1code, core0) - TRIAC/SolarEdge/PAC
-   * 15. xTaskCreatePinnedToCore(Task2code, core1) - OLED/PIR/WiFi/NTP/timers
-   * 
-   * Variables clés initialisées :
-   * - pasPuissance : puissanceBallon/100 (pas de contrôle TRIAC 0-100%)
-   * - tempsChauffe : durée marche forcée calculée (secondes)
-   * - plageMarcheForcee[0/1] : marche forcée primaire/secondaire avec marcheForceeDone flag
-   */
           /* ------- gestion des taches sur les deux cores ----------*/
       xTaskCreatePinnedToCore(      //Code pour créer un Task Core 0//
           Task1code,   /* Task function. */
@@ -1596,12 +1672,21 @@ using namespace ace_button;
 
 /*__________________________________________LOOP__________________________________________________________*/
 
+    /**
+     * @brief Boucle principale Arduino - intentionnellement vide car tout le traitement s'effectue dans Task1code (core 0) et Task2code (core 1)
+     * @note ESP32 dual-core : Task1code gère TRIAC/SolarEdge/PAC, Task2code gère OLED/PIR/WiFi/NTP
+     */
     void loop() {
       // put your main code here, to run repeatedly:
     }
 
 /*__________________________________________TIME_FUNCTIONS______________________________________________*/
 
+    /**
+     * @brief Calcule offset heure d'été DST France : +3600s entre dernier dimanche mars (>=25) et dernier dimanche octobre (>=25), 0 sinon
+     * @param newTime Timestamp Unix à tester
+     * @return 3600 si DST actif (été), 0 sinon (hiver)
+     */
     int dstOffset(time_t newTime){  //Adjust for DST
         tmElements_t te;
         time_t dstStart,dstEnd;
@@ -1624,6 +1709,10 @@ using namespace ace_button;
             return (0);                     //NonDST
     }
 
+    /**
+     * @brief Synchronise horloge système via NTP (europe.pool.ntp.org), applique TZ_OFFSET (GMT+1) et correction DST
+     * @return true si timeClient.update() réussi et setTime() effectué, false si échec NTP ou WiFi déconnecté
+     */
     bool getNTPTime(){
       bool rtn = false;
 
@@ -1650,6 +1739,11 @@ using namespace ace_button;
         return rtn;
     }
 
+    /**
+     * @brief Calcule timestamps jour (lever) et nuit (coucher) pour le mois donné à partir table journee[mois][heure,minute]
+     * @param theMonth Index du mois (0-11) pour lookup dans journee[][] (heures lever/coucher soleil)
+     * @note Met à jour variables globales : jour, nuit, lastday
+     */
     void calculDureeJour(int theMonth){
         uint8_t heureDebut = journee[theMonth][0];
         uint8_t mnDebut = journee[theMonth][1];
@@ -1669,6 +1763,11 @@ using namespace ace_button;
 
 /*__________________________________________ROUTEUR_FUNCTIONS______________________________________________*/
 
+    /**
+     * @brief Toggle marche forcée chauffe-eau : TRIAC ON 100% (value=true) ou OFF (value=false), met à jour flags mfChauffeEau/modeManuEau
+     * @param value true = démarrer marche forcée (TRIAC 100%), false = arrêter (TRIAC OFF)
+     * @note Appelle gestEcran() et gestWeb() pour mise à jour affichage/SSE
+     */
     void marcheForceeSwitch(boolean value){
       Serial.printf("Marche Forcée Chauffe Eau Switch: val=%s, TriacOn=%s\n",(value)?"true":"false",(valTriac != 0.0)?"true":"false");
       if((valTriac != 0.0) && !value){       // user asked to switch off
@@ -1696,6 +1795,11 @@ using namespace ace_button;
       }
     }
 
+    /**
+     * @brief Toggle marche forcée PAC : relay ON (value=true) ou OFF (value=false) si config.pacPresent, met à jour flags mfPAC/modeManuPAC
+     * @param value true = démarrer PAC (relay HIGH), false = arrêter (relay LOW)
+     * @note Appelle gestEcran() et gestWeb() pour mise à jour affichage/SSE, timestamp debutRelayPAC
+     */
     void marcheForceePACSwitch(boolean value){
       if(config.pacPresent) {
         if( (debutRelayPAC != 0) && !value) {   // asked to stop PAC
@@ -1718,12 +1822,23 @@ using namespace ace_button;
       }
     }
 
+    /**
+     * @brief Contrôle GPIO RelayPAC (HIGH/LOW) si config.pacPresent=true
+     * @param state HIGH pour activer relay PAC, LOW pour désactiver
+     */
     void setRelayPac(uint8_t state) {
       if(config.pacPresent) {
         digitalWrite(RelayPAC, state);
       }
     }
 
+    /**
+     * @brief Callback AceButton pour bouton physique : kEventPressed réveille OLED (gestEcran), kEventReleased toggle marcheForcee si !initPIRphase
+     * @param button Pointeur AceButton
+     * @param eventType Type événement (kEventPressed, kEventReleased, kEventLongPressed)
+     * @param buttonState État bouton (LOW/HIGH)
+     * @note kEventLongPressed non utilisé actuellement (stub)
+     */
     void handleButtonEvent(AceButton* button, uint8_t eventType, uint8_t buttonState){
       // Print out a message for all events, for both buttons.
       static bool wakedUp = false;
@@ -1754,6 +1869,11 @@ using namespace ace_button;
     }
   }
 
+    /**
+     * @brief Active/désactive capteur PIR motion : val=true positionne initPIRphase (calibration 60s), val=false detachInterrupt(pinMotionSensor)
+     * @param val true pour activer PIR avec phase d'initialisation, false pour désactiver
+     * @note Appelée depuis interface web (setup params)
+     */
     void changePIRmode(bool val){     // called from web setup params
       if(val){                        // change from false to true => set up after calibration 
         initPIRphase = true;
@@ -1764,6 +1884,11 @@ using namespace ace_button;
 
     /*__________________________________________Feed Back ecran or web FUNCTIONS______________________________________________*/
 
+    /**
+     * @brief Met à jour afficheur OLED U8g2 128x64 selon action : entete (IP/WiFi/icons), full (frame normal), mForcee (marche forcée), modeManu, values (GRID/LOAD/PV), horloge, httpError
+     * @param action Enum actionEcranWeb (none, entete, full, horloge, wifi, values, mForcee, mfValues, modeManu, httpError)
+     * @note Gère icônes WiFi/chauffe-eau/PAC, flèches direction flux, emoticons happy/sad, u8g2.sendBuffer() si updateEcran=true
+     */
     void gestEcran(actionEcranWeb action){
         char heure[20];
         char actionStr[][12] = {"none", "entete", "full", "horloge", "wifi", "values", "mForcee", "mfValues", "modeManu", "httpError"};
@@ -2086,11 +2211,19 @@ using namespace ace_button;
       }  
     }
 
+    /**
+     * @brief Éteint l'afficheur OLED U8g2 via u8g2.setPowerSave(1) et positionne flag oled=false
+     * @note Appelée après timeout inactivité PIR (60s sans mouvement)
+     */
     void stopEcran(){
       u8g2.setPowerSave(1);
       oled = false;
     }
 
+    /**
+     * @brief Déclenche mise à jour SSE (Server-Sent Events) via routeurWeb.OnUpdate() pour push temps réel vers clients web
+     * @note Appelée après changements d'état (marcheForcee, PAC, valTriac, etc.) pour synchronisation interface web
+     */
     void gestWeb(){
             // update main web site
           routeurWeb.OnUpdate();        
