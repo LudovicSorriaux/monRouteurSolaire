@@ -3,3 +3,14 @@
 .vscode/c_cpp_properties.json
 .vscode/launch.json
 .vscode/ipch
+
+# Node.js
+node_modules/
+package-lock.json
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+Logs/
