@@ -1,3 +1,18 @@
+/*******************************************************************************
+ * @file    espnow.h
+ * @brief   Communication ESP-NOW (expérimental)
+ * @details Protocole ESP-NOW pour communication sans fil entre ESP8266/ESP32.
+ *          Codes messages (DATA_MSG, CLIENT_HELLO, etc.), états transmission,
+ *          gestion canal WiFi (channel 1 obligatoire).
+ * 
+ * Usage   : Communication sans fil optionnelle (alternative/complément web)
+ * Référencé par : main.cpp (si espnowPAC activé)
+ * Référence     : espnow.h (ESP8266), esp_now.h (ESP32)
+ * 
+ * @author  Ludovic Sorriaux
+ * @date    2024
+ *******************************************************************************/
+
 #include <Arduino.h>
 #include <TimeLib.h>
 

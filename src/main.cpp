@@ -1,7 +1,19 @@
-/* Routeur solaire développé par Ludovic Sorriaux
+/*******************************************************************************
+ * @file    main.cpp
+ * @brief   Point d'entrée principal - Routeur solaire ESP32
+ * @details Setup: WiFiManager, AsyncWebServer, NTP, OLED (U8g2), DS18B20 (4x),
+ *          TRIAC dimmer, SolarEdge API. Loop: gestion 2 cores ESP32 (core0:
+ *          dimmer/sensors, core1: web/API). Routage surplus solaire vers
+ *          chauffe-eau résistif.
+ * 
+ * @version 1.0
+ * @date    2024
+ * @author  Ludovic Sorriaux
+ * 
+ * Routeur solaire développé par Ludovic Sorriaux
  * ESP32 + Dimmer1 24A-600V + écran Oled + relay PAc + sonde température DS18B20 (4)
  * Utilisation des 2 Cores de l'Esp32
-*/
+ ******************************************************************************/
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -1098,11 +1110,10 @@ using namespace ace_button;
 
         tmElements_t tm;
         uint8_t heure;
-        uinit8_t minute;
+        uint8_t minute;
         size_t newTimeMarcheForce;
         breakTime(now(), tm);  // break time_t into elements stored in tm struct
-        heure = atoi(config.heureBackup.substring(0, 2).c_str());
-        minute = atoi(config.heureBackup.substring(3).c_str());
+        sscanf(config.heureBackup, "%hhu:%hhu", &heure, &minute);
         tm.Hour = heure;
         tm.Minute = minute;
         newTimeMarcheForce = makeTime(tm);
@@ -1111,8 +1122,7 @@ using namespace ace_button;
         } else {
           plageMarcheForcee[0].marcheForceeDone = true;  // at init wait for next day to set marcheforcee
         }   
-        heure = atoi(config.heureSecondBackup.substring(0, 2).c_str());
-        minute = atoi(config.heureSecondBackup.substring(3).c_str());
+        sscanf(config.heureSecondBackup, "%hhu:%hhu", &heure, &minute);
         tm.Hour = heure;
         tm.Minute = minute;
         newTimeMarcheForce = makeTime(tm);

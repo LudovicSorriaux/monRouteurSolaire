@@ -1,3 +1,18 @@
+/*******************************************************************************
+ * @file    routeurWeb.h
+ * @brief   Serveur web asynchrone routeur solaire
+ * @details Gestion AsyncWebServer, routes API REST, SSE (Server-Sent Events),
+ *          authentification sessions, interface web contrôle dimmer TRIAC.
+ *          mDNS "routeurSol.local"
+ * 
+ * Usage   : Interface web pour pilotage routeur solaire
+ * Référencé par : main.cpp
+ * Référence     : ESPAsyncWebServer, ArduinoJson, LittleFS
+ * 
+ * @author  Ludovic Sorriaux
+ * @date    2024
+ *******************************************************************************/
+
 #include "globalRouteur.h"
 
 //#include <FS.h>                 //this needs to be first, or it all crashes and burns...

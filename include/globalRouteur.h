@@ -1,3 +1,18 @@
+/*******************************************************************************
+ * @file    globalRouteur.h
+ * @brief   Constantes globales et structures routeur solaire
+ * @details Définitions MAX_USERS, MAX_WIFI, structures configuration (users,
+ *          wifi, SolarEdge API, paramètres ballon). Instances globales
+ *          routeurWeb, server, SSE events.
+ * 
+ * Usage   : Configuration système, structures partagées
+ * Référencé par : TOUS les modules
+ * Référence     : Arduino.h, TimeLib
+ * 
+ * @author  Ludovic Sorriaux
+ * @date    2024
+ *******************************************************************************/
+
 #include <Arduino.h>
 #include <TimeLib.h>
 

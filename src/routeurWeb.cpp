@@ -1,8 +1,25 @@
+/*******************************************************************************
+ * @file    routeurWeb.cpp
+ * @brief   Implémentation classe RouteurSolWebClass - Serveur web
+ * @details Gestion AsyncWebServer, routes API (/api/status, /api/command, etc.),
+ *          SSE (Server-Sent Events), authentification sessions, interface
+ *          contrôle dimmer TRIAC et paramètres routeur.
+ * 
+ * @author  Ludovic Sorriaux
+ * @date    2024
+ *******************************************************************************/
+
 #include "routeurWeb.h"
 
     RouteurSolWebClass::~RouteurSolWebClass(void)
       {};
 
+  /*
+   * RouteurSolWebClass::RouteurSolWebClass
+   * But : (description automatique) — expliquer brièvement l'objectif de la fonction
+   * Entrées : voir la signature de la fonction (paramètres)
+   * Sortie : valeur de retour ou effet sur l'état interne
+   */
     RouteurSolWebClass::RouteurSolWebClass(){
         Serial.println(F("init monRouteurWeb"));
     }
@@ -10,6 +27,12 @@
 
 // PUBLIC functions 
 
+  /*
+   * void RouteurSolWebClass::startup
+   * But : (description automatique) — expliquer brièvement l'objectif de la fonction
+   * Entrées : voir la signature de la fonction (paramètres)
+   * Sortie : valeur de retour ou effet sur l'état interne
+   */
     void RouteurSolWebClass::startup(){
       Serial.println("monRouteurWeb Startup ... ");
       if(!serverSettedUp){
@@ -26,6 +49,12 @@
       startMDNS();                 // Start the mDNS responder
     }
 
+  /*
+   * void RouteurSolWebClass::OnUpdate
+   * But : (description automatique) — expliquer brièvement l'objectif de la fonction
+   * Entrées : voir la signature de la fonction (paramètres)
+   * Sortie : valeur de retour ou effet sur l'état interne
+   */
     void RouteurSolWebClass::OnUpdate(){
         #if defined(ESP8266)
             MDNS.update();
@@ -41,6 +70,12 @@
 
 /*__________________________________________________________SETUP_FUNCTIONS__________________________________________________________*/
 
+  /*
+   * void RouteurSolWebClass::startMDNS
+   * But : (description automatique) — expliquer brièvement l'objectif de la fonction
+   * Entrées : voir la signature de la fonction (paramètres)
+   * Sortie : valeur de retour ou effet sur l'état interne
+   */
     void RouteurSolWebClass::startMDNS() { // Start the mDNS responder
       #if defined(ESP8266)
         if (!MDNS.begin(mdnsName,WiFi.localIP())) {
@@ -56,6 +91,12 @@
         }
     }
 
+  /*
+   * void RouteurSolWebClass::startServer
+   * But : (description automatique) — expliquer brièvement l'objectif de la fonction
+   * Entrées : voir la signature de la fonction (paramètres)
+   * Sortie : valeur de retour ou effet sur l'état interne
+   */
     void RouteurSolWebClass::startServer() { // Start a HTTP server with a file read handler and an upload handler
 
         server.on("/", HTTP_ANY, std::bind(&RouteurSolWebClass::handleRoot, this, std::placeholders::_1));                         // Call the 'handleRoot' function when a client requests URI "/"                         // Call the 'handleRoot' function when a client requests URI "/"
@@ -121,6 +162,12 @@
 
 /*__________________________________________________________AUTHENTIFY_FUNCTIONS__________________________________________________________*/
 
+  /*
+   * void RouteurSolWebClass::printActiveSessions
+   * But : (description automatique) — expliquer brièvement l'objectif de la fonction
+   * Entrées : voir la signature de la fonction (paramètres)
+   * Sortie : valeur de retour ou effet sur l'état interne
+   */
     void RouteurSolWebClass::printActiveSessions(char *sessID){   // to help debug
         Serial.printf("Dump of Active session tab, now is: %lld\n",now());
         for (uint8_t i=0; i<10;i++){
@@ -129,6 +176,12 @@
         }  
     }
 
+  /*
+   * bool RouteurSolWebClass::isSessionValid
+   * But : (description automatique) — expliquer brièvement l'objectif de la fonction
+   * Entrées : voir la signature de la fonction (paramètres)
+   * Sortie : valeur de retour ou effet sur l'état interne
+   */
     bool RouteurSolWebClass::isSessionValid(char *sessID){
         uint8_t i = 0;
         bool flagOK=false;
@@ -157,6 +210,12 @@
 
 /*__________________________________________________________SERVER_HANDLERS__________________________________________________________*/
 
+  /*
+   * void RouteurSolWebClass::handleRoot
+   * But : (description automatique) — expliquer brièvement l'objectif de la fonction
+   * Entrées : voir la signature de la fonction (paramètres)
+   * Sortie : valeur de retour ou effet sur l'état interne
+   */
     void RouteurSolWebClass::handleRoot(AsyncWebServerRequest *request) {                         // When URI / is requested, send a login web page
         Serial.println(F("Enter handleRoot"));
         if(!handleFileRead("/index.html",request)){
@@ -164,6 +223,12 @@
         } 
     }
 
+  /*
+   * void RouteurSolWebClass::handleOtherFiles
+   * But : (description automatique) — expliquer brièvement l'objectif de la fonction
+   * Entrées : voir la signature de la fonction (paramètres)
+   * Sortie : valeur de retour ou effet sur l'état interne
+   */
     void RouteurSolWebClass::handleOtherFiles(AsyncWebServerRequest *request){ 	// if the requested file or page doesn't exist, return a 404 not found error
         Serial.println(F("Enter handleOtherFiles"));
         Serial.printf(" http://%s %s\n", request->host().c_str(), request->url().c_str());
@@ -172,6 +237,12 @@
         } 
     }
 
+  /*
+   * void RouteurSolWebClass::handleNotFound
+   * But : (description automatique) — expliquer brièvement l'objectif de la fonction
+   * Entrées : voir la signature de la fonction (paramètres)
+   * Sortie : valeur de retour ou effet sur l'état interne
+   */
     void RouteurSolWebClass::handleNotFound(AsyncWebServerRequest *request){ 	// if the requested file or page doesn't exist, return a 404 not found error
         Serial.println(F("Enter handleNotFound"));
 
@@ -215,6 +286,12 @@
         }
     }
 
+  /*
+   * void RouteurSolWebClass::handleNotFound2
+   * But : (description automatique) — expliquer brièvement l'objectif de la fonction
+   * Entrées : voir la signature de la fonction (paramètres)
+   * Sortie : valeur de retour ou effet sur l'état interne
+   */
     void RouteurSolWebClass::handleNotFound2(AsyncWebServerRequest *request){ 	// if the requested file or page doesn't exist, return a 404 not found error
     String path = request->url();
     //  bool authentified = false;
@@ -243,6 +320,12 @@
 
 /*__________________________________________________________USER_MANAGEMENT__________________________________________________________*/
 
+  /*
+   * void RouteurSolWebClass::handleLogin
+   * But : (description automatique) — expliquer brièvement l'objectif de la fonction
+   * Entrées : voir la signature de la fonction (paramètres)
+   * Sortie : valeur de retour ou effet sur l'état interne
+   */
   void RouteurSolWebClass::handleLogin(AsyncWebServerRequest *request) {                         // If a POST request is made to URI /login
       bool flgVerified = false;
       char newusername[MAX_USERNAME_SIZE], newuserpassword[MAX_USERNAME_SIZE];
@@ -301,6 +384,12 @@
     Serial.println(jsonBuff);
   }
 
+  /*
+   * void RouteurSolWebClass::handleRegister
+   * But : (description automatique) — expliquer brièvement l'objectif de la fonction
+   * Entrées : voir la signature de la fonction (paramètres)
+   * Sortie : valeur de retour ou effet sur l'état interne
+   */
   void RouteurSolWebClass::handleRegister(AsyncWebServerRequest *request){ 							// If a POST request is made to URI /register
       bool flgfound = false;
       int8_t flgFoundEmpty = -1;
@@ -386,6 +475,12 @@
     Serial.println(jsonBuff);
   }
 
+  /*
+   * void RouteurSolWebClass::handleChangAdminPW
+   * But : (description automatique) — expliquer brièvement l'objectif de la fonction
+   * Entrées : voir la signature de la fonction (paramètres)
+   * Sortie : valeur de retour ou effet sur l'état interne
+   */
   void RouteurSolWebClass::handleChangAdminPW(AsyncWebServerRequest *request) {   
   // /setpw?pw=x & npw=y & cpw=y
       char password[MAX_USERNAME_SIZE], newPassword[MAX_USERNAME_SIZE], chkPassword[MAX_USERNAME_SIZE];
@@ -430,6 +525,12 @@
     request->send(response);
   }
 
+  /*
+   * void RouteurSolWebClass::handleGetUsers
+   * But : (description automatique) — expliquer brièvement l'objectif de la fonction
+   * Entrées : voir la signature de la fonction (paramètres)
+   * Sortie : valeur de retour ou effet sur l'état interne
+   */
   void RouteurSolWebClass::handleGetUsers(AsyncWebServerRequest *request){
       String jsonBuff;
       JsonDocument  jsonRoot;
@@ -451,6 +552,12 @@
     Serial.println(jsonBuff);
   }
 
+  /*
+   * void RouteurSolWebClass::handleDeleteUsers
+   * But : (description automatique) — expliquer brièvement l'objectif de la fonction
+   * Entrées : voir la signature de la fonction (paramètres)
+   * Sortie : valeur de retour ou effet sur l'état interne
+   */
   void RouteurSolWebClass::handleDeleteUsers(AsyncWebServerRequest *request){
       bool flgfound = false;
       char theadminpassword[MAX_USERNAME_SIZE];
@@ -511,6 +618,12 @@
 
 /*__________________________________________________________PAGE_HANDLERS__________________________________________________________*/
 
+  /*
+   * bool RouteurSolWebClass::handleFileRead
+   * But : (description automatique) — expliquer brièvement l'objectif de la fonction
+   * Entrées : voir la signature de la fonction (paramètres)
+   * Sortie : valeur de retour ou effet sur l'état interne
+   */
     bool RouteurSolWebClass::handleFileRead(String path, AsyncWebServerRequest *request) { // send the right file to the client (if it exists)
         String contentType, pathWithGz;
         File file;
@@ -545,6 +658,12 @@
         return rtn;
     }
 
+  /*
+   * bool RouteurSolWebClass::handleFileError
+   * But : (description automatique) — expliquer brièvement l'objectif de la fonction
+   * Entrées : voir la signature de la fonction (paramètres)
+   * Sortie : valeur de retour ou effet sur l'état interne
+   */
     bool RouteurSolWebClass::handleFileError(String path, AsyncWebServerRequest *request) {         // send file not found to the client
 
         if (!handleFileRead("pages/Full404.html", request)){      // try sending 404.html file from SPIFFS before static one
@@ -624,6 +743,12 @@
         return false;
     }
 
+  /*
+   * void RouteurSolWebClass::handleFileList
+   * But : (description automatique) — expliquer brièvement l'objectif de la fonction
+   * Entrées : voir la signature de la fonction (paramètres)
+   * Sortie : valeur de retour ou effet sur l'état interne
+   */
     void RouteurSolWebClass::handleFileList( AsyncWebServerRequest *request) {
     String output = "[";
     
@@ -647,6 +772,12 @@
         }
     }
 
+  /*
+   * bool RouteurSolWebClass::checkSessionParam
+   * But : (description automatique) — expliquer brièvement l'objectif de la fonction
+   * Entrées : voir la signature de la fonction (paramètres)
+   * Sortie : valeur de retour ou effet sur l'état interne
+   */
     bool RouteurSolWebClass::checkSessionParam(AsyncWebServerRequest *request){
         char sessionID[16];
         bool rtn = false;
@@ -660,6 +791,12 @@
 
 /*__________________________________________________________ROUTEUR_HANDLERS__________________________________________________________*/
 
+  /*
+   * void RouteurSolWebClass::handleSetRouteurSSEData
+   * But : (description automatique) — expliquer brièvement l'objectif de la fonction
+   * Entrées : voir la signature de la fonction (paramètres)
+   * Sortie : valeur de retour ou effet sur l'état interne
+   */
     void RouteurSolWebClass::handleSetRouteurSSEData(AsyncWebServerRequest *request){          // setRouteurPagePrincip
           String jsonBuff;
           JsonDocument jsonRoot;
@@ -675,6 +812,12 @@
         Serial.println(F("OK SetRouteurSSEData done"));
     }
 
+  /*
+   * void RouteurSolWebClass::updateRouteurData
+   * But : (description automatique) — expliquer brièvement l'objectif de la fonction
+   * Entrées : voir la signature de la fonction (paramètres)
+   * Sortie : valeur de retour ou effet sur l'état interne
+   */
     void RouteurSolWebClass::updateRouteurData(){          
         String jsonBuffPP;
         JsonDocument routeurData;
@@ -718,6 +861,12 @@
       }
     }
 
+  /*
+   * void RouteurSolWebClass::handleSetSwitches
+   * But : (description automatique) — expliquer brièvement l'objectif de la fonction
+   * Entrées : voir la signature de la fonction (paramètres)
+   * Sortie : valeur de retour ou effet sur l'état interne
+   */
     void RouteurSolWebClass::handleSetSwitches(AsyncWebServerRequest *request){              // setRouteurParamPP?sess=sessID&cmd=startProgram&pid=pid&en=en
         char theSwitch[20];
         char jsonMess[100];
@@ -785,6 +934,12 @@
       Serial.println("OK setRouteurSwitches done");
   }
 
+  /*
+   * void RouteurSolWebClass::handleSetParamsSSEData
+   * But : (description automatique) — expliquer brièvement l'objectif de la fonction
+   * Entrées : voir la signature de la fonction (paramètres)
+   * Sortie : valeur de retour ou effet sur l'état interne
+   */
     void RouteurSolWebClass::handleSetParamsSSEData(AsyncWebServerRequest *request){          // setRouteurPageParams
         String jsonBuff;
         JsonDocument jsonRoot;
@@ -800,6 +955,12 @@
       Serial.println(F("OK SetRouteurSSEData done"));
     }  
 
+  /*
+   * void RouteurSolWebClass::updateRouteurParamsData
+   * But : (description automatique) — expliquer brièvement l'objectif de la fonction
+   * Entrées : voir la signature de la fonction (paramètres)
+   * Sortie : valeur de retour ou effet sur l'état interne
+   */
     void RouteurSolWebClass::updateRouteurParamsData(){          
         String jsonBuffPP;
         JsonDocument routeurParamsData;
@@ -848,6 +1009,12 @@
       }
     }
 
+  /*
+   * void RouteurSolWebClass::handleSetParams
+   * But : (description automatique) — expliquer brièvement l'objectif de la fonction
+   * Entrées : voir la signature de la fonction (paramètres)
+   * Sortie : valeur de retour ou effet sur l'état interne
+   */
     void RouteurSolWebClass::handleSetParams(AsyncWebServerRequest *request){              
         String theTime;
         char jsonMess[100];
@@ -1066,6 +1233,12 @@
 
 /*__________________________________________________________REST_HANDLERS__________________________________________________________*/
 
+  /*
+   * void RouteurSolWebClass::handleChangePassword
+   * But : (description automatique) — expliquer brièvement l'objectif de la fonction
+   * Entrées : voir la signature de la fonction (paramètres)
+   * Sortie : valeur de retour ou effet sur l'état interne
+   */
   void RouteurSolWebClass::handleChangePassword(AsyncWebServerRequest *request){ // /setpw ? adminpassword = oldAdminPW & password = newAdminPW
 
     char theadminpassword[MAX_USERNAME_SIZE];
@@ -1101,6 +1274,12 @@
     Serial.println(jsonBuff);
     }
 
+  /*
+   * void RouteurSolWebClass::handleGetRouteurStatus
+   * But : (description automatique) — expliquer brièvement l'objectif de la fonction
+   * Entrées : voir la signature de la fonction (paramètres)
+   * Sortie : valeur de retour ou effet sur l'état interne
+   */
   void RouteurSolWebClass::handleGetRouteurStatus(AsyncWebServerRequest *request) {  
         /*  /getrouteurstatus ? pw = adminPW return :
             {
@@ -1159,6 +1338,12 @@
     Serial.println("OK handleGetRouteurStatus done\n");
   }
 
+  /*
+   * void RouteurSolWebClass::handleSetRouteurSwitch
+   * But : (description automatique) — expliquer brièvement l'objectif de la fonction
+   * Entrées : voir la signature de la fonction (paramètres)
+   * Sortie : valeur de retour ou effet sur l'état interne
+   */
   void RouteurSolWebClass::handleSetRouteurSwitch(AsyncWebServerRequest *request) {  // /setrouteurswitch ? pw=adminPWD & [chauffeEau|pac]=[true|false]
       String jsonBuffPP;
       JsonDocument routeurData;
@@ -1198,6 +1383,12 @@
     Serial.println("OK handleSetRouteurSwitch done\n");
   }
 
+  /*
+   * void RouteurSolWebClass::showJsonConfig
+   * But : (description automatique) — expliquer brièvement l'objectif de la fonction
+   * Entrées : voir la signature de la fonction (paramètres)
+   * Sortie : valeur de retour ou effet sur l'état interne
+   */
   void RouteurSolWebClass::showJsonConfig(AsyncWebServerRequest *request){
     char jsonPrintConfig[3072];
     JsonDocument jsonConfig;
@@ -1278,6 +1469,12 @@
 
 /*__________________________________________________________HELPER_FUNCTIONS__________________________________________________________*/
 
+  /*
+   * String RouteurSolWebClass::formatBytes
+   * But : (description automatique) — expliquer brièvement l'objectif de la fonction
+   * Entrées : voir la signature de la fonction (paramètres)
+   * Sortie : valeur de retour ou effet sur l'état interne
+   */
     String RouteurSolWebClass::formatBytes(size_t bytes) { // convert sizes in bytes to KB and MB
         String rtn;
         if (bytes < 1024) {
@@ -1290,6 +1487,12 @@
         return rtn;
     }
 
+  /*
+   * String RouteurSolWebClass::getContentType
+   * But : (description automatique) — expliquer brièvement l'objectif de la fonction
+   * Entrées : voir la signature de la fonction (paramètres)
+   * Sortie : valeur de retour ou effet sur l'état interne
+   */
     String RouteurSolWebClass::getContentType(String filename) { // determine the filetype of a given filename, based on the extension
         if (filename.endsWith(".html")) return "text/html";
         else if (filename.endsWith(".css")) return "text/css";
@@ -1299,6 +1502,12 @@
         return "text/plain";
     }
 
+  /*
+   * bool RouteurSolWebClass::generateKey
+   * But : (description automatique) — expliquer brièvement l'objectif de la fonction
+   * Entrées : voir la signature de la fonction (paramètres)
+   * Sortie : valeur de retour ou effet sur l'état interne
+   */
     bool RouteurSolWebClass::generateKey(char *sessID,long ttl){
             char strSess[16];
             char alphabeth[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"; 
@@ -1337,6 +1546,12 @@
         return flagOK;   //  if (!flagOK){   // couldn't store no room left.
     }
 
+  /*
+   * void RouteurSolWebClass::printActiveSessions
+   * But : (description automatique) — expliquer brièvement l'objectif de la fonction
+   * Entrées : voir la signature de la fonction (paramètres)
+   * Sortie : valeur de retour ou effet sur l'état interne
+   */
     void RouteurSolWebClass::printActiveSessions(){   // to help debug
         Serial.printf("Dump of Active session tab, now is: %lld\n",now());
         for (uint8_t i=0; i<10;i++){

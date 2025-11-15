@@ -1,3 +1,17 @@
+/*******************************************************************************
+ * @file    Triac.h
+ * @brief   Contrôle dimmer TRIAC pour routage puissance
+ * @details Gestion dimmer 24A-600V avec détection zero-crossing et timer
+ *          hardware ESP32. Contrôle puissance 0-100% par découpage d'onde.
+ *          Interruptions IRAM pour précision temporelle.
+ * 
+ * Usage   : Contrôle charge résistive (chauffe-eau) depuis surplus solaire
+ * Référencé par : main.cpp
+ * Référence     : hw_timer_t (ESP32 hardware timer)
+ * 
+ * @author  Ludovic Sorriaux
+ * @date    2024
+ *******************************************************************************/
 
 #include <Arduino.h>
 

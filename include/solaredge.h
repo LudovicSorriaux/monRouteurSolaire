@@ -1,3 +1,18 @@
+/*******************************************************************************
+ * @file    solaredge.h
+ * @brief   Certificat SSL SolarEdge API
+ * @details Certificat racine DigiCert pour communication HTTPS sécurisée avec
+ *          l'API SolarEdge (monitoring.solaredge.com). Permet récupération
+ *          production solaire temps réel.
+ * 
+ * Usage   : HTTPClient secure vers API SolarEdge
+ * Référencé par : main.cpp (si API SolarEdge configurée)
+ * Référence     : WiFiClientSecure
+ * 
+ * @author  Ludovic Sorriaux
+ * @date    2024
+ *******************************************************************************/
+
     // Solaredge certificate
     const char* solarEdgeCertificate = \
     "-----BEGIN CERTIFICATE-----\n" \
